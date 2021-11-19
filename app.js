@@ -23,7 +23,9 @@ const usersInforRouter = require('./routes/usersInfo');
 const signupRouter = require('./routes/signup');
 
 // define product router
-const productRouter = require('./routes/product');
+const productRouter = require('./components/product/index');
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 const app = express();
@@ -76,5 +78,30 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+
+
+// for secure reason mysql cant connect to mysql version 8 and above so we have to use mysql2 module
+const mysql = require('mysql2');
+
+// create connection object which have imformation of our mysql database
+const conection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '1234',
+    database: 'beamsaber'
+});
+
+
+// connect our nodejs app to mysql database
+conection.connect((err) => {
+    if (err) {
+        return console.error('error: ' + err.message);
+    }
+
+    console.log("connected to beam saber data base")
+
+})
+
 
 module.exports = app;
