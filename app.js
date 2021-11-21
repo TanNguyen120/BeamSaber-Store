@@ -9,8 +9,8 @@ const usersRouter = require("./routes/users");
 
 // all specific project router go here
 /////////////////////////////////////////////////////////////////////////////////////
-// define login router
-const loginRouter = require("./routes/login");
+// define login router in component folder
+const loginRouter = require("./components/login/index");
 
 // define admin router
 const adminRouter = require("./routes/admin");
@@ -21,8 +21,24 @@ const usersInforRouter = require("./routes/usersInfo");
 // define signup router
 const signupRouter = require("./routes/signup");
 
-// define product router
+// define product router in component folder
 const productRouter = require("./components/product/index");
+
+// define contact router
+const contactRouter = require("./components/contact/index");
+
+// define 404page router
+const errorRouter = require("./components/404page/index");
+
+// define order details router
+const orderDetailsRouter = require("./components/order_details/index");
+
+// define shoping cart router
+const shopingCartRouter = require("./components/shoping_cart")
+
+// define about us page router
+const aboutUsRouter = require("./components/shop_owner_details")
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 const app = express();
@@ -45,6 +61,8 @@ app.use("/users", usersRouter);
 // middleware for login task
 app.use("/login", loginRouter);
 
+
+
 // middleware for adminIndexPage
 app.use("/admin", adminRouter);
 
@@ -57,6 +75,21 @@ app.use("/signup", signupRouter);
 // middleware for productlist task
 app.use("/product", productRouter);
 
+// middleware for contact page
+app.use("/contact", contactRouter);
+
+// middleware for error page
+app.use("/404_not_found",errorRouter);
+
+// middleware for orderdetails
+app.use("/check_out", orderDetailsRouter);
+
+// middleware for shopingcart
+app.use("/cart",shopingCartRouter);
+
+
+// middleware for about us page
+app.use("/about_us",aboutUsRouter);
 ////////////////////////////////////////////////////////////////////////////////////
 
 // catch 404 and forward to error handler

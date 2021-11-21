@@ -1,162 +1,769 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
+<!-- tanajil/  21 Nov 2019 03:28:46 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>BeamSaber Store</title>
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Fontawesome core CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <!--GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!--Slide Show Css -->
-    <link href="ItemSlider/css/main-style.css" rel="stylesheet" />
-    <!-- custom CSS here -->
-    <link href="css/style.css" rel="stylesheet" />
+    <title>Beamsaber - Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/css/jquery.scrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/"><strong>BeamSaber</strong> Store</a>
+<body class="home">
+<header class="header style7">
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <div class="header-message">
+                    Welcome to our online store!
+                </div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Track Order</a></li>
-                    <li><a href="/login" id="loginButton">Login</a>
-                        <div class="dropdown">
-                            <button class="nut_dropdown">Trang Mẫu</button>
-                            <div class="noidung_dropdown">
-                                <a href="/user-info" target="_blank">User</a>
-                                <a href="/admin" target="_blank">admin</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="/signup" target="_blank">Signup</a></li>
-                    <li><a href="#">Cart</a> </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><strong>Call: </strong>+084-056-3568-045</a></li>
-                            <li><a href="#"><strong>Mail: </strong>1612599@student.hcmus.edu.vn</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><strong>Address: </strong>
-                                <div>
-                                    227, Nguyễn Văn Cừ, P4, Q5,<br />
-                                    Thành Phố Hồ Chí Minh, Việt Nam
-                                </div>
-                            </a></li>
+            <div class="top-bar-right">
+                <div class="header-language">
+                    <div class="tanajil-language tanajil-dropdown">
+                        <a href="#" class="active language-toggle" data-tanajil="tanajil-dropdown">
+									<span>
+										English (USD)
+									</span>
+                        </a>
+                        <ul class="tanajil-submenu">
+                            <li class="switcher-option">
+                                <a href="#">
+											<span>
+												French (EUR)
+											</span>
+                                </a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="#">
+											<span>
+												Japanese (JPY)
+											</span>
+                                </a>
+                            </li>
                         </ul>
+                    </div>
+                </div>
+                <ul class="header-user-links">
+                    <li>
+                        <a href="/login">Login or Register</a>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
-                    </div>
-                    &nbsp;
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+    </div>
+    <div class="container">
+        <div class="main-header">
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 col-md-3 col-xs-7 col-ts-12 header-element">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="assets/beam_saber_images/beamsaber_store_logo.png" alt="img" style="width: 80px; height: 80px;">
+                            <label style="font-size: 20px;"> Beamsaber store </label>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-8 col-md-6 col-xs-5 col-ts-12">
+                    <div class="block-search-block">
+                        <form class="form-search form-search-width-category">
+                            <div class="form-content">
+                                <div class="category">
+                                    <select title="cate" data-placeholder="All Categories" class="chosen-select"
+                                            tabindex="1">
+                                        <option value="United States">Accessories</option>
+                                        <option value="United Kingdom">Prebuild</option>
+                                        <option value="Afghanistan">Tool</option>
+                                        <option value="Aland Islands">Box</option>
+                                        <option value="Albania">New Arrivals</option>
+                                        <option value="Algeria">Delcans</option>
+                                    </select>
+                                </div>
+                                <div class="inner">
+                                    <input type="text" class="input" name="s" value="" placeholder="Search here">
+                                </div>
+                                <button class="btn-search" type="submit">
+                                    <span class="icon-search"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-3 col-xs-12 col-ts-12">
+                    <div class="header-control">
+                        <div class="block-minicart tanajil-mini-cart block-header tanajil-dropdown">
+                            <a href="javascript:void(0);" class="shopcart-icon" data-tanajil="tanajil-dropdown">
+                                Cart
+                                <span class="count">
+										0
+										</span>
+                            </a>
+                            <div class="shopcart-description tanajil-submenu">
+                                <div class="content-wrap">
+                                    <h3 class="title">Shopping Cart</h3>
+                                    <ul class="minicart-items">
+                                        <li class="product-cart mini_cart_item">
+                                            <a href="#" class="product-media">
+                                                <img src="assets\beam_saber_images\HG barbartos.png" alt="img">
+                                            </a>
+                                            <div class="product-details">
+                                                <h5 class="product-name">
+                                                    <a href="#">HG Barbatos</a>
+                                                </h5>
+                                                <div class="variations">
+															<span class="attribute_color">
+																<a href="#">White</a>
+															</span>
+                                                    ,
+                                                    <span class="attribute_size">
+																<a href="#">High grade</a>
+															</span>
+                                                </div>
+                                                <span class="product-price">
+															<span class="price">
+																<span>$45</span>
+															</span>
+														</span>
+                                                <span class="product-quantity">
+															(x1)
+														</span>
+                                                <div class="product-remove">
+                                                    <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="product-cart mini_cart_item">
+                                            <a href="#" class="product-media">
+                                                <img src="assets/images/item-minicart-2.jpg" alt="img">
+                                            </a>
+                                            <div class="product-details">
+                                                <h5 class="product-name">
+                                                    <a href="#">Soap Wheels Solutions</a>
+                                                </h5>
+                                                <div class="variations">
+															<span class="attribute_color">
+																<a href="#">Black</a>
+															</span>
+                                                    ,
+                                                    <span class="attribute_size">
+																<a href="#">300ml</a>
+															</span>
+                                                </div>
+                                                <span class="product-price">
+															<span class="price">
+																<span>$45</span>
+															</span>
+														</span>
+                                                <span class="product-quantity">
+															(x1)
+														</span>
+                                                <div class="product-remove">
+                                                    <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="product-cart mini_cart_item">
+                                            <a href="#" class="product-media">
+                                                <img src="assets/images/item-minicart-3.jpg" alt="img">
+                                            </a>
+                                            <div class="product-details">
+                                                <h5 class="product-name">
+                                                    <a href="#">Wheels Solutions Soap</a>
+                                                </h5>
+                                                <div class="variations">
+															<span class="attribute_color">
+																<a href="#">Black</a>
+															</span>
+                                                    ,
+                                                    <span class="attribute_size">
+																<a href="#">300ml</a>
+															</span>
+                                                </div>
+                                                <span class="product-price">
+															<span class="price">
+																<span>$45</span>
+															</span>
+														</span>
+                                                <span class="product-quantity">
+															(x1)
+														</span>
+                                                <div class="product-remove">
+                                                    <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="subtotal">
+                                        <span class="total-title">Subtotal: </span>
+                                        <span class="total-price">
+													<span class="Price-amount">
+														$135
+													</span>
+												</span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="button button-viewcart" href="shoppingcart.html">
+                                            <span>View Bag</span>
+                                        </a>
+                                        <a href="/check_out" class="button button-checkout">
+                                            <span>Checkout</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-account block-header tanajil-dropdown">
+                            <a href="javascript:void(0);" data-tanajil="tanajil-dropdown">
+                                <span class="flaticon-user"></span>
+                            </a>
+                            <div class="header-account tanajil-submenu">
+                                <div class="header-user-form-tabs">
+                                    <ul class="tab-link">
+                                        <li class="active">
+                                            <a data-toggle="tab" aria-expanded="true" href="#header-tab-login">Login</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" aria-expanded="true" href="#header-tab-rigister">Register</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-container">
+                                        <div id="header-tab-login" class="tab-panel active">
+                                            <form method="post" class="login form-login">
+                                                <p class="form-row form-row-wide">
+                                                    <input type="email" placeholder="Email" class="input-text">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="password" class="input-text" placeholder="Password">
+                                                </p>
+                                                <p class="form-row">
+                                                    <label class="form-checkbox">
+                                                        <input type="checkbox" class="input-checkbox">
+                                                        <span>
+																	Remember me
+																</span>
+                                                    </label>
+                                                    <input type="submit" class="button" value="Login">
+                                                </p>
+                                                <p class="lost_password">
+                                                    <a href="#">Lost your password?</a>
+                                                </p>
+                                            </form>
+                                        </div>
+                                        <div id="header-tab-rigister" class="tab-panel">
+                                            <form method="post" class="register form-register">
+                                                <p class="form-row form-row-wide">
+                                                    <input type="email" placeholder="Email" class="input-text">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="password" class="input-text" placeholder="Password">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="submit" class="button" value="Register">
+                                                </p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="menu-bar mobile-navigation menu-toggle" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav-container rows-space-20">
+        <div class="container">
+            <div class="header-nav-wapper main-menu-wapper">
+                <div class="vertical-wapper block-nav-categori">
+                    <div class="block-title">
+							<span class="icon-bar">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+                        <span class="text">All Categories</span>
+                    </div>
+                    <div class="block-content verticalmenu-content">
+                        <ul class="tanajil-nav-vertical vertical-menu tanajil-clone-mobile-menu">
+                            <li class="menu-item">
+                                <a href="#" class="tanajil-menu-item-title" title="New Arrivals">New Arrivals</a>
+                            </li>
+                            <li class="menu-item">
+                                <a title="Hot Sale" href="#" class="tanajil-menu-item-title">Hot Sale</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a title="Accessories" href="#" class="tanajil-menu-item-title">Accessories</a>
+                                <span class="toggle-submenu"></span>
+                                <ul role="menu" class=" submenu">
+                                    <li class="menu-item">
+                                        <a title="Popular" href="#" class="tanajil-item-title">Popular</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a title="Interior" href="#" class="tanajil-item-title">Prebuild</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a title="New Arrivals" href="#" class="tanajil-item-title">New Arrivals</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a title="Accessories" href="#" class="tanajil-item-title">Accessories</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a title="Display Case" href="#" class="tanajil-item-title">Display Case</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a title="Prebuild" href="#" class="tanajil-menu-item-title">Prebuild</a>
+                            </li>
+                            <li class="menu-item">
+                                <a title="Tool" href="#" class="tanajil-menu-item-title">Tool</a>
+                            </li>
+                            <li class="menu-item">
+                                <a title="MiniFigure" href="#" class="tanajil-menu-item-title">MiniFigure</a>
+                            </li>
+                            <li class="menu-item">
+                                <a title="Option Part" href="#" class="tanajil-menu-item-title">Option Part</a>
+                            </li>
+                            <li class="menu-item">
+                                <a title="Decal" href="#" class="tanajil-menu-item-title">Decal</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <div class="container-wapper">
+                        <ul class="tanajil-clone-mobile-menu tanajil-nav main-menu " id="menu-main-menu">
+                            <li class="menu-item  menu-item-has-children">
+                                <a href="index-2.html" class="tanajil-menu-item-title" title="Home">Home</a>
+                                <span class="toggle-submenu"></span>
+                                <ul class="submenu">
+                                    <li class="menu-item">
+                                        <a href="/">Home 01</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Home 02</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Home 03</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="gridproducts.html" class="tanajil-menu-item-title" title="Shop">Product</a>
+                                <span class="toggle-submenu"></span>
+                                <ul class="submenu">
+                                    <li class="menu-item">
+                                        <a href="/product">All Product</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="gridproducts_leftsidebar.html">Grid Left sidebar</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="gridproducts_bannerslider.html">Grid Bannerslider</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="listproducts.html">List</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item  menu-item-has-children item-megamenu">
+                                <a href="#" class="tanajil-menu-item-title" title="Pages">Pages</a>
+                                <span class="toggle-submenu"></span>
+                                <div class="submenu mega-menu menu-page">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 menu-page-item">
+                                            <div class="tanajil-custommenu default">
+                                                <h2 class="widgettitle">Shop Pages</h2>
+                                                <ul class="menu">
+                                                    <li class="menu-item">
+                                                        <a href="/cart">Shopping Cart</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="/check_out">Checkout</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="/contact">Contact us</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="/404_not_found">404</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="/login">Login/Register</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 menu-page-item">
+                                            <div class="tanajil-custommenu default">
+                                                <h2 class="widgettitle">Product</h2>
+                                                <ul class="menu">
+                                                    <li class="menu-item">
+                                                        <a href="productdetails-fullwidth.html">Product Fullwidth</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="productdetails-leftsidebar.html">Product left
+                                                            sidebar</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="productdetails-rightsidebar.html">Product right
+                                                            sidebar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 menu-page-item">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 menu-page-item">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item  menu-item-has-children">
+                                <a href="inblog_right-siderbar.html" class="tanajil-menu-item-title"
+                                   title="Blogs">Blogs</a>
+                                <span class="toggle-submenu"></span>
+                                
+                                <!--
+                                    <ul class="submenu">
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#" class="tanajil-menu-item-title" title="Blog Style">Blog Style</a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="submenu">
+                                            <li class="menu-item">
+                                                <a href="bloggrid.html">Grid</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="bloglist.html">List</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="bloglist-leftsidebar.html">List Sidebar</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#" class="tanajil-menu-item-title" title="Post Layout">Post Layout</a>
+                                        <span class="toggle-submenu"></span>
+                                        <ul class="submenu">
+                                            <li class="menu-item">
+                                                <a href="inblog_left-siderbar.html">Left Sidebar</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="inblog_right-siderbar.html">Right Sidebar</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
-    {{{ body }}}
-    
-
-    <!--Footer -->
-    <div class="row">
-        <div class="col-md-4">
-            <strong>Send a Quick Query </strong>
-            <hr>
-            <form>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" required="required" placeholder="Name">
+                                /-->
+                                
+                            </li>
+                            <li class="menu-item">
+                                <a href="/about_us" class="tanajil-menu-item-title" title="About">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-device-mobile">
+    <div class="wapper">
+        <div class="item mobile-logo">
+            <div class="logo">
+                <a href="#">
+                    <img src="beam_saber_images\beamsaber_store_logo.png" alt="img">
+                </a>
+            </div>
+        </div>
+        <div class="item item mobile-search-box has-sub">
+            <a href="#">
+						<span class="icon">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</span>
+            </a>
+            <div class="block-sub">
+                <a href="#" class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+                <div class="header-searchform-box">
+                    <form class="header-searchform">
+                        <div class="searchform-wrap">
+                            <input type="text" class="search-input" placeholder="Enter keywords to search...">
+                            <input type="submit" class="submit button" value="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="item mobile-settings-box has-sub">
+            <a href="#">
+						<span class="icon">
+							<i class="fa fa-cog" aria-hidden="true"></i>
+						</span>
+            </a>
+            <div class="block-sub">
+                <a href="#" class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+                <div class="block-sub-item">
+                    <h5 class="block-item-title">Currency</h5>
+                    <form class="currency-form tanajil-language">
+                        <ul class="tanajil-language-wrap">
+                            <li class="active">
+                                <a href="#">
+											<span>
+												English (USD)
+											</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+											<span>
+												French (EUR)
+											</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+											<span>
+												Japanese (JPY)
+											</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="item menu-bar">
+            <a class=" mobile-navigation  menu-toggle" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- END OF HEADER /-->
+ {{{ body }}}
+<!-- FOOTER /-->
+<footer class="footer style7">
+    <div class="container">
+        <div class="container-wapper">
+            <div class="row">
+                <div class="box-footer col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="widget-box">
+                        <div class="single-img">
+                            <a href="/">
+                            <img src="assets/beam_saber_images/beamsaber_store_logo.png" alt="img" style="width: 80px; height: 80px;">
+                            <label style="font-size: 20px; font-corlor: wheat"> Beamsaber store </label></a>
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="#"><span class="flaticon-placeholder"></span>45 Grand Central Terminal New
+                                    York,NY 1017 United State USA</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#"><span class="fa fa-phone"></span>(+123) 456 789 - (+123) 666 888</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#"><span class="fa fa-envelope-o"></span>CelestialBeings@Co.uk</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#"><span class="flaticon-clock"></span>Mon-Sat 9:00pm - 5:00pm Sun : Closed</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                    <div class="tanajil-custommenu default">
+                        <h2 class="widgettitle">Quick Menu</h2>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="#">New arrivals</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Gunpla Lore</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Prebuild</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Reddit Page</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">News</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                    <div class="tanajil-custommenu default">
+                        <h2 class="widgettitle">Information</h2>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/check_out">Track Order</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Delivery</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/contact">Contact Us</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Return</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="tanajil-newsletter style1">
+                        <div class="newsletter-head">
+                            <h3 class="title">Newsletter</h3>
+                        </div>
+                        <div class="newsletter-form-wrap">
+                            <div class="list">
+                                Get notified of new products, limited releases, and more.
+                            </div>
+                            <input type="email" class="input-text email email-newsletter"
+                                   placeholder="Your email letter">
+                            <button class="button btn-submit submit-newsletter">SUBSCRIBE</button>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" required="required" placeholder="Email address">
+                    <div class="tanajil-socials">
+                        <ul class="socials">
+                            <li>
+                                <a href="#" class="social-item" target="_blank">
+                                    <i class="icon fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-item" target="_blank">
+                                    <i class="icon fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-item" target="_blank">
+                                    <i class="icon fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 border-custom">
+                    <span></span>
+                </div>
+            </div>
+            <div class="footer-end">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="coppyright">
+                            <a href="templateshub.net">Templateshub</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="tanajil-payment">
+                            <img src="assets/images/payments.png" alt="img">
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <textarea name="message" id="message" required="required" class="form-control" rows="3" placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Submit Request</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="col-md-4">
-            <strong>Our Location</strong>
-            <hr>
-            <p>
-                227, Nguyễn Văn Cừ, P4, Q5,<br /> Thành Phố Hồ Chí Minh, Việt Nam<br /> Call: +84-056-3568-045<br> Email: 1612599@student.hcmus.edu.vn<br>
-            </p>
-
-            2014 www.yourdomain.com | All Right Reserved
-        </div>
-        <div class="col-md-4 social-box">
-            <strong>We are Social </strong>
-            <hr>
-            <a href="#"><i class="fa fa-facebook-square fa-3x "></i></a>
-            <a href="#"><i class="fa fa-twitter-square fa-3x "></i></a>
-            <a href="#"><i class="fa fa-google-plus-square fa-3x c"></i></a>
-            <a href="#"><i class="fa fa-linkedin-square fa-3x "></i></a>
-            <a href="#"><i class="fa fa-pinterest-square fa-3x "></i></a>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-            </p>
+            </div>
         </div>
     </div>
-    <hr>
+</footer>
+<div class="footer-device-mobile">
+    <div class="wapper">
+        <div class="footer-device-mobile-item device-home">
+            <a href="index-2.html">
+					<span class="icon">
+						<i class="fa fa-home" aria-hidden="true"></i>
+					</span>
+                Home
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-wishlist">
+            <a href="#">
+					<span class="icon">
+						<i class="fa fa-heart" aria-hidden="true"></i>
+					</span>
+                Wishlist
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-cart">
+            <a href="#">
+					<span class="icon">
+						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+						<span class="count-icon">
+							0
+						</span>
+					</span>
+                <span class="text">Cart</span>
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-user">
+            <a href="login.html">
+					<span class="icon">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</span>
+                Account
+            </a>
+        </div>
     </div>
-    <!-- /.col -->
-    <div class="col-md-12 end-box ">
-        &copy; 2014 | &nbsp; All Rights Reserved | &nbsp; www.yourdomain.com | &nbsp; 24x7 support | &nbsp; Email us: info@yourdomain.com
-    </div>
-    <!-- /.col -->
-    <!--Footer end -->
-    <!--Core JavaScript file  -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <!--bootstrap JavaScript file  -->
-    <script src="js/bootstrap.js"></script>
-    <!--Slider JavaScript file  -->
-    <script src="ItemSlider/js/modernizr.custom.63321.js"></script>
-    <script src="ItemSlider/js/jquery.catslider.js"></script>
-    <script>
-        $(function() {
-
-            $('#mi-slider').catslider();
-
-        });
-    </script>
+</div>
+<a href="#" class="backtotop">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/jquery.plugin-countdown.min.js"></script>
+<script src="assets/js/jquery-countdown.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/jquery.scrollbar.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/mobile-menu.js"></script>
+<script src="assets/js/chosen.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/jquery.elevateZoom.min.js"></script>
+<script src="assets/js/jquery.actual.min.js"></script>
+<script src="assets/js/fancybox/source/jquery.fancybox.js"></script>
+<script src="assets/js/lightbox.min.js"></script>
+<script src="assets/js/owl.thumbs.min.js"></script>
+<script src="assets/js/jquery.scrollbar.min.js"></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
+<script src="assets/js/frontend-plugin.js"></script>
 </body>
 
-</html>
+
+
+
+
+

@@ -3,7 +3,6 @@ const Sequelize = require('sequelize');
 const initModels = require ("./init-models");
 
 
-// we will invoke init model here so when the app start it just have to creatate this one time only
 
 
 
@@ -22,5 +21,6 @@ const sequelize = new Sequelize(
 
 module.exports = {
     sequelize,
+    // we will invoke init model here so when the app start it just have to creatate this one time only
     models : initModels(sequelize),
 };
