@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+// define the controller of this router
+const productController = require("./product-controller")
+
 /* GET product page. */
-router.get('/', function(req, res, next) {
-    res.render('./product/product', { title: 'beamsaber' });
-});
+router.get('/', productController.listOfProduct);
 
 module.exports = router;
