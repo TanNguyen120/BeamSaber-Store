@@ -10,6 +10,8 @@ require("dotenv").config();
 // Try to connect to data base
 const { sequelize } = require("../models");
 
+
+// at the start of the app we invoke the sequelize function which can connect to data base with the authenticate function.
 sequelize
     .authenticate()
     .then(() => {

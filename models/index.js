@@ -1,6 +1,15 @@
-const Sequelize = require('sequelize')
-    // Option 3: Passing parameters separately (other dialects)
 
+const Sequelize = require('sequelize');
+const initModels = require ("./init-models");
+
+
+// we will invoke init model here so when the app start it just have to creatate this one time only
+
+
+
+
+
+// Option 3: Passing parameters separately (other dialects)
 // We read info from .env file for flexibility
 const sequelize = new Sequelize(
     process.env.DB_DATABASE,
@@ -12,5 +21,6 @@ const sequelize = new Sequelize(
 );
 
 module.exports = {
-    sequelize
-}
+    sequelize,
+    models : initModels(sequelize),
+};
