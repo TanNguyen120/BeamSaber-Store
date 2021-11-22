@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('./contact/index', { title: 'beamsaber' });
+    res.render('./admin/index', { layout: "./admin/adminlayout.hbs" ,title: 'beamsaber' });
 });
 
 module.exports = router;

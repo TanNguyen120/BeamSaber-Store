@@ -13,13 +13,11 @@ const usersRouter = require("./routes/users");
 const loginRouter = require("./components/login/index");
 
 // define admin router
-const adminRouter = require("./routes/admin");
+const adminRouter = require("./components/admin/index");
 
 // define user router
 const usersInforRouter = require("./routes/usersInfo");
 
-// define signup router
-const signupRouter = require("./routes/signup");
 
 // define product router in component folder
 const productRouter = require("./components/product/index");
@@ -40,37 +38,36 @@ const shopingCartRouter = require("./components/shoping_cart")
 const aboutUsRouter = require("./components/shop_owner_details")
 
 
+
 ////////////////////////////////////////////////////////////////////////////////////
 const app = express();
 
 // view engine setup
+
+app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
+
 app.set("view engine", "hbs");
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 // all project middle ware are put in here
 ////////////////////////////////////////////////////////////////////////////////////
+
 // middleware for login task
 app.use("/login", loginRouter);
-
-
 
 // middleware for adminIndexPage
 app.use("/admin", adminRouter);
 
 // middleware for userInfor task
 app.use("/user-info", usersInforRouter);
-
-// middleware for signup page
-app.use("/signup", signupRouter);
 
 // middleware for productlist task
 app.use("/product", productRouter);

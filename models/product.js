@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(45),
       allowNull: true
     },
-    theme: {
+    grade: {
       type: DataTypes.STRING(20),
       allowNull: true
     }

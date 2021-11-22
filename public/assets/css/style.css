@@ -11122,3 +11122,17 @@ a:hover, a:focus, a:active,
 .product-item .product-inner img {
 	width: 100%;
 }
+
+
+
+/*
+*********************************************************************************************************
+								Beamsaber store style
+*********************************************************************************************************
+*/
+
+#product-describe{
+	font-size: 30px;
+	color: darkslategray;
+	font-weight: 450px;
+}

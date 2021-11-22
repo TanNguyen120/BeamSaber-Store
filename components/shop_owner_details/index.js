@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('./web_owner_details', { title: 'beamsaber' });
+    res.render('about_us_info/index', { title: 'beamsaber' });
 });
 
 module.exports = router;
