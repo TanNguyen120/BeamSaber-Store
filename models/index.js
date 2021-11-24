@@ -21,6 +21,6 @@ const sequelize = new Sequelize(
 
 module.exports = {
     sequelize,
-    // we will invoke init model here so when the app start it just have to creatate this one time only
+    // we will invoke init model here so when the app start it just have to create it here
     models : initModels(sequelize),
 };

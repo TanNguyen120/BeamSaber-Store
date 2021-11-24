@@ -11136,3 +11136,12 @@ a:hover, a:focus, a:active,
 	color: darkslategray;
 	font-weight: 450px;
 }
+
+
+#filter_button{
+	background-color: transparent;
+	color: grey;
+	border-color: transparent;
+	border: transparent;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+}

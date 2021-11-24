@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;display=swap"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
@@ -82,14 +84,14 @@
                 </div>
                 <div class="col-lg-7 col-sm-8 col-md-6 col-xs-5 col-ts-12">
                     <div class="block-search-block">
-                        <form class="form-search form-search-width-category">
+                        <form class="form-search form-search-width-category" action="/product/search" method="POST">
                             <div class="form-content">
                                 <div class="category">
                                     <select title="cate" data-placeholder="All Categories" class="chosen-select"
                                             tabindex="1">
-                                        <option value="United States">Accessories</option>
-                                        <option value="United Kingdom">Prebuild</option>
-                                        <option value="Afghanistan">Tool</option>
+                                        <option name="product_name" value="United States">ProductName</option>
+                                        <option value="United Kingdom">Grade</option>
+                                        <option value="Afghanistan">Price Less Than</option>
                                         <option value="Aland Islands">Box</option>
                                         <option value="Albania">New Arrivals</option>
                                         <option value="Algeria">Delcans</option>
@@ -419,10 +421,10 @@
                                                 <a href="inblog_left-siderbar.html">Edit Product Data</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="inblog_right-siderbar.html">Delete Product</a>
+                                                <a href="/admin/delete_product">Delete Product</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="inblog_right-siderbar.html">Add New Product</a>
+                                                <a href="/admin/add_new_product">Add New Product</a>
                                             </li>
                                         </ul>
                                     </li>

@@ -6,6 +6,8 @@ const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const bodyParser = require('body-parser');
+
 
 // all specific project router go here
 /////////////////////////////////////////////////////////////////////////////////////
@@ -32,10 +34,10 @@ const errorRouter = require("./components/404page/index");
 const orderDetailsRouter = require("./components/order_details/index");
 
 // define shoping cart router
-const shopingCartRouter = require("./components/shoping_cart")
+const shopingCartRouter = require("./components/shoping_cart");
 
 // define about us page router
-const aboutUsRouter = require("./components/shop_owner_details")
+const aboutUsRouter = require("./components/shop_owner_details");
 
 
 
@@ -84,7 +86,6 @@ app.use("/check_out", orderDetailsRouter);
 // middleware for shopingcart
 app.use("/cart",shopingCartRouter);
 
-
 // middleware for about us page
 app.use("/about_us",aboutUsRouter);
 ////////////////////////////////////////////////////////////////////////////////////
@@ -93,6 +94,8 @@ app.use("/about_us",aboutUsRouter);
 app.use(function(req, res, next) {
     next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

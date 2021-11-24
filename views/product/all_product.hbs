@@ -5,7 +5,7 @@
         <div class="breadcrumb-trail breadcrumbs">
           <ul class="trail-items breadcrumb">
             <li class="trail-item trail-begin">
-              <a href="index-2.html">Home</a>
+              <a href="/">Home</a>
             </li>
             <li class="trail-item trail-end active">
               Grid Products
@@ -51,13 +51,31 @@
                 <option value="5">Sort by price: low to high</option>
               </select>
             </form>
+            <form class="filter-choice select-form" id="select form" method="GET" action="/product/filter_grade">
+              <span class="title">Filter by</span>
+              <select
+                id="filter_select"
+                title="Filter by"
+                data-placeholder="Grade"
+                class="chosen-select"
+                name="grade_filter"
+              >
+                <option name="dc" value="dc">Grade: dc</option>
+                <option name="batman" value="batman">Grade: batman</option>
+                <option name="city" value="city">Grade: city</option>
+                <option name="custom" value="custom">Grade: custom</option>
+              </select>
+              <button type="submit" class="btn btn-success" id="filter_button">
+                <i class="fa fa-filter" aria-hidden="true"></i>
+              </button>
+            </form>
             <div class="grid-view-mode">
               <div class="inner">
-                <a href="listproducts.html" class="modes-mode mode-list">
+                <a href="?page=0&items=1" class="modes-mode mode-list">
                   <span></span>
                   <span></span>
                 </a>
-                <a href="gridproducts.html" class="modes-mode mode-grid active">
+                <a href="?page=0" class="modes-mode mode-grid active">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -66,6 +84,7 @@
               </div>
             </div>
           </div>
+          <div id="currpage" style="opacity: 0"> {{pagepass}} </div>
           <ul class="row list-products auto-clear equal-container product-grid">
             {{#each productList}}
               <li
@@ -85,7 +104,7 @@
                     <div class="thumb-inner">
                       <a href="/product/details?id= {{product_id}}" >
                         <img
-                          src="assets\\beam_saber_images\HG barbartos.png"
+                          src="\assets\beam_saber_images\HG barbartos.png"
                           alt="img"
                         />
                       </a>
@@ -103,10 +122,12 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </di
                   <div class="product-info">
                     <h5 class="product-name product_title">
-                      <a href="#">{{name}}</a>
+                      <a href="/product/details?id = {{product_id}}" >
+                        {{name}}
+                      </a>
                     </h5>
                     <div class="group-info">
                       <div class="stars-rating">
@@ -126,9 +147,16 @@
                         </ins>
                       </div>
                     </div>
-                    <div> <p>
-                      id= {{ product_id }}
-                    </p> </div>
+                    <div> 
+                      <p>
+                        Grade = {{ grade }}
+                      </p> 
+                    </div>
+                    <div>
+                      <p>
+                        id = {{product_id}}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -136,17 +164,21 @@
           </ul>
           <div class="pagination clearfix style2">
             <div class="nav-link">
-              <a href="prevpage" class="page-numbers"><i
+              <div  class="page-numbers" id="prev_page"><i
                   class="icon fa fa-angle-left"
                   aria-hidden="true"
-                ></i></a>
-              <a href="?page=1" class="page-numbers current">1</a>
+                ></i>
+              </div>
+              <a href="?page=1" class="page-numbers">1</a>
               <a href="?page=2" class="page-numbers">2</a>
               <a href="?page=3" class="page-numbers">3</a>
-              <a href="?nextpage" class="page-numbers"><i
+              <a href="?page=4" class="page-numbers">4</a>
+              <a href="?page=5" class="page-numbers">5</a>
+              <div class="page-numbers" id="next_page"><i
                   class="icon fa fa-angle-right"
                   aria-hidden="true"
-                ></i></a>
+                ></i>
+              </div>
             </div>
           </div>
         </div>

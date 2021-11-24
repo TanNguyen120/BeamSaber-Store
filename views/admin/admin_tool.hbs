@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mx-auto">
+      <div class="row">
+        <h1>Please choose product you want to delete !!!!</h1>
+      </div>
+      <div class="row">
+        <form method="POST" action="/admin/delete_product">
+          <div class="form-group">
+            <label for="id-product" style="font-size: 20px;">Product-id</label>
+            <input
+              type="text"
+              name="product_id"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+          </div>
+          <button type="submit" class="btn btn-success">
+            <i class="fa fa-arrow-circle-right fa-lg"></i>
+            Find
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
