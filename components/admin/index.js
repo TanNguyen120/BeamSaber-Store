@@ -3,6 +3,8 @@ const express = require("express");
 const { productDetails } = require("../product/product_controller");
 const router = express.Router();
 const adminControler = require("./admin_control");
+const bodyParser = require("body-parser");
+
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -13,16 +15,19 @@ router.get("/", function (req, res, next) {
 });
 
 //------------------------------- render admin tool page -----------------------------------------
-router.get("/delete_product", function (req, res, next) {
-  res.render("./admin/admin_tool");
+router.get("/product/s", function (req, res, next) {
+  res.render("./admin/admin_form_find");
 });
 
 //-------------------------------- get information from form -------------------------------------------
-router.post("/delete_product", adminControler.productDetails);
+router.post("/product/s", adminControler.productDetails);
+
 
 //
-router.get("/add_new_product", function (req, res) {
+router.get("/addproduct", function (req, res) {
   res.render("./admin/add_product");
 });
+
+router.post("/addproduct", adminControler.addNewProduct);
 
 module.exports = router;

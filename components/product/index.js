@@ -9,30 +9,21 @@ const productController = require("./product_controller");
 router.get("/", productController.listOfProduct);
 
 
+//--------------- Handle filter by category ----------------------------------------------------------------
+
+router.get("/grade/:grade",productController.gradeFilter);
+
 
 //----------- rout to product details if req product details -----------------------------------------------
 
 router.get("/details", productController.productDetails);
 
 
-//---------------- Handle find grade -----------------------------------------------------------------------
-router.get("/filter_grade",productController.productFindGrade);
+//---------------- Handle find grade with pagniation ------------------------------------------------------
+router.get("/filter", productController.searchProductWithCond);
 
 
 
 //----------------rout to find price -----------------------------------------------------------------------
-router.get("/find_price" , productController.productFindLessThanPrice);
-
-
-//---------------------- handle search request with another router -----------------------------------------
-
-router.get("/search",productController.searchProductwCond);
-
-//-------------------------- handle search with name -------------------------------------------------------
-
-
+//router.get("/find_price" , productController.productFindLessThanPrice);
 module.exports = router;
-
-
-
-

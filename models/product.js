@@ -25,6 +25,10 @@ module.exports = function(sequelize, DataTypes) {
     grade: {
       type: DataTypes.STRING(20),
       allowNull: true
+    },
+    link_picture: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,

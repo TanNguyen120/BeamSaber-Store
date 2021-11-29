@@ -1,108 +1,72 @@
-<div class="container" style="border: 5px solid">
-  <div class="row" style="margin-left: 10px;">
+<div class="container" style="bor">
+  <div class="row">
     <div class="col-sm-6 mx-auto">
       <div class="row">
-        <div class="col-6">
-          <h1 style="color: lightslategray;"> Please fill all the information in the form below</h1>
-        </div>
+        <h1>Please Fill in all the information below !!!!</h1>
       </div>
-      <div class="row" style="border-bottom: 1px solid;">
-        <form method="POST" action="/admin/delete_product">
+      <div class="row">
+        <form method="POST" action="/admin/addproduct">
           <div class="form-group">
-            <div class="row">
-              <label
-                for="id-product"
-                style="font-size: 20px;"
-              >Product-id</label>
-              <input
-                type="text"
-                name="product_id"
-                class="form-control"
-                id="Id_text"
-                placeholder="ID"
-                style="size: 20px;"
-              />
-            </div>
-            <div class="row">
-              <label
-                for="product_name"
-                style="font-size: 20px;"
-              >Product Name</label>
-              <input
-                type="text"
-                name="product_name"
-                class="form-control"
-                id="name_text"
-                placeholder="Product Name"
-                style="size: 20px;"
-              />
-            </div>
-            <div class="row">
-              <label
-                for="Grade"
-                style="font-size: 20px;"
-              >Grade</label>
-              <input
-                type="text"
-                name="Grade"
-                class="form-control"
-                id="grade_text"
-                placeholder="ID"
-                style="size: 20px;"
-              />
-            </div>
-            <div class="row">
-              <label
-                for="description"
-                style="font-size: 20px;"
-              >Description</label>
-              <input
-                type="text"
-                name="description"
-                class="form-control"
-                id="description_text"
-                placeholder="ID"
-                style="size: 20px;"
-              />
-            </div>
-            <div class="row">
-              <label
-                for="price"
-                style="font-size: 20px;"
-              >Price</label>
-              <input
-                type="text"
-                name="price"
-                class="form-control"
-                id="price_text"
-                placeholder="ID"
-                style="size: 20px;"
-              />
-            </div>
-             <div class="row">
-              <label
-                for="universe"
-                style="font-size: 20px;"
-              >Universe</label>
-              <input
-                type="text"
-                name="universe"
-                class="form-control"
-                id="universe_text"
-                placeholder="ID"
-                style="size: 20px;"
-              />
-            </div>
-
+            <label for="id-product" style="font-size: 20px;">Product-id: </label>
+            <input
+              type="text"
+              name="product_id"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+             <label for="id-product" style="font-size: 20px;">Name: </label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+             <label for="id-product" style="font-size: 20px;">Grade: </label>
+            <input
+              type="text"
+              name="grade"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+            <label for="id-product" style="font-size: 20px;">Description: </label>
+            <input
+              type="text"
+              name="description"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+            <label for="id-product" style="font-size: 20px;">Price: </label>
+            <input
+              type="text"
+              name="price"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
+            <label for="id-product" style="font-size: 20px;">Universe: </label>
+            <input
+              type="text"
+              name="universe"
+              class="form-control"
+              id="Id_text"
+              placeholder="ID"
+              style="size: 20px;"
+            />
           </div>
+          <button type="submit" class="btn btn-success">
+            ADD
+          </button>
         </form>
-      </div>
-      <div class="row" style="margin-bottom: 10px;">
-        <div class="col-sm-4 mr-4 ml-auto">
-          <button style="margin-left: 550px; margin-top: 15px"> ADD </button>
-        </div>
       </div>
     </div>
   </div>
-
 </div>
