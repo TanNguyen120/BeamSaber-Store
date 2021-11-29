@@ -16,7 +16,7 @@ router.get("/grade/:grade",productController.gradeFilter);
 
 //----------- rout to product details if req product details -----------------------------------------------
 
-router.get("/details", productController.productDetails);
+router.get("/:product_name", productController.productDetails);
 
 
 //---------------- Handle find grade with pagniation ------------------------------------------------------
