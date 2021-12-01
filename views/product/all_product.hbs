@@ -59,19 +59,10 @@
                 class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1"
               >
                 <div class="product-inner equal-element">
-                  <div class="product-top">
-                    <div class="flash">
-                      <span class="onnew">
-                        <span class="text">
-                          new
-                        </span>
-                      </span>
-                    </div>
-                  </div>
                   <div class="product-thumb">
                     <div class="thumb-inner">
-                      <a href="/product/{{name}}/?id={{product_id}}" >
-                        <img
+                      <a href="/product/{{name}}?id={{product_id}}">
+                        <img class="product_picture"
                           src="{{link_picture}}"
                           alt="img"
                         />
@@ -82,7 +73,7 @@
                             <a href="#">Add to Wishlist</a>
                           </div>
                         </div>
-                        <a href="#" class="button quick-wiew-button">Quick View</a>
+                        <a href="/product/{{name}}?id={{product_id}}" class="button quick-wiew-button">Quick View</a>
                         <div class="loop-form-add-to-cart">
                           <button class="single_add_to_cart_button button">Add
                             to cart

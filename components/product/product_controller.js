@@ -82,15 +82,15 @@ exports.gradeFilter = async (req, res) => {
     const gradeCond = req.params.grade;
     console.log(" grade is: " + JSON.stringify(req.params));
     console.log("page is: " + page);
-    const productGradeList = await productService.findAllGrade(
+    const productList = await productService.findAllGrade(
         gradeCond, page
     );
-    if (productGradeList.length == 0) {
+    if (productList.length == 0) {
         res.status(404).end("no product found");
     }
     else {
-        res.render("./product/list_product_with_filter", {
-            productGradeList,
+        res.render("./product/all_product", {
+            productList,
             pagepass,
             filter: "grade",
         });

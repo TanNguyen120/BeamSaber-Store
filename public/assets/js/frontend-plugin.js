@@ -1064,6 +1064,145 @@ jQuery(document).ready(function($) {
     }
     //-------------------------------------------------------------------------------------------------------
 
+     //--------------------------------------- PAGINATION WITH FILTER IN QUERY STRING ------------------------------------
+
+     function pagesRender_filter() {
+        const pageArray = $("div.nav-link-filter> a");
+        const currrentPage = $("#currpageVar");
+        const pageNumberInt = parseInt(currrentPage.text());
+        const orderNumber = [-2, -1, 0, 1, 2];
+        const searchQuery = $("#filter_value").text();
+
+        // This is a loop that go through all element of pageItem class
+        if (pageNumberInt > 3) {
+            pageArray.each(function(i = 1, pages = $(this)) {
+                const page = $(this).text();
+                console.log("loop number: " + i);
+                console.log("item: " + page);
+
+                let changeto = pageNumberInt;
+                changeto = changeto + orderNumber[i];
+                console.log("change to: " + changeto);
+
+                // changing text and link
+                $(this).text(changeto);
+                $(this).attr("href", () => {
+                    const url = searchQuery+"&page=" + changeto;
+                    console.log("page change: " + url);
+                    return url;
+                });
+            });
+        }
+
+        pageArray.each(function(i = 1, pages = $(this)) {
+            const page = $(this).text();
+            console.log("loop number: " + i);
+            console.log("item: " + page);
+            if (parseInt(page) == parseInt(currrentPage.text())) {
+                console.log("found matching page: " + page + "|" + currrentPage.text());
+                $(this).toggleClass("current");
+                return false;
+            }
+            i++;
+        });
+    }
+
+    function pagination_toggle_current_page_filter() {
+        const pageItem = $("div.nav-link-filter > a");
+        const pageCurr = $("#currpage");
+
+        // This is a loop that go through all element of pageItem class
+        pageItem.each(function(i = 1, pages = $(this)) {
+            let pages_number = $(this).text();
+            console.log("loop number: " + i);
+            console.log("item: " + pages_number);
+
+            // Find the current page to toggle
+            if (parseInt(pages_number) == parseInt(pageCurr.text())) {
+                console.log(
+                    "found matching page: " + pages_number + " " + pageCurr.text()
+                );
+                $(this).toggleClass("current");
+                return;
+            }
+            i++;
+        });
+    }
+
+    function nextpage_click_filter() {
+        const pageItem = $("div.nav-link-filter > a");
+        const pageCurr = $("#currpageVar");
+        const next_page_button = $("#next_page");
+        const searchQuery = $("#filter_value").text();
+
+        // when click on next page button we will loop through all page => find current page => click on next page
+        next_page_button.click(() => {
+            const pageNumberInt = parseInt(pageCurr.text(), 10);
+
+            console.log("current page: " + pageNumberInt);
+
+            pageItem.each(function(i = 1, pages = $(this)) {
+                console.log("loop number : " + i);
+
+                // if page is full we have to make new pages array
+                if (i == 4) {
+                    console.log("page full");
+                    pageItem.each(function(j = 1, pages = $(this)) {
+                        let changeto = pageNumberInt;
+                        changeto = changeto + j;
+                        console.log("change to: " + changeto);
+
+                        // changing text and link
+                        $(this).text(changeto);
+                        $(this).attr("href", () => {
+                            const url = searchQuery+"&page=" + changeto;;
+                            console.log("page change: " + url);
+                            return url;
+                        });
+                    });
+                    return false;
+                }
+                let pages_number = $(this).text();
+                // Find the current page to click next page
+                if (parseInt(pages_number) == parseInt(pageCurr.text())) {
+                    const next_page = $(this).next();
+                    console.log("next page is: " + next_page.text());
+                    if (next_page.text() == "") {
+                        console.log("page full");
+                    } else {
+                        next_page[0].click();
+                        return false;
+                    }
+                }
+                i++;
+            });
+        });
+    }
+
+    function prevpage_click_filter() {
+        const pageItem = $("div.nav-link-filter > a");
+        const pageCurr = $("#currpageVar");
+        const prev_page_button = $("#prev_page");
+
+        // when click on next page button we will loop through all page => find current page => click on prev page
+        prev_page_button.click(() => {
+            pageItem.each(function(i = 1, pages = $(this)) {
+                let pages_number = $(this).text();
+                // Find the current page to click next page
+                if (parseInt(pages_number) == parseInt(pageCurr.text())) {
+                    const prev_page = $(this).prev();
+                    prev_page[0].click();
+                }
+                i++;
+            });
+        });
+    }
+
+
+    
+ 
+    // ------------------------------------------------------------------------------------------------------------------
+
 
 
     // --------------------------------------------------------
@@ -1103,5 +1242,10 @@ jQuery(document).ready(function($) {
     prevpage_click();
     nextpage_click();
     pagesRender();
-    pageination_toggle_current_page()
+    pageination_toggle_current_page();
+    pagesRender_filter();
+    pagination_toggle_current_page_filter();
+    nextpage_click_filter();
+    prevpage_click_filter();
+
 });

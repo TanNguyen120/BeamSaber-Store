@@ -6,10 +6,10 @@
         <div class="breadcrumb-trail breadcrumbs">
           <ul class="trail-items breadcrumb">
             <li class="trail-item trail-begin">
-              <a href="index-2.html">Home</a>
+              <a href="/">Home</a>
             </li>
             <li class="trail-item">
-              <a href="#">Interior</a>
+              <a href="/product">Products</a>
             </li>
             <li class="trail-item trail-end active">
               {{productDetails.name}}
@@ -52,46 +52,46 @@
                 >
                   <a
                     href="#"
-                    data-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                    data-zoom-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-zoom-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                     class="active"
                   >
                     <img
                       src="{{productDetails.link_picture}}"
-                      data-large-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                      data-large-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                       alt="img-1"
                     />
                   </a>
                   <a
                     href="#"
-                    data-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                    data-zoom-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-zoom-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                   >
                     <img
-                      src="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                      data-large-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                      src="{{productDetails.link_picture}}"
+                      data-large-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                       alt="img"
                     />
                   </a>
                   <a
                     href="#"
-                    data-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                    data-zoom-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-zoom-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                   >
                     <img
-                      src="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                      data-large-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                      src="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
+                      data-large-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                       alt="img"
                     />
                   </a>
                   <a
                     href="#"
-                    data-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                    data-zoom-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
+                    data-zoom-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                   >
                     <img
-                      src="\assets\beam_saber_images\product_imgs\default-boxart.png"
-                      data-large-image="\assets\beam_saber_images\product_imgs\default-boxart.png"
+                      src="{{productDetails.link_picture}}"
+                      data-large-image="\\\\assets\beam_saber_images\product_imgs\default-boxart.png"
                       alt="img"
                     />
                   </a>
@@ -99,7 +99,10 @@
               </div>
             </div>
             <div class="details-infor">
-              <h1 class="product-title" style="font-size: 30px; color:darkcyan" >
+              <h1
+                id="product_head_line"
+                class="product-title"
+              >
                 {{productDetails.name}}
               </h1>
               <div class="stars-rating">
@@ -111,15 +114,20 @@
                 </div>
               </div>
               <div class="availability">
-                availability:
-                <a href="#">in Stock</a>
+                Universe:
+                <a
+                  href="https://gundam.fandom.com/wiki/Gundam_Wiki:Timelines"
+                  target="blank"
+                >{{productDetails.universe}}</a>
               </div>
               <div class="price">
                 <span>$ {{productDetails.price}}</span>
               </div>
               <div class="product-details-description">
                 <ul>
-                  <li style="font-size: 25px; color:blueviolet">Grade: {{ productDetails.grade}}</li>
+                  <li id="product_details_universe"
+                  >Grade:
+                    {{productDetails.grade}}</li>
                   <li>Imported</li>
                   <li>Art.No. 06-7680</li>
                 </ul>
@@ -213,14 +221,9 @@
                 >Reviews</a>
               </li>
             </ul>
-            <div class="tab-container">
+            <div class="tab-container" style="white-space: pre-wrap">
               <div id="product-descriptions" class="tab-panel active">
-                <p>
-                  Grade: {{productDetails.grade}}
-                </p>
-                <p id="product-describe">
-                  {{productDetails.description}}
-                </p>
+                <p id="product-describe"> {{productDetails.description}}</p>
               </div>
               <div id="information" class="tab-panel">
                 <table class="table table-bordered">
@@ -375,7 +378,10 @@
                   <div class="product-thumb">
                     <div class="thumb-inner">
                       <a href="#">
-                        <img src="/assets/images/product-item-1.jpg" alt="img" />
+                        <img
+                          src="/assets/images/product-item-1.jpg"
+                          alt="img"
+                        />
                       </a>
                       <div class="thumb-group">
                         <div class="yith-wcwl-add-to-wishlist">
@@ -431,7 +437,10 @@
                   <div class="product-thumb">
                     <div class="thumb-inner">
                       <a href="#">
-                        <img src="/assets/images/product-item-2.jpg" alt="img" />
+                        <img
+                          src="/assets/images/product-item-2.jpg"
+                          alt="img"
+                        />
                       </a>
                       <div class="thumb-group">
                         <div class="yith-wcwl-add-to-wishlist">
@@ -487,7 +496,10 @@
                   <div class="product-thumb">
                     <div class="thumb-inner">
                       <a href="#">
-                        <img src="/assets/images/product-item-3.jpg" alt="img" />
+                        <img
+                          src="/assets/images/product-item-3.jpg"
+                          alt="img"
+                        />
                       </a>
                       <div class="thumb-group">
                         <div class="yith-wcwl-add-to-wishlist">
@@ -543,7 +555,10 @@
                   <div class="product-thumb">
                     <div class="thumb-inner">
                       <a href="#">
-                        <img src="/assets/images/product-item-4.jpg" alt="img" />
+                        <img
+                          src="/assets/images/product-item-4.jpg"
+                          alt="img"
+                        />
                       </a>
                       <div class="thumb-group">
                         <div class="yith-wcwl-add-to-wishlist">

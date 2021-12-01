@@ -5,7 +5,7 @@
         <div class="breadcrumb-trail breadcrumbs">
           <ul class="trail-items breadcrumb">
             <li class="trail-item trail-begin">
-              <a href="index-2.html">Home</a>
+              <a href="/">Home</a>
             </li>
             <li class="trail-item trail-end active">
               Authentication
@@ -25,7 +25,7 @@
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="login-item">
                   <h5 class="title-login">Login your Account</h5>
-                  <form class="login">
+                  <form class="login" method="post">
                     <div class="social-account">
                       <h6 class="title-social">Login with social account</h6>
                       <a href="#" class="mxh-item facebook">
@@ -42,7 +42,7 @@
                     </div>
                     <p class="form-row form-row-wide">
                       <label class="text">Username</label>
-                      <input title="username" type="text" class="input-text" />
+                      <input title="username" type="text" class="input-text" name="username" placeholder="Username"/>
                     </p>
                     <p class="form-row form-row-wide">
                       <label class="text">Password</label>
@@ -50,6 +50,7 @@
                         title="password"
                         type="password"
                         class="input-text"
+                        name="password"
                       />
                     </p>
                     <p class="lost_password">
