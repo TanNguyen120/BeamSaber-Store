@@ -8,16 +8,16 @@ const usersRouter = require("./routes/users");
 const bodyParser = require('body-parser');
 const passport = require('./components/auth/passport');
 const session = require("express-session");
-const flash = require('connect-flash');
+
 
 
 // all specific project router go here
 /////////////////////////////////////////////////////////////////////////////////////
 // define login router in component folder
-const loginRouter = require("./components/auth/index");
+const loginRouter = require("./components/auth/login_router");
 
-// define admin router
-const adminRouter = require("./components/admin/index");
+// define register router
+const registerRouter = require("./components/auth/register_router");
 
 // define user router
 const usersInforRouter = require("./routes/usersInfo");
@@ -45,7 +45,7 @@ const aboutUsRouter = require("./components/shop_owner_details");
 const searchBarRouter = require("./components/search_bar");
 
 // define main page router
-const mainPageRouter = require("./components/main_page");
+const indexPageRouter = require("./components/index_page");
 
 
 
@@ -75,11 +75,21 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
+
 
 /////////////////////////////////////////////////////////////////////////////////////
+
+// use this middle ware to store user session to local var so we can pass it every time another router is use
+app.use(function(req, res, next) {
+    res.locals.user = req.user;  
+    //res.locals.authenticated = !req.user.anonymous;
+    next();
+});
+
+
+
 // default routes
-app.use("/", mainPageRouter);
+app.use("/", indexPageRouter);
 app.use("/users", usersRouter);
 
 // all project middle ware router are put in here
@@ -88,8 +98,7 @@ app.use("/users", usersRouter);
 // middleware for login task
 app.use("/login", loginRouter);
 
-// middleware for adminIndexPage
-app.use("/admin", adminRouter);
+app.use("/register", registerRouter);
 
 // middleware for userInfor task
 app.use("/user-info", usersInforRouter);
@@ -116,12 +125,6 @@ app.use("/about_us", aboutUsRouter);
 app.use("/search", searchBarRouter);
 
 
-app.get('/flash', function(req, res){
-    // Set a flash message by passing the key, followed by the value, to req.flash().
-    req.flash('info', 'Flash is back!')
-    res.redirect('/');
-  });
-
 ////////////////////////////////////////////////////////////////////////////////////
 
 // catch 404 and forward to error handler
@@ -133,6 +136,10 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
+    process.on('unhandledRejection', error => {
+        // Will print "unhandledRejection err is not defined"
+        console.log('unhandledRejection', error.message);
+      });
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get("env") === "development" ? err : {};

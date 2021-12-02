@@ -14,3 +14,15 @@ exports.findProductWithName = (nameCondition) => {
     });
 };
 
+exports.filterPriceAscent = (page,limit = 12)=>{
+    return models.product.findAll({
+        order: [["price", "ASC"]],
+        limit: 12,
+        offset: page * limit,
+    },{
+
+        raw: true
+    }
+    )
+}
+

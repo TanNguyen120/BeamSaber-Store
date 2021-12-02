@@ -40,6 +40,9 @@
                         <span class="text">TWITTER</span>
                       </a>
                     </div>
+                    {{#if wrongPass}}
+                      <b style="color:red; margin-bottom:6px">your username or password is incorrect !!!!!</b>
+                    {{/if}}
                     <p class="form-row form-row-wide">
                       <label class="text">Username</label>
                       <input title="username" type="text" class="input-text" name="username" placeholder="Username"/>
@@ -71,20 +74,21 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 style="color:red">{{message}}</h3>
                 <div class="login-item">
                   <h5 class="title-login">Register now</h5>
-                  <form class="register">
+                  <form class="register" method="POST" action="/register">
                     <p class="form-row form-row-wide">
                       <label class="text">Your email</label>
-                      <input title="email" type="email" class="input-text" />
+                      <input title="email" type="email" class="input-text" name="email" />
                     </p>
                     <p class="form-row form-row-wide">
                       <label class="text">Username</label>
-                      <input title="name" type="text" class="input-text" />
+                      <input title="name" type="text" class="input-text" name="name" placeholder="don't use real name"/>
                     </p>
                     <p class="form-row form-row-wide">
                       <label class="text">Password</label>
-                      <input title="pass" type="password" class="input-text" />
+                      <input title="pass" type="password" class="input-text" name="password" />
                     </p>
                     <p class="form-row">
                       <span class="inline">

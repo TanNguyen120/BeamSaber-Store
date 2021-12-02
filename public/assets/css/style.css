@@ -11477,10 +11477,11 @@ a:active,
 }
 
 .product_picture {
-  float: left;
   width: 100px;
   height: 500px;
   object-fit: cover;
+  border: 1px solid lightgray;
+  border-radius: 3px;
 }
 
 #product_details_universe {

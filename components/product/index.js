@@ -22,6 +22,9 @@ router.get("/:product_name", productController.productDetails);
 //---------------- Handle find grade with pagniation ------------------------------------------------------
 router.get("/filter", productController.searchProductWithCond);
 
+//=================Handle filter list of products ----------------------------------------------------------
+router.get("/list", productController.searchProductWithCond);
+
 
 
 //----------------rout to find price -----------------------------------------------------------------------

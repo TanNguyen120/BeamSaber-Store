@@ -23,13 +23,32 @@ const searchBarService = require("./searchBarService");
             const listOfProduct = await searchBarService.findProductWithName(value,page-1);
             if(listOfProduct.length == 0)
             {
-                res.status(500).end("Bad Request: There no product name in data base have that substring")
+                res.status(500).render('error',{message: "there no product with name: " + value});
                 
             }
             else {
-                res.render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
+                res.status(200).render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
+                
             }
             break;
         }
+        case "price_acs":{
+            try{
+                console.log("filter price high to low");
+                const listOfProduct = await searchBarService.filterPriceAscent(page-1);
+                res.status(200).render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
+            }
+            catch(err){
+                res.render('error',{message: "something wrong happen"})
+                console.err(err);
+                throw err;
+            }
+            break;
+        }
+        case "newness":{
+
+        }
+        
     }
+
 }

@@ -23,20 +23,23 @@
             Grid Products
           </h3>
           <div class="shop-top-control">
-            </form>
-            <form class="filter-choice select-form">
+            
+            <form class="filter-choice select-form" method="get" action="/search/" style="display:inline">
               <span class="title">Sort by</span>
               <select
                 title="sort-by"
                 data-placeholder="Price: Low to High"
                 class="chosen-select"
+                name="search_with"
               >
-                <option value="1">Price: Low to High</option>
-                <option value="2">Sort by popularity</option>
-                <option value="3">Sort by average rating</option>
-                <option value="4">Sort by newness</option>
-                <option value="5">Sort by price: low to high</option>
+                <option value="price_acs">Price: Low to High</option>
+                <option value="popularity">Sort by popularity</option>
+                <option value="rating">Sort by average rating</option>
+                <option value="newness">Sort by newness</option>
+                <option value="price_des">Sort by price: low to high</option>
               </select>
+              <button class="btn btn-round" type="submit"> <i class="fa fa-filter"></i> </button>
+            </form>
             <div class="grid-view-mode">
               <div class="inner">
                 <a href="?page=0&items=1" class="modes-mode mode-list">
@@ -55,70 +58,69 @@
           <div id="currpageVar" style="display:none"> {{pagepass}} </div>
           <ul class="row list-products auto-clear equal-container product-grid">
             {{#each productList}}
-              <li
-                class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1"
-              >
-                <div class="product-inner equal-element">
-                  <div class="product-thumb">
-                    <div class="thumb-inner">
-                      <a href="/product/{{name}}?id={{product_id}}">
-                        <img class="product_picture"
-                          src="{{link_picture}}"
-                          alt="img"
-                        />
-                      </a>
-                      <div class="thumb-group">
-                        <div class="yith-wcwl-add-to-wishlist">
-                          <div class="yith-wcwl-add-button">
-                            <a href="#">Add to Wishlist</a>
+             <a href="/product/{{name}}?id={{product_id}}" syle="inline-block">
+                <li
+                  class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1"
+                >
+                  <div class="product-inner equal-element">
+                    <div class="product-thumb">
+                      <div class="thumb-inner">
+                        <a href="/product/{{name}}?id={{product_id}}">
+                          <img class="product_picture"
+                            src="{{link_picture}}"
+                            alt="img"
+                          />
+                        </a>
+                        <div class="thumb-group">
+                          <div class="yith-wcwl-add-to-wishlist">
+                            <div class="yith-wcwl-add-button">
+                              <a href="#">Add to Wishlist</a>
+                            </div>
+                          </div>
+                          <a href="/product/{{name}}?id={{product_id}}" class="button quick-wiew-button">Quick View</a>
+                          <div class="loop-form-add-to-cart">
+                            <button class="single_add_to_cart_button button">Add
+                              to cart
+                            </button>
                           </div>
                         </div>
-                        <a href="/product/{{name}}?id={{product_id}}" class="button quick-wiew-button">Quick View</a>
-                        <div class="loop-form-add-to-cart">
-                          <button class="single_add_to_cart_button button">Add
-                            to cart
-                          </button>
-                        </div>
                       </div>
                     </div>
-                  </di
-                  <div class="product-info">
-                    <h5 class="product-name product_title">
-                      <a href="/product/{{name}}/?id={{product_id}}" >
-                        {{name}}
-                      </a>
-                    </h5>
-                    <div class="group-info">
-                      <div class="stars-rating">
-                        <div class="star-rating">
-                          <span class="star-3"></span>
+                    <div class="product-info">
+                      <h5 class="product-name product_title">
+                        <a href="/product/{{name}}/?id={{product_id}}" >
+                          {{name}}
+                        </a>
+                      </h5>
+                      <div class="group-info">
+                        <div class="stars-rating">
+                          <div class="star-rating">
+                            <span class="star-3"></span>
+                          </div>
+                          <div class="count-star">
+                            (3)
+                          </div>
                         </div>
-                        <div class="count-star">
-                          (3)
-                        </div>
+                        <a href="/product/{{name}}/?id={{product_id}}" >
+                          <div class="price">
+                            <del>
+                              $10000000
+                            </del>
+                            <ins>
+                              ${{price}}
+                            </ins>
+                          </div>
+                        </a>
+                         <a href="/product/grade/{{grade}}" >
+                          <div style="margin: 15px; font=size:16px">
+                            {{grade}}
+                          </div>
+                        </a>
                       </div>
-                      <div class="price">
-                        <del>
-                          $10000000
-                        </del>
-                        <ins>
-                          ${{price}}
-                        </ins>
-                      </div>
-                    </div>
-                    <div> 
-                      <p>
-                        Grade = {{ grade }}
-                      </p> 
-                    </div>
-                    <div>
-                      <p>
-                        id = {{product_id}}
-                      </p>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </a>
             {{/each}}
           </ul>
           <div class="pagination clearfix style2">

@@ -66,8 +66,8 @@
               </div>
             </div>
           </div>
-          <div id="currpageVar"> {{pagePass}} </div>
-          <div id="filter_value">{{filterCondition}} </div>
+          <div id="currpageVar" style="display:none"> {{pagePass}} </div>
+          <div id="filter_value" >{{filterCondition}} </div>
           
           <ul class="row list-products auto-clear equal-container product-grid">
             {{#each productList}}
@@ -154,11 +154,11 @@
                   aria-hidden="true"
                 ></i>
               </div>
-              <a href="&page=1" class="page-numbers">1</a>
-              <a href="&page=2" class="page-numbers">2</a>
-              <a href="&page=3" class="page-numbers">3</a>
-              <a href="&page=4" class="page-numbers">4</a>
-              <a href="&page=5" class="page-numbers">5</a>
+              <a href="{{filterCondition}}&page=1" class="page-numbers">1</a>
+              <a href="{{filterCondition}}&page=2" class="page-numbers">2</a>
+              <a href="{{filterCondition}}&page=3" class="page-numbers">3</a>
+              <a href="{{filterCondition}}&page=4" class="page-numbers">4</a>
+              <a href="{{filterCondition}}&page=5" class="page-numbers">5</a>
               <div class="page-numbers" id="next_page"><i
                   class="icon fa fa-angle-right"
                   aria-hidden="true"
