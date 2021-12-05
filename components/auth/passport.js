@@ -19,8 +19,9 @@ passport.use(new LocalStrategy(
             /*When Passport authenticates a request, it parses the credentials contained in the request. 
             It then invokes the verify callback with those credentials as arguments, in this case username and password. 
             If the credentials are valid, the verify callback invokes done to supply Passport with the user that authenticated. */
+
+            console.log("user.id: " + user.id);
             const mathPassword = await checkPassword(user, password)
-            console.log("pass is " + mathPassword);
             if (!mathPassword) {
                 return done(null, false, { message: 'Incorrect password.' });
             }

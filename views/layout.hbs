@@ -9,7 +9,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="/assets/images/favicon.png"
+      href="/assets/beam_saber_images/beamsaber_store_logo.png"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;display=swap"
@@ -127,11 +127,6 @@
                         tabindex="1"
                       >
                         <option value="name">ProductName</option>
-                        <option value="grade">Grade</option>
-                        <option value="price_less_than">Price Less Than</option>
-                        <option value="grade">Grade</option>
-                        <option value="new">New Arrivals</option>
-                        <option value="universe">Universe</option>
                       </select>
                     </div>
                     <div class="inner">
@@ -294,7 +289,7 @@
                 </div>
                 {{#if user}}
                   <div style="color:grey" style="font-size: 12px" class="block-account">
-                    <a href="/{{user.user_name}}/profile" style= "display:inline-block">
+                    <a href="/user/{{user.user_name}}/profile" style= "display:inline-block">
                       <h5> <span class="flaticon-user"></span>   {{user.user_name}}</h5>
                     <a/>
                   </div>
@@ -629,7 +624,6 @@
                       >Blogs</a
                     >
                     <span class="toggle-submenu"></span>
-
                     <!--
                                     <ul class="submenu">
                                     <li class="menu-item menu-item-has-children">
@@ -808,19 +802,16 @@
                 <h2 class="widgettitle">Quick Menu</h2>
                 <ul class="menu">
                   <li class="menu-item">
-                    <a href="#">New arrivals</a>
+                    <a href="/product">New arrivals</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Gunpla Lore</a>
+                    <a href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">Gunpla Lore</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Prebuild</a>
+                    <a href="https://www.reddit.com/r/Gunpla/" target="_blank">Reddit Page</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Reddit Page</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#">News</a>
+                    <a href="">News</a>
                   </li>
                 </ul>
               </div>
@@ -896,7 +887,7 @@
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="coppyright">
-                  <a href="templateshub.net">Templateshub</a>
+                  <a href="/">Tan Nguyen</a>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

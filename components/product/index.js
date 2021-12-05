@@ -11,7 +11,7 @@ router.get("/", productController.listOfProduct);
 
 //--------------- Handle filter by category ----------------------------------------------------------------
 
-router.get("/grade/:grade",productController.gradeFilter);
+router.get("/grade/:grade", productController.gradeFilter);
 
 
 //----------- rout to product details if req product details -----------------------------------------------
@@ -19,7 +19,7 @@ router.get("/grade/:grade",productController.gradeFilter);
 router.get("/:product_name", productController.productDetails);
 
 
-//---------------- Handle find grade with pagniation ------------------------------------------------------
+//---------------- Handle find grade with pagination ------------------------------------------------------
 router.get("/filter", productController.searchProductWithCond);
 
 //=================Handle filter list of products ----------------------------------------------------------

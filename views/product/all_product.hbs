@@ -18,13 +18,55 @@
       <div
         class="content-area shop-grid-content full-width col-lg-12 col-md-12 col-sm-12 col-xs-12"
       >
+        <div
+          class="banner-shop banner-slider owl-slick equal-container"
+          data-slick='{"autoplay":true, "autoplaySpeed":6000, "arrows":false, "dots":true, "infinite":true, "speed":700, "rows":1}'
+        >
+          <div class="item-banner style1">
+            <div class="inner equal-element">
+              <div class="banner-content style1">
+                <h4 class="tanajil-subtitle">Start ur weekend off right!</h4>
+                <h3 class="title">Flash Sale Up To<br /> 15% Off</h3>
+                <span class="when-code">When Use Code:
+                  <span class="code">Amuro Ray</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="item-banner style2">
+            <div class="inner equal-element">
+              <div class="banner-content style2">
+                <h3 class="title">The Best Mobile Suit</h3>
+                <span class="description">Enjoy an entirely new level of
+                  <br />
+                  piloting experience</span>
+                <span class="hot-price">Hot Price:
+                  <span class="price-number">$25000.00</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="item-banner style6">
+            <div class="inner equal-element">
+              <div class="banner-content style6">
+                <h3 class="title">Be a gundam pilot</h3>
+                <span class="description"> and be a part of 
+                  <br />
+                  anti war campaign</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="site-main">
           <h3 class="custom_blog_title">
             Grid Products
           </h3>
           <div class="shop-top-control">
-            
-            <form class="filter-choice select-form" method="get" action="/search/" style="display:inline">
+
+            <form
+              class="filter-choice select-form"
+              method="get"
+              action="/search/"
+              style="display:inline"
+            >
               <span class="title">Sort by</span>
               <select
                 title="sort-by"
@@ -33,12 +75,14 @@
                 name="search_with"
               >
                 <option value="price_acs">Price: Low to High</option>
+                <option value="price_desc">Price: high to low</option>
                 <option value="popularity">Sort by popularity</option>
                 <option value="rating">Sort by average rating</option>
-                <option value="newness">Sort by newness</option>
-                <option value="price_des">Sort by price: low to high</option>
+                <option value="newness">Newness</option>
               </select>
-              <button class="btn btn-round" type="submit"> <i class="fa fa-filter"></i> </button>
+              <button class="btn btn-round" type="submit">
+                <i class="fa fa-filter"></i>
+              </button>
             </form>
             <div class="grid-view-mode">
               <div class="inner">
@@ -58,7 +102,7 @@
           <div id="currpageVar" style="display:none"> {{pagepass}} </div>
           <ul class="row list-products auto-clear equal-container product-grid">
             {{#each productList}}
-             <a href="/product/{{name}}?id={{product_id}}" syle="inline-block">
+              <a href="/product/{{name}}?id={{product_id}}" syle="inline-block">
                 <li
                   class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1"
                 >
@@ -66,7 +110,8 @@
                     <div class="product-thumb">
                       <div class="thumb-inner">
                         <a href="/product/{{name}}?id={{product_id}}">
-                          <img class="product_picture"
+                          <img
+                            class="product_picture"
                             src="{{link_picture}}"
                             alt="img"
                           />
@@ -77,7 +122,10 @@
                               <a href="#">Add to Wishlist</a>
                             </div>
                           </div>
-                          <a href="/product/{{name}}?id={{product_id}}" class="button quick-wiew-button">Quick View</a>
+                          <a
+                            href="/product/{{name}}?id={{product_id}}"
+                            class="button quick-wiew-button"
+                          >Quick View</a>
                           <div class="loop-form-add-to-cart">
                             <button class="single_add_to_cart_button button">Add
                               to cart
@@ -88,7 +136,7 @@
                     </div>
                     <div class="product-info">
                       <h5 class="product-name product_title">
-                        <a href="/product/{{name}}/?id={{product_id}}" >
+                        <a href="/product/{{name}}/?id={{product_id}}">
                           {{name}}
                         </a>
                       </h5>
@@ -101,7 +149,7 @@
                             (3)
                           </div>
                         </div>
-                        <a href="/product/{{name}}/?id={{product_id}}" >
+                        <a href="/product/{{name}}/?id={{product_id}}">
                           <div class="price">
                             <del>
                               $10000000
@@ -111,11 +159,17 @@
                             </ins>
                           </div>
                         </a>
-                         <a href="/product/grade/{{grade}}" >
+                        <a href="/product/grade/{{grade}}">
                           <div style="margin: 15px; font=size:16px">
                             {{grade}}
                           </div>
                         </a>
+                        <div>
+                          <p>
+                            id =
+                            {{product_id}}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -125,7 +179,7 @@
           </ul>
           <div class="pagination clearfix style2">
             <div class="nav-link">
-              <div  class="page-numbers" id="prev_page"><i
+              <div class="page-numbers" id="prev_page"><i
                   class="icon fa fa-angle-left"
                   aria-hidden="true"
                 ></i>

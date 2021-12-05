@@ -2,7 +2,7 @@
 const productService = require("./product_service");
 
 /**
- * This will call product service to list all product with req querry offset and limit
+ * This will call product service to list all product with req query offset and limit
  *
  * @param {*} req
  * @param {*} res
@@ -143,5 +143,6 @@ exports.searchProductWithCond = async (req, res) => {
                     filter: "grade",
                 });
             }
+
     }
 };

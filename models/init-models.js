@@ -5,6 +5,7 @@ var _product_comment = require("./product_comment");
 var _product_list = require("./product_list");
 var _user = require("./user");
 
+// this function is will return a DAO object of the sequelize variable
 function initModels(sequelize) {
   var order = _order(sequelize, DataTypes);
   var product = _product(sequelize, DataTypes);

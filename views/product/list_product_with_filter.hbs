@@ -23,20 +23,6 @@
             Grid Products
           </h3>
           <div class="shop-top-control">
-            <form class="select-item select-form">
-              <span class="title">Sort</span>
-              <select
-                title="sort"
-                data-placeholder="9 Products/Page"
-                class="chosen-select"
-              >
-                <option value="2">9 Products/Page</option>
-                <option value="1">12 Products/Page</option>
-                <option value="3">10 Products/Page</option>
-                <option value="4">8 Products/Page</option>
-                <option value="5">6 Products/Page</option>
-              </select>
-            </form>
             <form class="filter-choice select-form">
               <span class="title">Sort by</span>
               <select
@@ -44,12 +30,15 @@
                 data-placeholder="Price: Low to High"
                 class="chosen-select"
               >
-                <option value="1">Price: Low to High</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+                <option value="newness">Sort by Newness</option>
                 <option value="2">Sort by popularity</option>
                 <option value="3">Sort by average rating</option>
-                <option value="4">Sort by newness</option>
-                <option value="5">Sort by price: low to high</option>
               </select>
+              <button class="btn btn-round" type="submit">
+                <i class="fa fa-filter"></i>
+              </button>
             </form>
             <div class="grid-view-mode">
               <div class="inner">
@@ -75,7 +64,7 @@
                 class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1"
               >
                 <div class="product-inner equal-element">
-                  <div class="product-top">
+                  {{!-- <div class="product-top">
                     <div class="flash">
                       <span class="onnew">
                         <span class="text">
@@ -83,7 +72,7 @@
                         </span>
                       </span>
                     </div>
-                  </div>
+                  </div> --}}
                   <div class="product-thumb">
                     <div class="thumb-inner">
                       <a href="/product/{{name}}?id={{product_id}}" >

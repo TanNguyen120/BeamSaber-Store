@@ -30,12 +30,12 @@ exports.findItem = (id) => {
 };
 
 /**
- *Use this for find all product with mathching grade
+ *Use this for find all product with matching grade
  *
  * @param {*} gradeCond
  * @return {*} raw data of product
  */
-exports.findAllGrade = (gradeCond,page = 0,items_per_page = 12) => {
+exports.findAllGrade = (gradeCond, page = 0, items_per_page = 12) => {
   console.log("haaaaa find this grade: " + gradeCond);
   return models.product.findAll({
     where: { grade: gradeCond },
@@ -67,7 +67,7 @@ exports.findLessThanPrice = (priceCond) => {
 exports.findListNameCond = (namecond) => {
   return models.product.findAll({
     where: {
-      name:{  [Op.substring] :namecond}
+      name: { [Op.substring]: namecond }
     },
     raw: true
   });

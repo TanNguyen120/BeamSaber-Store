@@ -26,3 +26,23 @@ exports.filterPriceAscent = (page,limit = 12)=>{
     )
 }
 
+exports.filterPriceDesc = (page,limit = 12)=>{
+    return models.product.findAll({
+        order: [["price", "DESC"]],
+        limit: limit,
+        offset: page * limit
+    },
+    {
+        raw: true
+    })
+}
+
+exports.filterNewest = (page,limit=12)=>{
+    return models.product.findAll({
+        order: [["product_id", "DESC"]],
+        limit: limit,
+        offset: page * limit
+    },{
+        raw: true
+    })
+}

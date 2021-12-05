@@ -34,7 +34,7 @@ const searchBarService = require("./searchBarService");
         }
         case "price_acs":{
             try{
-                console.log("filter price high to low");
+                console.log("filter price as low to high");
                 const listOfProduct = await searchBarService.filterPriceAscent(page-1);
                 res.status(200).render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
             }
@@ -46,7 +46,29 @@ const searchBarService = require("./searchBarService");
             break;
         }
         case "newness":{
-
+            try{
+                console.log("client want to filter by newness")
+                const listOfProduct = await searchBarService.filterNewest(page-1);
+                res.status(200).render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
+            }
+            catch(err){
+                console.err(err);
+                res.status(500).render("error",{message: "cant filter by newness"});
+                throw err;
+            }
+            break;
+        }
+        case "price_desc":{
+            try{
+                console.log("client want to filter by price desc");
+                const listOfProduct = await searchBarService.filterPriceDesc(page-1);
+                res.status(200).render("product/list_product_with_filter",{productList:listOfProduct,pagePass,filterCondition})
+            }
+            catch{
+                console.err(err);
+                res.status(500).render("error",{message: "cant filter by price desc"});
+                throw err;
+            }
         }
         
     }

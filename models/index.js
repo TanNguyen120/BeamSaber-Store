@@ -15,6 +15,6 @@ const sequelize = new Sequelize(
 
 module.exports = {
   sequelize,
-  // we will invoke init model here so when the app start it just have to create it here
+  // when models is create it will invoke initModels which will return models of all tables in database
   models: initModels(sequelize),
 };

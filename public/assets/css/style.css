@@ -6718,7 +6718,7 @@ ul.list-products {
   padding: 0;
 }
 .slider-item.style4 .slider-inner {
-  background-image: url(../beam_saber_images/index_img1.png);
+  background-image: url(../beam_saber_images/index_img/index_img1.png);
   border-radius: 0;
 }
 .slider-item.style4 .slider-inner .slider-infor {
@@ -6728,7 +6728,7 @@ ul.list-products {
   padding-right: 30px;
 }
 .slider-item.style5 .slider-inner {
-  background-image: url(../beam_saber_images/index_img2.png);
+  background-image: url(../beam_saber_images/index_img/index_img2.png);
   border-radius: 0;
 }
 .slider-item.style5 .slider-inner .slider-infor {
@@ -6760,7 +6760,7 @@ ul.list-products {
   font-weight: 700;
 }
 .slider-item.style6 .slider-inner {
-  background-image: url(../beam_saber_images/index_img3.png);
+  background-image: url(../beam_saber_images/index_img/index_img3.png);
 }
 .slider-item.style6 .slider-inner .slider-infor {
   padding-bottom: 162px;
@@ -6797,7 +6797,7 @@ ul.list-products {
   margin-bottom: 20px;
 }
 .slider-item.style7 .slider-inner {
-  background-image: url(../beam_saber_images/index_img1.png);
+  background-image: url(../beam_saber_images/index_img/index_img1.png);
 }
 .slider-item.style7 .slider-inner .slider-infor {
   padding-bottom: 185px;
@@ -6806,7 +6806,7 @@ ul.list-products {
   padding-right: 400px;
 }
 .slider-item.style8 .slider-inner {
-  background-image: url(../beam_saber_images/index_img2.png);
+  background-image: url(../beam_saber_images/index_img/index_img2.png);
 }
 .slider-item.style8 .slider-inner .slider-infor {
   padding-bottom: 161px;
@@ -6815,7 +6815,7 @@ ul.list-products {
   padding-right: 400px;
 }
 .slider-item.style9 .slider-inner {
-  background-image: url(../beam_saber_images/index_img3.png);
+  background-image: url(../beam_saber_images/index_img/index_img3.png);
 }
 .slider-item.style9 .slider-inner .slider-infor {
   padding-bottom: 161px;
@@ -8550,7 +8550,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   position: relative;
 }
 .full-width .item-banner.style1 .inner {
-  background-image: url(../images/banner-01_full_width.jpg);
+  background-image: url(../beam_saber_images/store_banner/itemsBanner.jpg);
 }
 .item-banner.style1 .banner-content {
   padding-left: 150px;
@@ -8612,7 +8612,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   border-color: #fff;
 }
 .full-width .item-banner.style2 .inner {
-  background-image: url(../images/banner-02_full_width.jpg);
+  background-image: url(../beam_saber_images/store_banner/itemBaner2.jpg);
 }
 .item-banner.style2 .banner-content {
   padding-left: 130px;
@@ -8702,7 +8702,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   margin-bottom: 28px;
 }
 .item-banner.style5 .inner {
-  background-image: url(../beam_saber_images/banner_style5_perform_part.png);
+  background-image: url(../beam_saber_images/index_banner/index_banner_3.png);
 }
 .item-banner.style5 .banner-content {
   padding-left: 40px;
@@ -8729,7 +8729,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   position: relative;
 }
 .item-banner.style6 .inner {
-  background-image: url(../images/banner-home-4.jpg);
+  background-image: url(../beam_saber_images/store_banner/itemBanner3.png);
   border-radius: 0;
 }
 .item-banner.style6 .banner-content {
@@ -8745,7 +8745,7 @@ body.vertical-menu-open .vertical-menu-overlay {
 }
 /*banner home 03*/
 .item-banner.style7 .inner {
-  background-image: url(../beam_saber_images/index_banner_1.png);
+  background-image: url(../beam_saber_images/index_banner/index_banner_1.png);
 }
 .item-banner.style7 .banner-content {
   padding-top: 58px;
@@ -8763,7 +8763,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   margin-bottom: 15px;
 }
 .item-banner.style8 .inner {
-  background-image: url(../beam_saber_images/index_banner_2.png);
+  background-image: url(../beam_saber_images/index_banner/index_banner_2.png);
 }
 .item-banner.style8 .banner-content {
   padding-top: 60px;
@@ -11502,4 +11502,11 @@ a:active,
   letter-spacing: -1px;
   line-height: 1;
   text-align: left;
+}
+
+#profile_contend{
+  border-left: darkgrey solid 1px;
+  border-right: darkgrey solid 1px;
+  padding-left: 40px;
+  padding-right : 40px;
 }

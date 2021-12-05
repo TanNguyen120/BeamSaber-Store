@@ -24,16 +24,16 @@ const usersInforRouter = require("./routes/usersInfo");
 
 
 // define product router in component folder
-const productRouter = require("./components/product/index");
+const productRouter = require("./components/product");
 
 // define contact router
-const contactRouter = require("./components/contact/index");
+const contactRouter = require("./components/contact");
 
 // define 404page router
-const errorRouter = require("./components/404page/index");
+const errorRouter = require("./components/404page");
 
 // define order details router
-const orderDetailsRouter = require("./components/order_details/index");
+const orderDetailsRouter = require("./components/order_details");
 
 // define shoping cart router
 const shopingCartRouter = require("./components/shoping_cart");
@@ -47,6 +47,9 @@ const searchBarRouter = require("./components/search_bar");
 // define main page router
 const indexPageRouter = require("./components/index_page");
 
+
+//define user profile router
+const userRouter = require("./components/user");
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -80,14 +83,16 @@ app.use(passport.session());
 /////////////////////////////////////////////////////////////////////////////////////
 
 // use this middle ware to store user session to local var so we can pass it every time another router is use
-app.use(function(req, res, next) {
-    res.locals.user = req.user;  
+app.use(function (req, res, next) {
+    res.locals.user = req.user;
     //res.locals.authenticated = !req.user.anonymous;
     next();
 });
 
 
 
+
+// ROUTER MUST BE USE AFTER ALL OTHER MIDDLE WARE ARE DEFINED
 // default routes
 app.use("/", indexPageRouter);
 app.use("/users", usersRouter);
@@ -124,6 +129,9 @@ app.use("/about_us", aboutUsRouter);
 // middleware for search bar
 app.use("/search", searchBarRouter);
 
+// middleware for user profile
+app.use("/user", userRouter);
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -136,10 +144,7 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-    process.on('unhandledRejection', error => {
-        // Will print "unhandledRejection err is not defined"
-        console.log('unhandledRejection', error.message);
-      });
+
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get("env") === "development" ? err : {};
@@ -147,6 +152,10 @@ app.use(function (err, req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render("error");
+    process.on('unhandledRejection', error => {
+        // Will print "unhandledRejection err is not defined"
+        console.log('!!!!!! unhandledRejection: ', error.message);
+    });
 });
 
 
