@@ -45,9 +45,19 @@ exports.listOfProduct = async (req, res) => {
  * @param {*} res
  */
 exports.productDetails = async (req, res) => {
-    const productDetails = await productService.findItem(req.query.id);
-    console.log("found item: " + productDetails);
-    res.render("./product/product_details", { productDetails });
+    const productId = req.query.id;
+    try {
+        const productDetails = await productService.findItem(req.query.id);
+        ("found item: " + JSON.stringify(productDetails));
+        const listComments = await productService.findComments(productId);
+        res.render("./product/product_details", { productDetails, listComments });
+
+    } catch (err) {
+        console.error("errr:" + err);
+        res.render("error", { message: "cant find product: " + req.params.product_name });
+        throw err;
+    }
+
 };
 
 //----------------------------------------------------------------------------------------------------------------------------------------
@@ -146,3 +156,21 @@ exports.searchProductWithCond = async (req, res) => {
 
     }
 };
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+exports.addComment = async (req, res, next) => {
+    const name = req.params.product_name
+    const comment = req.body.comment;
+    const productId = parseInt(req.query.id);
+    const userId = parseInt(req.user.id);
+    const star = parseInt(req.body.star);
+    try {
+        await productService.addComment(productId, userId, comment, star);
+        res.redirect("/product/" + name + "?id=" + productId);
+    } catch (err) {
+        console.log("ERR while query: " + err);
+        res.render("error", { message: err });
+        throw err;
+    }
+}

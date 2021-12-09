@@ -1,20 +1,23 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('product_comment', {
     product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       references: {
         model: 'product',
-        key: 'product_id'
+        key: 'product_id',
+
       }
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       references: {
         model: 'user',
-        key: 'user_id'
+        key: 'user_id',
       }
     },
     comment: {

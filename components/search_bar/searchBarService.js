@@ -14,35 +14,35 @@ exports.findProductWithName = (nameCondition) => {
     });
 };
 
-exports.filterPriceAscent = (page,limit = 12)=>{
+exports.filterPriceAscent = (page, limit = 12) => {
     return models.product.findAll({
         order: [["price", "ASC"]],
         limit: 12,
         offset: page * limit,
-    },{
+    }, {
 
         raw: true
     }
     )
 }
 
-exports.filterPriceDesc = (page,limit = 12)=>{
+exports.filterPriceDesc = (page, limit = 12) => {
     return models.product.findAll({
         order: [["price", "DESC"]],
         limit: limit,
         offset: page * limit
     },
-    {
-        raw: true
-    })
+        {
+            raw: true
+        })
 }
 
-exports.filterNewest = (page,limit=12)=>{
+exports.filterNewest = (page, limit = 12) => {
     return models.product.findAll({
         order: [["product_id", "DESC"]],
         limit: limit,
         offset: page * limit
-    },{
+    }, {
         raw: true
     })
 }

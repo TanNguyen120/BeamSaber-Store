@@ -29,6 +29,15 @@ exports.findItem = (id) => {
   return models.product.findByPk(id, { raw: true });
 };
 
+exports.findComments = (pid) => {
+  return models.product_comment.findAndCountAll(
+    {
+      where: { product_id: pid },
+      include: 'user',
+      raw: true
+    });
+}
+
 /**
  *Use this for find all product with matching grade
  *
@@ -52,7 +61,6 @@ exports.findAllGrade = (gradeCond, page = 0, items_per_page = 12) => {
  * @return {*} raw data of list product
  */
 exports.findLessThanPrice = (priceCond) => {
-  console.log("haaaaa find this you just have: " + priceCond + "$ Poor you");
   return models.product.findAll({
     where: {
       price: {
@@ -72,3 +80,12 @@ exports.findListNameCond = (namecond) => {
     raw: true
   });
 };
+
+exports.addComment = (productId, userId, postComment, postStar) => {
+  models.product_comment.create({
+    product_id: productId,
+    user_id: userId,
+    comment: postComment,
+    rate: postStar
+  });
+}

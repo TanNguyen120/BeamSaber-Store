@@ -18,6 +18,8 @@ router.get("/grade/:grade", productController.gradeFilter);
 
 router.get("/:product_name", productController.productDetails);
 
+router.post("/:product_name", productController.addComment);
+
 
 //---------------- Handle find grade with pagination ------------------------------------------------------
 router.get("/filter", productController.searchProductWithCond);

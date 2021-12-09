@@ -12,10 +12,10 @@ exports.lastProducts = (page = 0, item_per_page = 6) => {
     // findAll function will return all row of product table
     // offset is what row to get data and limit is number of row for each times we call this function
     return models.product.findAll(
-    {
-        order: [['product_id', "DESC"]],
-        offset: page * item_per_page,
-        limit: item_per_page,
-        raw: true
-    });
+        {
+            order: [['product_id', "DESC"]],
+            offset: page * item_per_page,
+            limit: item_per_page,
+            raw: true
+        });
 };

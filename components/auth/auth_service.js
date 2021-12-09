@@ -1,6 +1,6 @@
 const { models } = require("../../models");
 const { Op } = require("sequelize");
-const {Sequelize} = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 
 exports.findEmail = (userEmail) => {
@@ -23,13 +23,13 @@ exports.createUser = (userId, userName, userEmail, userPassword) => {
     );
 }
 
-exports.lastUser = ()=>{
+exports.lastUser = () => {
     return models.user.findOne({
         attributes: [[Sequelize.fn('max', Sequelize.col('user_id')), "id"]],
         raw: true
     });
 }
 
-exports.findUser = (userName)=>{
-    return models.user.findOne({where: {name: userName}},{ raw: true});
+exports.findUser = (userName) => {
+    return models.user.findOne({ where: { name: userName } }, { raw: true });
 }

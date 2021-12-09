@@ -1,11 +1,11 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     "use strict";
 
     function tanajil_google_maps() {
         if ($(".tanajil-google-maps").length <= 0) {
             return;
         }
-        $(".tanajil-google-maps").each(function() {
+        $(".tanajil-google-maps").each(function () {
             var $this = $(this),
                 $id = $this.attr("id"),
                 $title_maps = $this.attr("data-title_maps"),
@@ -25,92 +25,92 @@ jQuery(document).ready(function($) {
 
             if ($modify_coloring == true) {
                 var $styles = [{
-                        stylers: [
-                            { hue: $hue },
-                            { invert_lightness: false },
-                            { saturation: $saturation },
-                            { lightness: 1 },
-                            {
-                                featureType: "landscape.man_made",
-                                stylers: [{
-                                    visibility: "on",
-                                }, ],
-                            },
-                        ],
-                    },
-                    {
-                        featureType: "all",
-                        elementType: "labels.text.fill",
-                        stylers: [
-                            { saturation: 36 },
-                            { color: "#000000" },
-                            { lightness: 40 },
-                        ],
-                    },
-                    {
-                        featureType: "all",
-                        elementType: "labels.text.stroke",
-                        stylers: [
-                            { visibility: "on" },
-                            { color: "#000000" },
-                            { lightness: 16 },
-                        ],
-                    },
-                    {
-                        featureType: "all",
-                        elementType: "labels.icon",
-                        stylers: [{ visibility: "off" }],
-                    },
-                    {
-                        featureType: "administrative",
-                        elementType: "geometry.fill",
-                        stylers: [{ color: "#000000" }, { lightness: 20 }],
-                    },
-                    {
-                        featureType: "administrative",
-                        elementType: "geometry.stroke",
-                        stylers: [{ color: "#000000" }, { lightness: 17 }, { weight: 1.2 }],
-                    },
-                    {
-                        featureType: "landscape",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 20 }],
-                    },
-                    {
-                        featureType: "poi",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 21 }],
-                    },
-                    {
-                        featureType: "road.highway",
-                        elementType: "geometry.fill",
-                        stylers: [{ color: "#000000" }, { lightness: 17 }],
-                    },
-                    {
-                        featureType: "road.highway",
-                        elementType: "geometry.stroke",
-                        stylers: [{ color: "#000000" }, { lightness: 29 }, { weight: 0.2 }],
-                    },
-                    {
-                        featureType: "road.arterial",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 18 }],
-                    },
-                    {
-                        featureType: "road.local",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 16 }],
-                    },
-                    {
-                        featureType: "transit",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 19 }],
-                    },
-                    {
-                        featureType: "water",
-                        elementType: "geometry",
-                        stylers: [{ color: "#000000" }, { lightness: 17 }],
-                    },
+                    stylers: [
+                        { hue: $hue },
+                        { invert_lightness: false },
+                        { saturation: $saturation },
+                        { lightness: 1 },
+                        {
+                            featureType: "landscape.man_made",
+                            stylers: [{
+                                visibility: "on",
+                            },],
+                        },
+                    ],
+                },
+                {
+                    featureType: "all",
+                    elementType: "labels.text.fill",
+                    stylers: [
+                        { saturation: 36 },
+                        { color: "#000000" },
+                        { lightness: 40 },
+                    ],
+                },
+                {
+                    featureType: "all",
+                    elementType: "labels.text.stroke",
+                    stylers: [
+                        { visibility: "on" },
+                        { color: "#000000" },
+                        { lightness: 16 },
+                    ],
+                },
+                {
+                    featureType: "all",
+                    elementType: "labels.icon",
+                    stylers: [{ visibility: "off" }],
+                },
+                {
+                    featureType: "administrative",
+                    elementType: "geometry.fill",
+                    stylers: [{ color: "#000000" }, { lightness: 20 }],
+                },
+                {
+                    featureType: "administrative",
+                    elementType: "geometry.stroke",
+                    stylers: [{ color: "#000000" }, { lightness: 17 }, { weight: 1.2 }],
+                },
+                {
+                    featureType: "landscape",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 20 }],
+                },
+                {
+                    featureType: "poi",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 21 }],
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "geometry.fill",
+                    stylers: [{ color: "#000000" }, { lightness: 17 }],
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "geometry.stroke",
+                    stylers: [{ color: "#000000" }, { lightness: 29 }, { weight: 0.2 }],
+                },
+                {
+                    featureType: "road.arterial",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 18 }],
+                },
+                {
+                    featureType: "road.local",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 16 }],
+                },
+                {
+                    featureType: "transit",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 19 }],
+                },
+                {
+                    featureType: "water",
+                    elementType: "geometry",
+                    stylers: [{ color: "#000000" }, { lightness: 17 }],
+                },
                 ];
             }
             var map;
@@ -159,7 +159,7 @@ jQuery(document).ready(function($) {
             var boundsListener = google.maps.event.addListener(
                 map,
                 "bounds_changed",
-                function(event) {
+                function (event) {
                     this.setZoom($zoom);
                     google.maps.event.removeListener(boundsListener);
                 }
@@ -167,20 +167,20 @@ jQuery(document).ready(function($) {
         });
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         tanajil_google_maps();
     });
 
     function tanajil_init_menu_toggle() {
         var contain = ".tanajil-nav-toggle";
-        $(contain).each(function() {
+        $(contain).each(function () {
             var _main = $(this);
-            _main.children(".menu-item.parent").each(function() {
+            _main.children(".menu-item.parent").each(function () {
                 var curent = $(this).find(".submenu");
 
                 $(this)
                     .children(".toggle-submenu")
-                    .on("click", function() {
+                    .on("click", function () {
                         $(this).parent().children(".submenu").slideToggle(500);
                         _main.find(".submenu").not(curent).slideUp(500);
 
@@ -193,11 +193,11 @@ jQuery(document).ready(function($) {
 
                 var next_curent = $(this).find(".submenu");
 
-                next_curent.children(".menu-item.parent").each(function() {
+                next_curent.children(".menu-item.parent").each(function () {
                     var child_curent = $(this).find(".submenu");
                     $(this)
                         .children(".toggle-submenu")
-                        .on("click", function() {
+                        .on("click", function () {
                             $(this)
                                 .parent()
                                 .parent()
@@ -219,7 +219,7 @@ jQuery(document).ready(function($) {
         });
     }
     // click menu
-    $(document).on("click", ".bar-open-menu", function() {
+    $(document).on("click", ".bar-open-menu", function () {
         $(this).toggleClass("active");
         $(this)
             .closest(".main-header")
@@ -228,7 +228,7 @@ jQuery(document).ready(function($) {
         return false;
     });
     // vertical-menu
-    $(document).on("click", ".block-title", function() {
+    $(document).on("click", ".block-title", function () {
         $(this).closest(".block-nav-categori").toggleClass("active");
         $(this)
             .closest(".block-nav-categori")
@@ -236,18 +236,18 @@ jQuery(document).ready(function($) {
             .toggleClass("show-up");
         return false;
     });
-    $(document).on("click", ".bar-open-menu,.vertical-menu-overlay", function() {
+    $(document).on("click", ".bar-open-menu,.vertical-menu-overlay", function () {
         $("body").toggleClass("vertical-menu-open");
         return false;
     });
-    $(document).on("click", ".error-404 .toggle-hightlight", function() {
+    $(document).on("click", ".error-404 .toggle-hightlight", function () {
         $(this).closest(".text-404").find(".search-form").toggleClass("open");
         return false;
     });
     // ----------tanajil_custom_scrollbar-------------------
     function tanajil_custom_scrollbar() {
         $(".tanajil-mini-cart .minicart-items").mCustomScrollbar();
-        $(".tanajil-mini-cart .minicart-items").change(function() {
+        $(".tanajil-mini-cart .minicart-items").change(function () {
             $(".tanajil-mini-cart .minicart-items").mCustomScrollbar();
         });
     }
@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
             ".header.vertical-style .header-nav .container-wapper"
         ).mCustomScrollbar();
         $(".header.vertical-style .header-nav .container-wapper").change(
-            function() {
+            function () {
                 $(
                     ".header.vertical-style .header-nav .container-wapper"
                 ).mCustomScrollbar();
@@ -294,7 +294,7 @@ jQuery(document).ready(function($) {
                 ajax: {
                     cache: false,
                 },
-                afterOpen: function(obj) {
+                afterOpen: function (obj) {
                     var mw = $(".modal_window");
 
                     mw.find(".custom_select").customSelect();
@@ -369,7 +369,7 @@ jQuery(document).ready(function($) {
                 lensFadeIn: 500,
                 lensFadeOut: 500,
             });
-            $(".open_qv").on("click", function(e) {
+            $(".open_qv").on("click", function (e) {
                 var ez = $(this).siblings("img").data("elevateZoom");
                 $.fancybox(ez.getGalleryList());
                 e.preventDefault();
@@ -396,10 +396,10 @@ jQuery(document).ready(function($) {
 
     /* TOGGLE */
     function tanajil_dropdown() {
-        $(document).on("click", ".header-control .close", function() {
+        $(document).on("click", ".header-control .close", function () {
             $(this).closest(".tanajil-dropdown").removeClass("open");
         });
-        $(document).on("click", function(event) {
+        $(document).on("click", function (event) {
             var _target = $(event.target).closest(".tanajil-dropdown");
             var _allparent = $(".tanajil-dropdown");
 
@@ -423,7 +423,7 @@ jQuery(document).ready(function($) {
         $(document).on(
             "click",
             ".header-device-mobile .item.has-sub>a",
-            function() {
+            function () {
                 $(this)
                     .closest(".header-device-mobile")
                     .find(".item")
@@ -433,11 +433,11 @@ jQuery(document).ready(function($) {
                 return false;
             }
         );
-        $(document).on("click", ".header-device-mobile .item .close", function() {
+        $(document).on("click", ".header-device-mobile .item .close", function () {
             $(this).closest(".item").removeClass("open");
             return false;
         });
-        $(document).on("click", "*", function(event) {
+        $(document).on("click", "*", function (event) {
             if (!$(event.target).closest(".header-device-mobile").length) {
                 $(".header-device-mobile").find(".item").removeClass("open");
             }
@@ -448,7 +448,7 @@ jQuery(document).ready(function($) {
     function tanajil_init_carousel() {
         $(".owl-slick")
             .not(".slick-initialized")
-            .each(function() {
+            .each(function () {
                 var _this = $(this),
                     _responsive = _this.data("responsive"),
                     _config = [];
@@ -467,17 +467,17 @@ jQuery(document).ready(function($) {
                 _config.cssEase = "linear";
 
                 _this.slick(_config);
-                _this.on("afterChange", function(event, slick, direction) {
+                _this.on("afterChange", function (event, slick, direction) {
                     _this.find(".slick-active:first").addClass("first-slick");
                     _this.find(".slick-active:last").addClass("last-slick");
                 });
-                _this.on("beforeChange", function(event, slick, currentSlide) {
+                _this.on("beforeChange", function (event, slick, currentSlide) {
                     _this.find(".slick-slide").removeClass("last-slick");
                     _this.find(".slick-slide").removeClass("first-slick");
                 });
                 if (_this.hasClass("slick-vertical")) {
                     equal_elems();
-                    setTimeout(function() {
+                    setTimeout(function () {
                         _this.slick("setPosition");
                     }, 0);
                 }
@@ -491,7 +491,7 @@ jQuery(document).ready(function($) {
        --------------------------------------------- */
     function tanajil_tab_fade_effect() {
         // effect click
-        $(document).on("click", ".tanajil-tabs .tab-link a", function() {
+        $(document).on("click", ".tanajil-tabs .tab-link a", function () {
             var tab_id = $(this).attr("href");
             var tab_animated = $(this).data("animate");
 
@@ -505,31 +505,31 @@ jQuery(document).ready(function($) {
                 .find(
                     ".product-list-owl .owl-item.active, .product-list-grid .product-item"
                 )
-                .each(function(i) {
+                .each(function (i) {
                     var t = $(this);
                     var style = $(this).attr("style");
                     style = style == undefined ? "" : style;
                     var delay = i * 400;
                     t.attr(
-                            "style",
-                            style +
-                            ";-webkit-animation-delay:" +
-                            delay +
-                            "ms;" +
-                            "-moz-animation-delay:" +
-                            delay +
-                            "ms;" +
-                            "-o-animation-delay:" +
-                            delay +
-                            "ms;" +
-                            "animation-delay:" +
-                            delay +
-                            "ms;"
-                        )
+                        "style",
+                        style +
+                        ";-webkit-animation-delay:" +
+                        delay +
+                        "ms;" +
+                        "-moz-animation-delay:" +
+                        delay +
+                        "ms;" +
+                        "-o-animation-delay:" +
+                        delay +
+                        "ms;" +
+                        "animation-delay:" +
+                        delay +
+                        "ms;"
+                    )
                         .addClass(tab_animated + " animated")
                         .one(
                             "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-                            function() {
+                            function () {
                                 t.removeClass(tab_animated + " animated");
                                 t.attr("style", style);
                             }
@@ -594,18 +594,18 @@ jQuery(document).ready(function($) {
     }
 
     // --------------------------------BACK TO TOP-----------------------------
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
         if ($(window).scrollTop() > 1000) {
             $(".backtotop").addClass("show");
         } else {
             $(".backtotop").removeClass("show");
         }
     });
-    $(document).on("click", "a.backtotop", function() {
+    $(document).on("click", "a.backtotop", function () {
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
     //---------------------------Price filter----------------------
-    $(".slider-range-price").each(function() {
+    $(".slider-range-price").each(function () {
         var min = $(this).data("min");
         var max = $(this).data("max");
         var unit = $(this).data("unit");
@@ -618,7 +618,7 @@ jQuery(document).ready(function($) {
             min: min,
             max: max,
             values: [value_min, value_max],
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 var result =
                     " <span>" +
                     unit +
@@ -638,7 +638,7 @@ jQuery(document).ready(function($) {
     $(document).on(
         "click",
         ".quantity .quantity-plus, .quantity .quantity-minus",
-        function(e) {
+        function (e) {
             // Get values
             var $qty = $(this).closest(".quantity").find(".qty"),
                 currentVal = parseFloat($qty.val()),
@@ -678,15 +678,15 @@ jQuery(document).ready(function($) {
     );
     //------------------------EQUAL ELEM----------------------------
     function better_equal_elems() {
-        setTimeout(function() {
-            $(".equal-container").each(function() {
+        setTimeout(function () {
+            $(".equal-container").each(function () {
                 var $this = $(this);
                 if ($this.find(".equal-element").length) {
                     $this.find(".equal-element").css({
                         height: "auto",
                     });
                     var elem_height = 0;
-                    $this.find(".equal-element").each(function() {
+                    $this.find(".equal-element").each(function () {
                         var this_elem_h = $(this).height();
                         if (elem_height < this_elem_h) {
                             elem_height = this_elem_h;
@@ -698,10 +698,10 @@ jQuery(document).ready(function($) {
         }, 1000);
     }
 
-    $(window).load(function() {
+    $(window).load(function () {
         better_equal_elems();
     });
-    $(window).on("resize", function() {
+    $(window).on("resize", function () {
         better_equal_elems();
     });
     // ------------------owl-thumbs-----------------------------------------------
@@ -718,7 +718,7 @@ jQuery(document).ready(function($) {
             thumbItemClass: "owl-thumb-item",
         });
         // owl config
-        $(".owl-carousel").each(function(index, el) {
+        $(".owl-carousel").each(function (index, el) {
             var config = $(this).data();
             config.navText = [
                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
@@ -743,12 +743,12 @@ jQuery(document).ready(function($) {
             }
 
             var owl = $(this);
-            owl.on("initialized.owl.carousel", function(event) {
+            owl.on("initialized.owl.carousel", function (event) {
                 var total_active = parseInt(owl.find(".owl-item.active").length);
                 var i = 0;
                 owl.find(".owl-item").removeClass("item-first item-last");
-                setTimeout(function() {
-                    owl.find(".owl-item.active").each(function() {
+                setTimeout(function () {
+                    owl.find(".owl-item.active").each(function () {
                         i++;
                         if (i == 1) {
                             $(this).addClass("item-first");
@@ -759,12 +759,12 @@ jQuery(document).ready(function($) {
                     });
                 }, 100);
             });
-            owl.on("refreshed.owl.carousel", function(event) {
+            owl.on("refreshed.owl.carousel", function (event) {
                 var total_active = parseInt(owl.find(".owl-item.active").length);
                 var i = 0;
                 owl.find(".owl-item").removeClass("item-first item-last");
-                setTimeout(function() {
-                    owl.find(".owl-item.active").each(function() {
+                setTimeout(function () {
+                    owl.find(".owl-item.active").each(function () {
                         i++;
                         if (i == 1) {
                             $(this).addClass("item-first");
@@ -775,12 +775,12 @@ jQuery(document).ready(function($) {
                     });
                 }, 100);
             });
-            owl.on("change.owl.carousel", function(event) {
+            owl.on("change.owl.carousel", function (event) {
                 var total_active = parseInt(owl.find(".owl-item.active").length);
                 var i = 0;
                 owl.find(".owl-item").removeClass("item-first item-last");
-                setTimeout(function() {
-                    owl.find(".owl-item.active").each(function() {
+                setTimeout(function () {
+                    owl.find(".owl-item.active").each(function () {
                         i++;
                         if (i == 1) {
                             $(this).addClass("item-first");
@@ -791,13 +791,13 @@ jQuery(document).ready(function($) {
                     });
                 }, 100);
                 owl.addClass("owl-changed");
-                setTimeout(function() {
+                setTimeout(function () {
                     owl.removeClass("owl-changed");
                 }, config.smartSpeed);
             });
-            owl.on("drag.owl.carousel", function(event) {
+            owl.on("drag.owl.carousel", function (event) {
                 owl.addClass("owl-changed");
-                setTimeout(function() {
+                setTimeout(function () {
                     owl.removeClass("owl-changed");
                 }, config.smartSpeed);
             });
@@ -805,7 +805,7 @@ jQuery(document).ready(function($) {
             // Sections backgrounds
             if ($(window).width() < 992) {
                 var itembackground = $(".item-background");
-                itembackground.each(function(index) {
+                itembackground.each(function (index) {
                     if ($(".item-background").attr("data-background")) {
                         $(this).css(
                             "background-image",
@@ -852,8 +852,8 @@ jQuery(document).ready(function($) {
                     container_width = parseFloat(container.innerWidth());
                     var container_offset = 0;
                     container_offset = container.offset();
-                    setTimeout(function() {
-                        $(".main-menu .menu-item-has-children").each(function(
+                    setTimeout(function () {
+                        $(".main-menu .menu-item-has-children").each(function (
                             index,
                             element
                         ) {
@@ -902,7 +902,7 @@ jQuery(document).ready(function($) {
             var labels = ["Years", "Months", "Weeks", "Days", "Hrs", "Mins", "Secs"];
             var layout =
                 '<span class="box-count day"><span class="number">{dnn}</span> <span class="text">Days</span></span><span class="box-count hrs"><span class="number">{hnn}</span> <span class="text">Hrs</span></span><span class="box-count min"><span class="number">{mnn}</span> <span class="text">Mins</span></span><span class="box-count secs"><span class="number">{snn}</span> <span class="text">Secs</span></span>';
-            $(".tanajil-countdown").each(function() {
+            $(".tanajil-countdown").each(function () {
                 var austDay = new Date(
                     $(this).data("y"),
                     $(this).data("m") - 1,
@@ -941,7 +941,7 @@ jQuery(document).ready(function($) {
 
         // This is a loop that go through all element of pageItem class
         if (pageNumberInt > 3) {
-            pageArray.each(function(i = 1, pages = $(this)) {
+            pageArray.each(function (i = 1, pages = $(this)) {
                 const page = $(this).text();
                 console.log("loop number: " + i);
                 console.log("item: " + page);
@@ -960,7 +960,7 @@ jQuery(document).ready(function($) {
             });
         }
 
-        pageArray.each(function(i = 1, pages = $(this)) {
+        pageArray.each(function (i = 1, pages = $(this)) {
             const page = $(this).text();
             console.log("loop number: " + i);
             console.log("item: " + page);
@@ -978,7 +978,7 @@ jQuery(document).ready(function($) {
         const pageCurr = $("#currpage");
 
         // This is a loop that go through all element of pageItem class
-        pageItem.each(function(i = 1, pages = $(this)) {
+        pageItem.each(function (i = 1, pages = $(this)) {
             let pages_number = $(this).text();
             console.log("loop number: " + i);
             console.log("item: " + pages_number);
@@ -1006,13 +1006,13 @@ jQuery(document).ready(function($) {
 
             console.log("current page: " + pageNumberInt);
 
-            pageItem.each(function(i = 1, pages = $(this)) {
+            pageItem.each(function (i = 1, pages = $(this)) {
                 console.log("loop number : " + i);
 
                 // if page is full we have to make new pages array
                 if (i == 4) {
                     console.log("page full");
-                    pageItem.each(function(j = 1, pages = $(this)) {
+                    pageItem.each(function (j = 1, pages = $(this)) {
                         let changeto = pageNumberInt;
                         changeto = changeto + j;
                         console.log("change to: " + changeto);
@@ -1051,7 +1051,7 @@ jQuery(document).ready(function($) {
 
         // when click on next page button we will loop through all page => find current page => click on prev page
         prev_page_button.click(() => {
-            pageItem.each(function(i = 1, pages = $(this)) {
+            pageItem.each(function (i = 1, pages = $(this)) {
                 let pages_number = $(this).text();
                 // Find the current page to click next page
                 if (parseInt(pages_number) == parseInt(pageCurr.text())) {
@@ -1064,9 +1064,9 @@ jQuery(document).ready(function($) {
     }
     //-------------------------------------------------------------------------------------------------------
 
-     //--------------------------------------- PAGINATION WITH FILTER IN QUERY STRING ------------------------------------
+    //--------------------------------------- PAGINATION WITH FILTER IN QUERY STRING ------------------------------------
 
-     function pagesRender_filter() {
+    function pagesRender_filter() {
         const pageArray = $("div.nav-link-filter> a");
         const currrentPage = $("#currpageVar");
         const pageNumberInt = parseInt(currrentPage.text());
@@ -1075,7 +1075,7 @@ jQuery(document).ready(function($) {
 
         // This is a loop that go through all element of pageItem class
         if (pageNumberInt > 3) {
-            pageArray.each(function(i = 1, pages = $(this)) {
+            pageArray.each(function (i = 1, pages = $(this)) {
                 const page = $(this).text();
                 console.log("loop number: " + i);
                 console.log("item: " + page);
@@ -1087,14 +1087,14 @@ jQuery(document).ready(function($) {
                 // changing text and link
                 $(this).text(changeto);
                 $(this).attr("href", () => {
-                    const url = searchQuery+"&page=" + changeto;
+                    const url = searchQuery + "&page=" + changeto;
                     console.log("page change: " + url);
                     return url;
                 });
             });
         }
 
-        pageArray.each(function(i = 1, pages = $(this)) {
+        pageArray.each(function (i = 1, pages = $(this)) {
             const page = $(this).text();
             console.log("loop number: " + i);
             console.log("item: " + page);
@@ -1112,7 +1112,7 @@ jQuery(document).ready(function($) {
         const pageCurr = $("#currpage");
 
         // This is a loop that go through all element of pageItem class
-        pageItem.each(function(i = 1, pages = $(this)) {
+        pageItem.each(function (i = 1, pages = $(this)) {
             let pages_number = $(this).text();
             console.log("loop number: " + i);
             console.log("item: " + pages_number);
@@ -1141,13 +1141,13 @@ jQuery(document).ready(function($) {
 
             console.log("current page: " + pageNumberInt);
 
-            pageItem.each(function(i = 1, pages = $(this)) {
+            pageItem.each(function (i = 1, pages = $(this)) {
                 console.log("loop number : " + i);
 
                 // if page is full we have to make new pages array
                 if (i == 4) {
                     console.log("page full");
-                    pageItem.each(function(j = 1, pages = $(this)) {
+                    pageItem.each(function (j = 1, pages = $(this)) {
                         let changeto = pageNumberInt;
                         changeto = changeto + j;
                         console.log("change to: " + changeto);
@@ -1155,7 +1155,7 @@ jQuery(document).ready(function($) {
                         // changing text and link
                         $(this).text(changeto);
                         $(this).attr("href", () => {
-                            const url = searchQuery+"&page=" + changeto;;
+                            const url = searchQuery + "&page=" + changeto;;
                             console.log("page change: " + url);
                             return url;
                         });
@@ -1186,7 +1186,7 @@ jQuery(document).ready(function($) {
 
         // when click on next page button we will loop through all page => find current page => click on prev page
         prev_page_button.click(() => {
-            pageItem.each(function(i = 1, pages = $(this)) {
+            pageItem.each(function (i = 1, pages = $(this)) {
                 let pages_number = $(this).text();
                 // Find the current page to click next page
                 if (parseInt(pages_number) == parseInt(pageCurr.text())) {
@@ -1199,17 +1199,27 @@ jQuery(document).ready(function($) {
     }
 
 
-    
- 
+    function start_rating() {
+        $(".rating input:radio").attr("checked", false);
+
+        $('.rating input').click(function () {
+            $(".rating-custom span").removeClass('checked');
+            $(this).parent().addClass('checked');
+        });
+    }
+
+
+
+
     // ------------------------------------------------------------------------------------------------------------------
 
 
 
     // --------------------------------------------------------
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         tanajil_custom_scrollbar();
     });
-    $(window).resize(function() {
+    $(window).resize(function () {
         quickview_popup();
         tanajil_masonry();
         kt_resizeMegamenu();
@@ -1217,7 +1227,7 @@ jQuery(document).ready(function($) {
         tanajil_details_thumd_zoom();
         tanajil_custom_scrollbar();
     });
-    $(window).load(function() {
+    $(window).load(function () {
         newletter_popup();
         quickview_popup();
         tanajil_mobile_block();
@@ -1247,5 +1257,6 @@ jQuery(document).ready(function($) {
     pagination_toggle_current_page_filter();
     nextpage_click_filter();
     prevpage_click_filter();
+    start_rating();
 
 });

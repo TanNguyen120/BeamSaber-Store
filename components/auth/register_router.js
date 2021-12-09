@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('./auth_controller');
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('./login_and_register/index');
 })
 

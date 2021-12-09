@@ -48,7 +48,7 @@ async function checkPassword(user, password) {
 // for storing user data to session storage
 // for performance purpose we just store user id and name in session
 passport.serializeUser(function (user, done) {
-    done(null, { user_id: user.user_id, user_name: user.name });
+    done(null, { id: user.user_id, name: user.name });
     console.log("Serialize: " + user.user_id);
 });
 

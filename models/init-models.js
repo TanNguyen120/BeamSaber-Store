@@ -15,16 +15,16 @@ function initModels(sequelize) {
 
   order.belongsToMany(product, { as: 'product_id_products', through: product_list, foreignKey: "order_id", otherKey: "product_id" });
   product.belongsToMany(order, { as: 'order_id_orders', through: product_list, foreignKey: "product_id", otherKey: "order_id" });
-  product_list.belongsTo(order, { as: "order", foreignKey: "order_id"});
-  order.hasMany(product_list, { as: "product_lists", foreignKey: "order_id"});
-  product_comment.belongsTo(product, { as: "product", foreignKey: "product_id"});
-  product.hasMany(product_comment, { as: "product_comments", foreignKey: "product_id"});
-  product_list.belongsTo(product, { as: "product", foreignKey: "product_id"});
-  product.hasMany(product_list, { as: "product_lists", foreignKey: "product_id"});
-  order.belongsTo(user, { as: "user", foreignKey: "user_id"});
-  user.hasMany(order, { as: "orders", foreignKey: "user_id"});
-  product_comment.belongsTo(user, { as: "user", foreignKey: "user_id"});
-  user.hasMany(product_comment, { as: "product_comments", foreignKey: "user_id"});
+  product_list.belongsTo(order, { as: "order", foreignKey: "order_id" });
+  order.hasMany(product_list, { as: "product_lists", foreignKey: "order_id" });
+  product_comment.belongsTo(product, { as: "product", foreignKey: "product_id" });
+  product.hasMany(product_comment, { as: "product_comments", foreignKey: "product_id" });
+  product_list.belongsTo(product, { as: "product", foreignKey: "product_id" });
+  product.hasMany(product_list, { as: "product_lists", foreignKey: "product_id" });
+  order.belongsTo(user, { as: "user", foreignKey: "user_id" });
+  user.hasMany(order, { as: "orders", foreignKey: "user_id" });
+  product_comment.belongsTo(user, { as: "user", foreignKey: "user_id" });
+  user.hasMany(product_comment, { as: "product_comments", foreignKey: "user_id" });
 
   return {
     order,

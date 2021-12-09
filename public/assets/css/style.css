@@ -36,7 +36,7 @@ REPONSIVE
   1.0 COMPONENT STYLES
 ============================================================================ */
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #868686;
@@ -123,7 +123,7 @@ q p {
   font-size: 14px;
 }
 blockquote::before {
-  content: url("../images/quote-item.png");
+  content: url('../images/quote-item.png');
   display: block;
 }
 /* ==========================================================================
@@ -138,12 +138,12 @@ blockquote::before {
   width: 1px;
   overflow: hidden;
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="search"],
-input[type="url"],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='search'],
+input[type='url'],
 textarea,
 select {
   border: 1px solid #eeeeee;
@@ -151,12 +151,12 @@ select {
   max-width: 100%;
   background: none;
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="search"],
-input[type="url"] {
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='search'],
+input[type='url'] {
   height: 42px;
   border-radius: 4px;
 }
@@ -179,7 +179,7 @@ option {
 }
 .button,
 button,
-input[type="submit"] {
+input[type='submit'] {
   display: inline-block;
   padding: 9px 20px;
   color: #fff;
@@ -194,13 +194,13 @@ input[type="submit"] {
   border-radius: 4px;
   text-transform: capitalize;
 }
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
 textarea:focus,
 button:focus,
 select:focus {
@@ -807,7 +807,7 @@ table tr:last-child th {
 .row10::before,
 .row10::after {
   display: table;
-  content: "";
+  content: '';
 }
 .row10::after {
   clear: both;
@@ -1248,14 +1248,14 @@ table tr:last-child th {
 }
 .slick-slider.nav-center > .slick-arrow::before {
   font-family: FontAwesome, sans-serif;
-  content: "\f105";
+  content: '\f105';
 }
 .slick-slider.nav-center > .slick-arrow:first-child {
   right: auto;
   left: 0;
 }
 .slick-slider.nav-center > .slick-arrow:first-child::before {
-  content: "\f104";
+  content: '\f104';
 }
 .slick-slide > div:not([class]) > * {
   display: block !important;
@@ -1323,11 +1323,11 @@ table tr:last-child th {
   background-image: none !important;
 }
 .chosen-container-single .chosen-single div b::after {
-  content: "\f0d7";
+  content: '\f0d7';
   font-size: 14px;
   font-weight: normal;
   color: #aaaaaa;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1469,8 +1469,8 @@ table tr:last-child th {
   z-index: 1001;
 }
 .tanajil-dropdown .language-toggle:after {
-  content: "\f107";
-  font-family: "FontAwesome";
+  content: '\f107';
+  font-family: 'FontAwesome';
   display: inline-block;
   margin-left: 5px;
   vertical-align: top;
@@ -1629,8 +1629,8 @@ table tr:last-child th {
   border-radius: 4px;
 }
 .block-minicart .shopcart-icon::after {
-  content: "\f107";
-  font-family: "FontAwesome";
+  content: '\f107';
+  font-family: 'FontAwesome';
   position: absolute;
   display: inline-block;
   color: #888;
@@ -1676,7 +1676,7 @@ table tr:last-child th {
   padding-left: 35px;
 }
 .block-search .icon-search::before {
-  content: "\f12d";
+  content: '\f12d';
   font-family: Flaticon;
   display: inline-block;
   vertical-align: middle;
@@ -1755,17 +1755,17 @@ table tr:last-child th {
 }
 .form-checkbox span::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 21px;
   height: 21px;
   border: 1px solid #f1f1f1;
   left: 0px;
   top: -2px;
 }
-.form-checkbox input[type="checkbox"]:checked + span::after,
+.form-checkbox input[type='checkbox']:checked + span::after,
 .form-checkbox:hover span::after {
-  font-family: "FontAwesome";
-  content: "\f00c";
+  font-family: 'FontAwesome';
+  content: '\f00c';
   display: inline-block;
   top: 2px;
   left: 6px;
@@ -1848,8 +1848,8 @@ table tr:last-child th {
   letter-spacing: 0.05em;
 }
 .main-menu > li.menu-item-has-children > a:after {
-  font-family: "FontAwesome";
-  content: "\f107";
+  font-family: 'FontAwesome';
+  content: '\f107';
   margin-left: 5px;
   font-size: 15px;
   color: #fff;
@@ -1872,7 +1872,7 @@ table tr:last-child th {
   margin-bottom: 5px;
 }
 .tanajil-demolink .image::before {
-  content: "";
+  content: '';
   background-color: #000000;
   transition: all 0.9s ease-out 0s;
   -webkit-transition: all 0.9s ease-out 0s;
@@ -1948,7 +1948,7 @@ table tr:last-child th {
   padding-bottom: 10px;
 }
 .mega-menu .tanajil-custommenu .widgettitle::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1981,8 +1981,8 @@ table tr:last-child th {
   background-color: #f1f1f1;
 }
 .main-menu .submenu > li.menu-item-has-children > a:after {
-  font-family: "FontAwesome";
-  content: "\f105";
+  font-family: 'FontAwesome';
+  content: '\f105';
   float: right;
 }
 /* -------------------- */
@@ -2040,7 +2040,7 @@ table tr:last-child th {
   color: #222;
   margin-bottom: 40px;
   text-transform: uppercase;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .blog-articles > .custom_blog_title,
 .comments-area > .custom_blog_title {
@@ -2059,7 +2059,7 @@ table tr:last-child th {
   overflow: hidden;
 }
 .post-title {
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .post-item .post-title {
   font-size: 26px;
@@ -2417,7 +2417,7 @@ blockquote .author .desc {
   width: 100%;
 }
 .blog-list .blog-item .post-format > a::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   right: 50%;
@@ -2435,7 +2435,7 @@ blockquote .author .desc {
   right: 10px;
 }
 .blog-list .blog-item .post-format > a::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   bottom: 50%;
@@ -2528,14 +2528,14 @@ blockquote .author .desc {
   text-transform: none;
   display: block;
 }
-.customer_login input[type="text"],
-.customer_login input[type="email"],
-.customer_login input[type="password"] {
+.customer_login input[type='text'],
+.customer_login input[type='email'],
+.customer_login input[type='password'] {
   margin-bottom: 0;
   width: 100%;
   border-color: #f1f1f1;
 }
-.customer_login input[type="checkbox"] {
+.customer_login input[type='checkbox'] {
   display: none;
 }
 .customer_login .label-text {
@@ -2547,10 +2547,10 @@ blockquote .author .desc {
   position: relative;
   font-weight: normal;
 }
-.customer_login input[type="checkbox"]:checked + label::before,
+.customer_login input[type='checkbox']:checked + label::before,
 .customer_login .label-text:hover::before {
-  font-family: "FontAwesome";
-  content: "\f00c";
+  font-family: 'FontAwesome';
+  content: '\f00c';
   display: inline-block;
   top: 5px;
   left: 0;
@@ -2564,10 +2564,10 @@ blockquote .author .desc {
   padding: 0;
   line-height: 14px;
 }
-.customer_login input[type="checkbox"] + label::after {
+.customer_login input[type='checkbox'] + label::after {
   position: absolute;
   z-index: 1;
-  content: "";
+  content: '';
   left: 0;
   top: 2px;
   width: 20px;
@@ -2694,7 +2694,7 @@ blockquote .author .desc {
 .kt-popup-quickview:after,
 .kt-popup-quickview:before {
   display: table;
-  content: "";
+  content: '';
 }
 .kt-popup-quickview:after {
   clear: both;
@@ -2855,16 +2855,16 @@ blockquote .author .desc {
 }
 .tanajil-disablepopupnewsletter span::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 17px;
   height: 17px;
   border: 1px solid #e9e9e9;
   left: 0;
   top: 0;
 }
-.tanajil-disablepopupnewsletter input[type="checkbox"]:checked + span::after {
-  font-family: "FontAwesome";
-  content: "\f00c";
+.tanajil-disablepopupnewsletter input[type='checkbox']:checked + span::after {
+  font-family: 'FontAwesome';
+  content: '\f00c';
   display: inline-block;
   top: 1px;
   left: 2px;
@@ -3019,7 +3019,7 @@ blockquote .author .desc {
 }
 .kt-popup-newsletter.style-3
   .tanajil-disablepopupnewsletter
-  input[type="checkbox"]:checked
+  input[type='checkbox']:checked
   + span::after {
   display: none;
 }
@@ -3326,7 +3326,7 @@ blockquote .author .desc {
   border-right: 1px solid #eee;
 }
 .kt-panels-actions-wrap .kt-prev-panel:before {
-  content: "\f104";
+  content: '\f104';
   font-family: FontAwesome;
 }
 .kt-clone-wrap .kt-panels {
@@ -3391,7 +3391,7 @@ blockquote .author .desc {
   z-index: 10;
 }
 .kt-next-panel:before {
-  content: "\f105";
+  content: '\f105';
   font-family: FontAwesome;
 }
 .kt-panels-actions-wrap .kt-current-panel-title {
@@ -3480,8 +3480,8 @@ blockquote .author .desc {
   font-size: 13px;
 }
 .footer-end .demos a::after {
-  font-family: "FontAwesome";
-  content: "\f107";
+  font-family: 'FontAwesome';
+  content: '\f107';
   margin-left: 5px;
   font-size: 15px;
   color: #888;
@@ -3578,8 +3578,8 @@ blockquote .author .desc {
 }
 .breadcrumb > li + li:before {
   padding: 0 8px;
-  content: "\f101";
-  font-family: "FontAwesome";
+  content: '\f101';
+  font-family: 'FontAwesome';
   font-weight: 400;
 }
 /*--------PAGINATION--------------*/
@@ -3653,7 +3653,7 @@ blockquote .author .desc {
   border-bottom: 2px solid #e8e8e8;
 }
 .widget .widgettitle::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -3672,7 +3672,7 @@ blockquote .author .desc {
 .widget a {
   color: #555555;
 }
-.sidebar input[type="checkbox"] {
+.sidebar input[type='checkbox'] {
   display: none;
 }
 .sidebar .label-text {
@@ -3684,10 +3684,10 @@ blockquote .author .desc {
   position: relative;
   font-weight: normal;
 }
-.sidebar input[type="checkbox"] + label::after {
+.sidebar input[type='checkbox'] + label::after {
   position: absolute;
   z-index: 1;
-  content: "";
+  content: '';
   left: 0;
   top: 3px;
   width: 18px;
@@ -3695,9 +3695,9 @@ blockquote .author .desc {
   border: solid 1px #eeeeee;
   border-radius: 4px;
 }
-.sidebar input[type="checkbox"]:checked + label::before {
-  font-family: "FontAwesome";
-  content: "\f00c";
+.sidebar input[type='checkbox']:checked + label::before {
+  font-family: 'FontAwesome';
+  content: '\f00c';
   display: inline-block;
   top: 7px;
   left: 0;
@@ -3823,7 +3823,7 @@ blockquote .author .desc {
   border-color: #bf1b1b transparent;
 }
 .widget_filter_price .ui-slider .ui-slider-handle::before {
-  content: "";
+  content: '';
   border-style: solid;
   border-width: 8px 6px 0 6px;
   border-color: #bf1b1b transparent;
@@ -3901,7 +3901,7 @@ blockquote .author .desc {
 .list-color a.active::before,
 .list-color a:hover::before {
   color: #fff;
-  content: "\f00c";
+  content: '\f00c';
   display: inline-block;
   font-family: FontAwesome;
   font-size: 12px;
@@ -3964,7 +3964,7 @@ blockquote .author .desc {
   padding-top: 30px;
 }
 .Testimonial-inner .comment::before {
-  content: "“";
+  content: '“';
   font-size: 60px;
   font-family: Georgia;
   color: #aaaaaa;
@@ -4002,8 +4002,8 @@ blockquote .author .desc {
   border-radius: 0;
 }
 .newsletter-widget:before {
-  font-family: "FontAwesome";
-  content: "\f003";
+  font-family: 'FontAwesome';
+  content: '\f003';
   font-size: 150px;
   color: #f5f5f5;
   position: absolute;
@@ -4023,7 +4023,7 @@ blockquote .author .desc {
   color: #222;
   line-height: 1.2;
   margin-bottom: 10px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -4114,12 +4114,12 @@ blockquote .author .desc {
   color: #bf1b1b;
 }
 .grid-view-mode .modes-mode.mode-grid::before {
-  content: "\f118";
+  content: '\f118';
   font-family: Flaticon;
   font-size: 17px;
 }
 .grid-view-mode .modes-mode.mode-list::before {
-  content: "\f119";
+  content: '\f119';
   font-family: Flaticon;
   font-size: 23px;
 }
@@ -4172,11 +4172,11 @@ ul.list-products {
 }
 .product-item .yith-wcwl-add-to-wishlist > div a:before {
   font-size: 18px;
-  font-family: "FontAwesome";
-  content: "\f08a";
+  font-family: 'FontAwesome';
+  content: '\f08a';
 }
 .product-item .yith-wcwl-add-to-wishlist > div a:hover::before {
-  content: "\f004";
+  content: '\f004';
 }
 .product-item .product-thumb {
   margin-bottom: 15px;
@@ -4218,8 +4218,8 @@ ul.list-products {
 .product-item.style2 .button.quick-wiew-button::before,
 .product-item.style-3 .button.quick-wiew-button::before {
   font-size: 18px;
-  content: "\f12d";
-  font-family: "Flaticon";
+  content: '\f12d';
+  font-family: 'Flaticon';
   font-weight: normal;
 }
 .product-item.style-list .button.quick-wiew-button:hover,
@@ -4237,7 +4237,7 @@ ul.list-products {
   margin: 0;
   margin-bottom: 4px;
   letter-spacing: 0;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .product-item .product-name a {
   color: #bf1b1b;
@@ -4300,8 +4300,8 @@ ul.list-products {
 }
 .product-item .thumb-group .quick-wiew-button::before {
   font-size: 18px;
-  content: "\f12d";
-  font-family: "Flaticon";
+  content: '\f12d';
+  font-family: 'Flaticon';
   font-weight: normal;
 }
 .product-item .thumb-group .loop-form-add-to-cart {
@@ -4319,8 +4319,8 @@ ul.list-products {
   .thumb-group
   .loop-form-add-to-cart
   .single_add_to_cart_button::before {
-  font-family: "Flaticon";
-  content: "\f137";
+  font-family: 'Flaticon';
+  content: '\f137';
   font-size: 18px;
   color: #fff;
   font-weight: normal;
@@ -4382,7 +4382,7 @@ ul.list-products {
 .product-item.style2 .product-name a {
   color: #222222;
 }
-.product-item.style2 .stars-rating {
+.product-item.style2 .stars-rating-custom-custom {
   margin-bottom: 5px;
 }
 .product-item.style2 .desc {
@@ -4475,7 +4475,7 @@ ul.list-products {
   margin-bottom: 15px;
   display: none;
 }
-.product-item.style-list .stars-rating {
+.product-item.style-list .stars-rating-custom-custom {
   margin-bottom: 20px;
 }
 .product-item.style-list .product-info-left ul {
@@ -4492,7 +4492,7 @@ ul.list-products {
   color: #888888;
 }
 .product-item.style-list .product-info-left .attributes-display li a:after {
-  content: "/";
+  content: '/';
   display: inline-block;
   color: #888888;
 }
@@ -4517,7 +4517,7 @@ ul.list-products {
   display: inline-block;
 }
 .product-item.style-list .product-list-message::after {
-  content: "";
+  content: '';
   height: 2px;
   width: 36px;
   bottom: 0;
@@ -4578,25 +4578,24 @@ ul.list-products {
   width: 34px;
   height: inherit;
 }
-/*STARS-RATING*/
-.star-rating {
+STARS-RATING .star-rating-custom-custom {
   font-size: 0;
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
-.star-rating:before,
-.star-rating > span:before {
+.star-rating-custom-custom:before,
+.star-rating-custom-custom > span:before {
   display: inline-block;
   float: left;
   font-family: FontAwesome;
-  content: "\f006\f006\f006\f006\f006";
+  content: '\f006\f006\f006\f006\f006';
   font-size: 13px;
   line-height: 13px;
   color: #ffb933;
   letter-spacing: 0.1em;
 }
-.star-rating > span {
+*/ .star-rating-custom-custom > span {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -4604,23 +4603,23 @@ ul.list-products {
   overflow: hidden;
   line-height: 13px;
 }
-.star-rating .star-1 {
+.star-rating-custom-custom .star-1 {
   width: 20%;
 }
-.star-rating .star-2 {
+.star-rating-custom-custom .star-2 {
   width: 40%;
 }
-.star-rating .star-3 {
+.star-rating-custom-custom .star-3 {
   width: 60%;
 }
-.star-rating .star-4 {
+.star-rating-custom-custom .star-4 {
   width: 80%;
 }
-.star-rating .star-5 {
+.star-rating-custom-custom .star-5 {
   width: 100%;
 }
-.star-rating > span:before {
-  content: "\f005\f005\f005\f005\f005";
+.star-rating-custom-custom > span:before {
+  content: '\f005\f005\f005\f005\f005';
   color: #ffb933;
 }
 .count-star {
@@ -4719,7 +4718,7 @@ ul.list-products {
 .form-contact::after,
 .form-contact::before {
   display: table;
-  content: "";
+  content: '';
 }
 .form-contact::after {
   clear: both;
@@ -4738,7 +4737,7 @@ ul.list-products {
   text-align: left;
   font-style: normal;
   margin-bottom: 27px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   text-transform: uppercase;
 }
 .tanajil-contact-fom p:last-child {
@@ -4778,7 +4777,7 @@ ul.list-products {
   font-weight: 500;
   color: #fff;
   margin-bottom: 55px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   text-transform: uppercase;
 }
 .tanajil-contact-info .item {
@@ -4798,20 +4797,20 @@ ul.list-products {
   line-height: 40px;
 }
 .tanajil-contact-info .item .icon::before {
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: 20px;
   color: #bf1b1b;
   display: inline-block;
   text-align: center;
 }
 .tanajil-contact-info .address .icon::before {
-  content: "\f041";
+  content: '\f041';
 }
 .tanajil-contact-info .phone .icon::before {
-  content: "\f095";
+  content: '\f095';
 }
 .tanajil-contact-info .email .icon::before {
-  content: "\f003";
+  content: '\f003';
 }
 .tanajil-contact-info .item .text {
   display: block;
@@ -4883,7 +4882,7 @@ ul.list-products {
   font-size: 20px;
 }
 .cart-form .product-remove a:before {
-  content: "\f014";
+  content: '\f014';
   font-family: FontAwesome;
   font-size: 20px;
   color: #aaa;
@@ -4910,7 +4909,7 @@ ul.list-products {
 .cart-form .shop_table .product-name a {
   display: block;
   font-weight: 500;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   font-size: 16px;
 }
 .cart-form .shop_table .product-name .attributes-select {
@@ -4958,7 +4957,7 @@ ul.list-products {
   font-weight: 500;
   color: #333333;
 }
-.cart-form .shop_table .actions input[type="text"] {
+.cart-form .shop_table .actions input[type='text'] {
   min-width: 281px;
   color: #888888;
 }
@@ -4978,9 +4977,9 @@ ul.list-products {
   background: transparent;
 }
 .shop_table .actions .coupon .button::after {
-  content: "\f061";
+  content: '\f061';
   display: inline-block;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: 14px;
 }
 .shop_table .actions .order-total span {
@@ -5019,7 +5018,7 @@ ul.list-products {
 .header-banner.banner-image .banner-wrap::after,
 .header-banner.banner-image .banner-wrap::before {
   display: table;
-  content: "";
+  content: '';
 }
 .header-banner.banner-image .banner-wrap::after {
   clear: both;
@@ -5036,7 +5035,7 @@ ul.list-products {
   font-style: normal;
   font-weight: 700;
   margin-bottom: 20px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .header-banner .sub-title {
   font-size: 16px;
@@ -5261,7 +5260,7 @@ ul.list-products {
   position: relative;
 }
 .title-form::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -5391,8 +5390,8 @@ ul.list-products {
   min-width: 135px;
 }
 .checkout-wrapp .button-payment::after {
-  content: "\f061";
-  font-family: "FontAwesome";
+  content: '\f061';
+  font-family: 'FontAwesome';
   font-size: 13px;
   color: #aaaaaa;
   margin-left: 10px;
@@ -5429,8 +5428,8 @@ ul.list-products {
   color: #ffffff;
 }
 .button-control .btn-back-to-shipping::before {
-  content: "\f060";
-  font-family: "FontAwesome";
+  content: '\f060';
+  font-family: 'FontAwesome';
   font-size: 13px;
   color: #aaaaaa;
   margin-right: 10px;
@@ -5451,7 +5450,7 @@ ul.list-products {
   margin-bottom: 25px;
 }
 .end-checkout .icon::before {
-  content: url("../images/icon-checkout.png");
+  content: url('../images/icon-checkout.png');
 }
 .end-checkout .title-checkend {
   font-size: 18px;
@@ -5496,7 +5495,7 @@ ul.list-products {
   right: 1px;
   top: 1px;
   bottom: 1px;
-  content: "";
+  content: '';
   z-index: 1;
   border-radius: 4px;
 }
@@ -5572,13 +5571,13 @@ ul.list-products {
   color: #333;
   margin-bottom: 9px;
   margin-top: -9px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
-.details-infor .stars-rating {
+/* .details-infor .stars-rating-custom-custom {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 5px;
-}
+} */
 .details-infor .availability {
   text-transform: capitalize;
   font-size: 14px;
@@ -5641,7 +5640,7 @@ ul.list-products {
 .attribute_color .list-color a:hover::before,
 .attribute_color .list-color a.active::before {
   color: #fff;
-  content: "\f00c";
+  content: '\f00c';
   display: inline-block;
   font-family: FontAwesome;
   font-size: 12px;
@@ -5683,7 +5682,7 @@ ul.list-products {
 }
 .details-infor .group-button .yith-wcwl-add-to-wishlist div a::before,
 .details-infor .group-button .size-chart-wrapp .btn-size-chart a::before {
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   margin-right: 7px;
   color: #ccc;
   font-size: 18px;
@@ -5693,14 +5692,14 @@ ul.list-products {
   margin-top: -2px;
 }
 .details-infor .group-button .yith-wcwl-add-to-wishlist div a::before {
-  content: "\f08a";
+  content: '\f08a';
 }
 .details-infor .group-button .yith-wcwl-add-to-wishlist div a:hover::before {
-  content: "\f004";
+  content: '\f004';
 }
 .details-infor .group-button .size-chart-wrapp .btn-size-chart a::before {
-  content: "\f11b";
-  font-family: "Flaticon";
+  content: '\f11b';
+  font-family: 'Flaticon';
 }
 .details-infor .quantity,
 .details-infor .group-button .button {
@@ -5753,7 +5752,7 @@ ul.list-products {
   position: absolute;
   bottom: -8px;
   left: 0;
-  content: "";
+  content: '';
 }
 .tab-details-product #product-descriptions p {
   margin-bottom: 0;
@@ -5778,10 +5777,10 @@ ul.list-products {
   overflow: hidden;
   padding-left: 30px;
 }
-.reviews-tab .stars-rating {
+/* .reviews-tab .stars-rating-custom-custom {
   float: right;
   display: inline-block;
-}
+} */
 .reviews-tab .comment-text .meta {
   border-bottom: 1px solid #eee;
   padding-bottom: 5px;
@@ -5820,28 +5819,28 @@ ul.list-products {
   padding-left: 0;
 }
 .review_form .comment-form-review .stars a::before {
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: 13px;
   display: inline-block;
 }
 .review_form .comment-form-review .stars a.star-1::before {
-  content: "\f005";
+  content: '\f005';
 }
 .review_form .comment-form-review .stars a.star-2::before {
-  content: "\f005\f005";
+  content: '\f005\f005';
 }
 .review_form .comment-form-review .stars a.star-3::before {
-  content: "\f005\f005\f005";
+  content: '\f005\f005\f005';
 }
 .review_form .comment-form-review .stars a.star-4::before {
-  content: "\f005\f005\f005\f005";
+  content: '\f005\f005\f005\f005';
 }
 .review_form .comment-form-review .stars a.star-5::before {
-  content: "\f005\f005\f005\f005\f005";
+  content: '\f005\f005\f005\f005\f005';
 }
-.comment-form-review input[type="text"],
-.comment-form-review input[type="email"],
-.comment-form input[type="url"] {
+.comment-form-review input[type='text'],
+.comment-form-review input[type='email'],
+.comment-form input[type='url'] {
   clear: both;
   float: left;
   padding: 6px 15px;
@@ -5869,12 +5868,12 @@ ul.list-products {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 15px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   padding-top: 60px;
 }
 .product-grid-title::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 70px;
   border-bottom: 4px solid #bf1b1b;
   bottom: 0;
@@ -5974,7 +5973,7 @@ ul.list-products {
   font-weight: 700;
   line-height: 1;
   max-width: 370px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   text-transform: capitalize;
 }
 .slider-item.slick-active .title-big {
@@ -6111,7 +6110,7 @@ ul.list-products {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 0;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   color: #fff;
 }
 .tanajil-newsletter.default .subtitle {
@@ -6145,7 +6144,7 @@ ul.list-products {
   position: relative;
 }
 .tanajil-tabs .tab-link::before {
-  content: "";
+  content: '';
   top: 50%;
   left: 0;
   right: 0;
@@ -6199,12 +6198,12 @@ ul.list-products {
   display: table;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   padding-bottom: 15px;
 }
 .custommenu-title-blog::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 70px;
   border-bottom: 4px solid #bf1b1b;
   bottom: 0;
@@ -6226,7 +6225,7 @@ ul.list-products {
 .tanajil-blog-item .post-thumb > a::after,
 .tanajil-blog-item .post-thumb .video-tanajil-blog figure::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   bottom: 0;
   left: 0;
@@ -6307,13 +6306,13 @@ ul.list-products {
   font-size: 18px;
   color: #333;
   margin-bottom: 15px;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   font-weight: 500;
   position: relative;
   padding-bottom: 10px;
 }
 .tanajil-blog-item .blog-title::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -6467,8 +6466,8 @@ ul.list-products {
   color: #fff;
 }
 .video-tanajil-blog .quick-install::before {
-  content: "\f115";
-  font-family: "Flaticon", sans-serif;
+  content: '\f115';
+  font-family: 'Flaticon', sans-serif;
 }
 .video-tanajil-blog .quick-install:hover {
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.9);
@@ -6519,7 +6518,7 @@ ul.list-products {
   margin-top: 0;
 }
 .top-bar .header-language .tanajil-language::after {
-  content: "|";
+  content: '|';
 }
 .top-bar .header-user-links a {
   line-height: 48px;
@@ -6583,7 +6582,7 @@ ul.list-products {
   margin: 0;
 }
 .form-search .form-content .btn-search .icon-search::before {
-  content: "\f12d";
+  content: '\f12d';
   font-family: Flaticon;
   display: inline-block;
   vertical-align: middle;
@@ -6679,7 +6678,7 @@ ul.list-products {
   color: #222222;
 }
 .tanajil-tabs.style2 .tab-link li:after {
-  content: "";
+  content: '';
   width: 2px;
   height: 30px;
   background: #f1f1f1;
@@ -6918,8 +6917,8 @@ body.vertical-menu-open .header .header-nav {
   top: 18px;
 }
 .vertical-style .main-menu > li .toggle-submenu:before {
-  font-family: "FontAwesome";
-  content: "\f107";
+  font-family: 'FontAwesome';
+  content: '\f107';
   font-size: 15px;
   color: #fff;
   font-weight: normal;
@@ -7194,12 +7193,12 @@ body.vertical-menu-open .vertical-menu-overlay {
   padding-bottom: 15px;
   position: relative;
   text-transform: uppercase;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
   color: #fff;
 }
 .tanajil-newsletter.style3 .title::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 70px;
   border-bottom: 4px solid #bf1b1b;
   bottom: 0;
@@ -7351,7 +7350,7 @@ body.vertical-menu-open .vertical-menu-overlay {
 }
 .header-vertical .main-content::before,
 .header-vertical .main-content::after {
-  content: "";
+  content: '';
   display: table;
 }
 .header-vertical .main-content::after {
@@ -7466,7 +7465,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   letter-spacing: 0.05em;
 }
 .vertical-wapper .block-title::after {
-  content: "";
+  content: '';
   position: absolute;
   left: -8px;
   top: -10px;
@@ -7479,7 +7478,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   top: -10px;
   left: 0;
   right: 0;
-  content: "";
+  content: '';
   background-color: #bf1b1b;
   height: 10px;
 }
@@ -7591,8 +7590,8 @@ body.vertical-menu-open .vertical-menu-overlay {
   transform: translate(0, 0);
 }
 .vertical-menu .menu-item-has-children > a::before {
-  content: "\f105";
-  font-family: "FontAwesome";
+  content: '\f105';
+  font-family: 'FontAwesome';
   position: absolute;
   top: 0;
   right: 0;
@@ -7792,11 +7791,11 @@ body.vertical-menu-open .vertical-menu-overlay {
   margin-bottom: 20px;
   position: relative;
   color: #fff;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .tanajil-product.layout1 .head .title::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 40px;
   top: auto;
   bottom: -10px;
@@ -7839,7 +7838,7 @@ body.vertical-menu-open .vertical-menu-overlay {
 /*tanajil-testimonials*/
 .tanajil-testimonials.default {
   margin-bottom: 30px;
-  background-image: url("../beam_saber_images/new_letter_2.png");
+  background-image: url('../beam_saber_images/new_letter_2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7940,7 +7939,7 @@ body.vertical-menu-open .vertical-menu-overlay {
 .instagram .item-instagram::after {
   position: absolute;
   top: 0px;
-  content: "";
+  content: '';
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -8000,7 +7999,7 @@ body.vertical-menu-open .vertical-menu-overlay {
 .header.style9 .block-minicart .shopcart-icon:before,
 .header.style8 .block-minicart .shopcart-icon:before,
 .header.style7 .block-minicart .shopcart-icon:before {
-  content: "\f12e";
+  content: '\f12e';
   font-family: Flaticon;
   font-size: 26px;
   font-weight: normal;
@@ -8153,7 +8152,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   font-weight: 700;
   margin-right: 10px;
 }
-.product-item.style-4 .stars-rating {
+.product-item.style-4 .stars-rating-custom-custom {
   display: inline-block;
 }
 .product-item.style-4 .group-buttons .button,
@@ -8486,7 +8485,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   text-decoration: none;
 }
 .popup-pinmap::before {
-  content: "";
+  content: '';
   position: absolute;
   border: 8px solid transparent;
   opacity: 0;
@@ -8522,7 +8521,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   visibility: visible;
 }
 .popup-pinmap::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 20px;
   height: 100%;
@@ -8574,7 +8573,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   line-height: 1;
   color: #fff;
   text-transform: capitalize;
-  font-family: "Rubik", serif;
+  font-family: 'Rubik', serif;
 }
 .item-banner.style1 .inner .title {
   font-size: 40px;
@@ -8673,7 +8672,7 @@ body.vertical-menu-open .vertical-menu-overlay {
   font-size: 30px;
   line-height: 32px;
   margin-bottom: 7px;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 700;
 }
 .item-banner.style3 .tanajil-subtitle {
@@ -8854,7 +8853,7 @@ iframe {
   line-height: 32px;
   color: #ffffff;
   font-weight: 700;
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 .item-banner.style23 .banner-content {
   padding-top: 110px;
@@ -8868,7 +8867,7 @@ iframe {
   line-height: 32px;
   color: #ffffff;
   font-weight: 700;
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 /*banner home 05*/
 .item-banner.style24 .banner-content {
@@ -8880,7 +8879,7 @@ iframe {
 }
 .item-banner.style24 .title {
   font-weight: 700;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 30px;
   line-height: 32px;
   margin-bottom: 25px;
@@ -8924,7 +8923,7 @@ iframe {
 }
 .item-banner.style26 .title {
   font-size: 24px;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   border-bottom: 1px solid;
   margin-bottom: 15px;
   display: inline-block;
@@ -8976,7 +8975,7 @@ iframe {
   line-height: 32px;
   font-weight: 700;
   margin-bottom: 13px;
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 .item-banner.style18 .description {
   margin-bottom: 20px;
@@ -9000,7 +8999,7 @@ iframe {
   border-bottom: 1px solid;
   display: inline-block;
   margin-bottom: 5px;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   letter-spacing: 0;
 }
 .item-banner.style19 .sub-title {
@@ -9330,7 +9329,7 @@ iframe {
   text-transform: uppercase;
 }
 .footer .widgettitle::before {
-  content: "";
+  content: '';
   border-left: 3px solid #bf1b1b;
   height: 19px;
   position: absolute;
@@ -9369,7 +9368,7 @@ iframe {
 }
 .tanajil-newsletter.style1 .title::before,
 .tanajil-newsletter.style2 .title::before {
-  content: "";
+  content: '';
   border-left: 3px solid #bf1b1b;
   height: 19px;
   position: absolute;
@@ -9392,15 +9391,15 @@ iframe {
   padding-left: 20px;
   cursor: pointer;
 }
-.tanajil-newsletter.style1 .list input[type="radio"] {
+.tanajil-newsletter.style1 .list input[type='radio'] {
   display: none;
 }
-.tanajil-newsletter.style1 .list input[type="radio"]:checked + span {
+.tanajil-newsletter.style1 .list input[type='radio']:checked + span {
   border-bottom: 1px solid #bbbbbb;
 }
 .tanajil-newsletter.style1 .list label span:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 16px;
   height: 16px;
   border: 1px solid #666666;
@@ -9408,8 +9407,8 @@ iframe {
   top: 5px;
   border-radius: 50%;
 }
-.tanajil-newsletter.style1 .list input[type="radio"]:checked + span:after {
-  content: "";
+.tanajil-newsletter.style1 .list input[type='radio']:checked + span:after {
+  content: '';
   display: inline-block;
   top: 9px;
   left: 4px;
@@ -9463,7 +9462,7 @@ iframe {
   margin-top: 15px;
 }
 .footer .tanajil-socials li a::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -1px;
   left: -1px;
@@ -9519,25 +9518,25 @@ iframe {
   padding-left: 100px;
 }
 .footer .menu-connect li a::before {
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: 18px;
   color: #eeeeee;
   margin-right: 20px;
 }
 .footer .menu-connect li.facebook a::before {
-  content: "\f082";
+  content: '\f082';
 }
 .footer .menu-connect li.twitter a::before {
-  content: "\f099";
+  content: '\f099';
 }
 .footer .menu-connect li.instagram a::before {
-  content: "\f16d";
+  content: '\f16d';
 }
 .footer .menu-connect li.youtube a::before {
-  content: "\f16a";
+  content: '\f16a';
 }
 .footer .menu-connect li.pinterest a::before {
-  content: "\f0d2";
+  content: '\f0d2';
 }
 /*============footer style 3==============*/
 .footer.style3 .tanajil-socials {
@@ -9730,7 +9729,7 @@ iframe {
   .tanajil-newsletter.style3::before,
   .item-banner .inner::before,
   .slider-item .slider-inner::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -10572,19 +10571,19 @@ iframe {
   .tanajil-newsletter.style1 .newsletter-form-wrap .input-text {
     font-size: 13px;
   }
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="search"],
-  input[type="url"],
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='tel'],
+  input[type='search'],
+  input[type='url'],
   textarea,
   select {
     padding: 7px 10px;
   }
   .button,
   button,
-  input[type="submit"] {
+  input[type='submit'] {
     font-size: 12px;
   }
   .item-banner.style10 .title {
@@ -11300,12 +11299,12 @@ iframe {
 }
 .button,
 button,
-input[type="submit"],
+input[type='submit'],
 .block-minicart .shopcart-icon .count,
 .load-more a:hover,
 .tanajil-newsletter.style1 .newsletter-form-wrap .submit-newsletter:hover,
 .product-item .button:hover,
-.customer_login input[type="submit"],
+.customer_login input[type='submit'],
 .sevice-box-content .sevice-button:hover,
 .footer-device-mobile-item.device-cart .count-icon,
 .widget_filter_size li.active,
@@ -11335,13 +11334,13 @@ input[type="submit"],
   background-color: #bf1b1b;
 }
 .product-item .button:hover,
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
 textarea:focus,
 button:focus,
 select:focus,
@@ -11378,7 +11377,7 @@ a:active,
 .slider-lookbook-item .view-the-look:hover,
 .list-product-order .attributes-select:hover,
 .header-language .tanajil-submenu > li > a:hover,
-.sidebar input[type="checkbox"]:checked + label::before,
+.sidebar input[type='checkbox']:checked + label::before,
 .main-menu .submenu > li:hover > a,
 .main-menu .submenu > li.active > a,
 .block-minicart .no-product .text span,
@@ -11460,7 +11459,7 @@ a:active,
 
 #product-describe {
   color: #685206;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
   line-height: 24px;
   margin: 0 0 24px;
@@ -11486,7 +11485,7 @@ a:active,
 
 #product_details_universe {
   color: #685206;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   font-weight: 300;
   line-height: 32px;
@@ -11496,7 +11495,7 @@ a:active,
 
 #product_head_line {
   color: #685206;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 45px;
   font-weight: bold;
   letter-spacing: -1px;
@@ -11504,9 +11503,103 @@ a:active,
   text-align: left;
 }
 
-#profile_contend{
+#profile_contend {
   border-left: darkgrey solid 1px;
   border-right: darkgrey solid 1px;
   padding-left: 40px;
-  padding-right : 40px;
+  padding-right: 40px;
+}
+
+/* 
+        Use :not with impossible condition so inputs are only hidden 
+        if pseudo selectors are supported. Otherwise the user would see
+        no inputs and no highlighted stars.
+    */
+.rating input[type='radio']:not(:nth-of-type(0)) {
+  /* hide visually */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.rating [type='radio']:not(:nth-of-type(0)) + label {
+  display: none;
+}
+
+label[for]:hover {
+  cursor: pointer;
+}
+
+.rating .stars label:before {
+  content: '★';
+}
+
+.stars label {
+  color: lightgray;
+}
+
+.stars label:hover {
+  text-shadow: 0 0 1px #000;
+}
+
+.rating
+  [type='radio']:nth-of-type(1):checked
+  ~ .stars
+  label:nth-of-type(-n + 1),
+.rating
+  [type='radio']:nth-of-type(2):checked
+  ~ .stars
+  label:nth-of-type(-n + 2),
+.rating
+  [type='radio']:nth-of-type(3):checked
+  ~ .stars
+  label:nth-of-type(-n + 3),
+.rating
+  [type='radio']:nth-of-type(4):checked
+  ~ .stars
+  label:nth-of-type(-n + 4),
+.rating
+  [type='radio']:nth-of-type(5):checked
+  ~ .stars
+  label:nth-of-type(-n + 5) {
+  color: orange;
+}
+
+.rating [type='radio']:nth-of-type(1):focus ~ .stars label:nth-of-type(1),
+.rating [type='radio']:nth-of-type(2):focus ~ .stars label:nth-of-type(2),
+.rating [type='radio']:nth-of-type(3):focus ~ .stars label:nth-of-type(3),
+.rating [type='radio']:nth-of-type(4):focus ~ .stars label:nth-of-type(4),
+.rating [type='radio']:nth-of-type(5):focus ~ .stars label:nth-of-type(5) {
+  color: darkorange;
+}
+
+:root {
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; 
+  line-height: 1;
+}
+.Stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--star-background) var(--percent),
+      var(--star-color) var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
