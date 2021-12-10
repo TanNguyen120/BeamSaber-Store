@@ -8,7 +8,7 @@ const usersRouter = require("./routes/users");
 const bodyParser = require('body-parser');
 const passport = require('./components/auth/passport');
 const session = require("express-session");
-
+const auth = require("./components/auth/ath_checking");
 
 
 // all specific project router go here
@@ -51,6 +51,9 @@ const indexPageRouter = require("./components/index_page");
 //define user profile router
 const userRouter = require("./components/user");
 
+//define session handler router
+const sessionHandler = require("./components/session_handler");
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 const app = express();
@@ -75,6 +78,7 @@ app.use(cookieParser());
 app.use(session({
     secret: process.env.SESSION_SECRET, resave: true,
     saveUninitialized: false,
+    cookie: { maxAge: 60 * 60 * 24 * 60 }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -90,8 +94,11 @@ app.use(function (req, res, next) {
 });
 
 
-
-
+app.use(sessionHandler);
+app.use((req, res, next) => {
+    console.log(req.method + req.path + " unAuthnID: " + req.session.unAuthUser);
+    next();
+})
 // ROUTER MUST BE USE AFTER ALL OTHER MIDDLE WARE ARE DEFINED
 // default routes
 app.use("/", indexPageRouter);
@@ -130,7 +137,7 @@ app.use("/about_us", aboutUsRouter);
 app.use("/search", searchBarRouter);
 
 // middleware for user profile
-app.use("/user", userRouter);
+app.use("/user", auth.isAuth, userRouter);
 
 
 ////////////////////////////////////////////////////////////////////////////////////

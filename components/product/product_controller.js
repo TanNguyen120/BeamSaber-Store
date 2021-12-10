@@ -50,7 +50,8 @@ exports.productDetails = async (req, res) => {
         const productDetails = await productService.findItem(req.query.id);
         ("found item: " + JSON.stringify(productDetails));
         const listComments = await productService.findComments(productId);
-        res.render("./product/product_details", { productDetails, listComments });
+        const relateList = await productService.findRelate(productDetails.grade, 0);
+        res.render("./product/product_details", { productDetails, listComments, relateList });
 
     } catch (err) {
         console.error("errr:" + err);

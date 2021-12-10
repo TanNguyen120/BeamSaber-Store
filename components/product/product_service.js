@@ -89,3 +89,12 @@ exports.addComment = (productId, userId, postComment, postStar) => {
     rate: postStar
   });
 }
+
+exports.findRelate = (productGrade, randomOffset) => {
+  return models.product.findAll(
+    {
+      where: { grade: productGrade },
+      offset: randomOffset,
+      limit: 6
+    })
+}
