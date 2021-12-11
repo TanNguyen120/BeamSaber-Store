@@ -2,8 +2,7 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('order', {
     order_id: {
-      autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(45),
       allowNull: false,
       primaryKey: true
     },
@@ -22,6 +21,14 @@ module.exports = function(sequelize, DataTypes) {
     total_cost: {
       type: DataTypes.FLOAT,
       allowNull: false
+    },
+    status: {
+      type: DataTypes.STRING(45),
+      allowNull: true
+    },
+    ordercol: {
+      type: DataTypes.STRING(45),
+      allowNull: true
     }
   }, {
     sequelize,

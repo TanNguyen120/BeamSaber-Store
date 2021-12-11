@@ -32,7 +32,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     password: {
-      type: DataTypes.STRING(8),
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    account_status: {
+      type: DataTypes.STRING(20),
       allowNull: true
     }
   }, {

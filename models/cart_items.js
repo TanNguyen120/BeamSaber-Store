@@ -1,6 +1,15 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('product_comment', {
+  return sequelize.define('cart_items', {
+    cart_id: {
+      type: DataTypes.STRING(45),
+      allowNull: false,
+      primaryKey: true,
+      references: {
+        model: 'cart',
+        key: 'cart_id'
+      }
+    },
     product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -10,26 +19,25 @@ module.exports = function(sequelize, DataTypes) {
         key: 'product_id'
       }
     },
-    user_id: {
+    quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
+      allowNull: true
+    },
+    total_cost: {
+      type: DataTypes.FLOAT,
+      allowNull: true
+    },
+    order_id: {
+      type: DataTypes.STRING(45),
+      allowNull: true,
       references: {
-        model: 'user',
-        key: 'user_id'
+        model: 'order',
+        key: 'order_id'
       }
-    },
-    comment: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
-    rate: {
-      type: DataTypes.INTEGER,
-      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'product_comment',
+    tableName: 'cart_items',
     timestamps: false,
     indexes: [
       {
@@ -37,22 +45,22 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
+          { name: "cart_id" },
           { name: "product_id" },
-          { name: "user_id" },
         ]
       },
       {
-        name: "user_comment_idx",
-        using: "BTREE",
-        fields: [
-          { name: "user_id" },
-        ]
-      },
-      {
-        name: "comment_product_idx",
+        name: "FK_cart_item_product_idx",
         using: "BTREE",
         fields: [
           { name: "product_id" },
+        ]
+      },
+      {
+        name: "FK_cart_item_order_idx",
+        using: "BTREE",
+        fields: [
+          { name: "order_id" },
         ]
       },
     ]
