@@ -402,8 +402,12 @@
                     </div>
                     <div class='product-thumb'>
                       <div class='thumb-inner'>
-                        <a href='#'>
-                          <img src='{{link_picture}}' alt='img' />
+                        <a href='/product/{{name}}?id={{product_id}}'>
+                          <img
+                            src='{{link_picture}}'
+                            alt='img'
+                            class='product_picture'
+                          />
                         </a>
                         <div class='thumb-group'>
                           <div class='yith-wcwl-add-to-wishlist'>
@@ -423,7 +427,9 @@
                     </div>
                     <div class='product-info'>
                       <h5 class='product-name product_title'>
-                        <a href='#'>{{name}}</a>
+                        <a
+                          href='/product/{{name}}?id={{product_id}}'
+                        >{{name}}</a>
                       </h5>
                       <div class='group-info'>
                         <div class='stars-rating'>

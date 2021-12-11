@@ -98,3 +98,21 @@ exports.findRelate = (productGrade, randomOffset) => {
       limit: 6
     })
 }
+
+
+exports.filterFind = (page, limit = 12, fGrade, priceRange, productUniverse, orderBy, orderCondition) => {
+  return models.product.findAll(
+    {
+      where: {
+        grade: fGrade,
+        universe: productUniverse,
+        price: { [Op.lte]: priceRange }
+      },
+      order: [
+        [orderBy, orderCondition]
+      ],
+      offset: page * limit,
+      limit: limit
+    }
+  )
+}

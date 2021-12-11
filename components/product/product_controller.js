@@ -160,7 +160,7 @@ exports.searchProductWithCond = async (req, res) => {
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
-exports.addComment = async (req, res, next) => {
+exports.addComment = async (req, res) => {
     const name = req.params.product_name
     const comment = req.body.comment;
     const productId = parseInt(req.query.id);
@@ -173,5 +173,46 @@ exports.addComment = async (req, res, next) => {
         console.log("ERR while query: " + err);
         res.render("error", { message: err });
         throw err;
+    }
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+exports.filterProduct = async (req, res) => {
+    const page = !isNaN(parseInt(req.query.page)) ? parseInt(req.query.page) : 1;
+
+    // define orderby column by query string
+    const orderBy = req.query.order == "newest" ? "product_id" : "price";
+    const orderValue = req.query.order;
+
+    // check if not filter by newest then check price filter condition
+    const orderCondition = orderValue == "newest" ? "DESC" : orderValue.includes("desc") ? "DESC" : "ASC";
+    const universe = req.query.universe;
+    const priceRange = req.query.price_range;
+    const grade = req.query.grade;
+
+    // set the query string to pass to client
+    const filterCondition = "?price="
+        + req.query.price
+        + "&time="
+        + req.query.time
+        + "&grade="
+        + grade
+        + "& price_range="
+        + priceRange;
+    try {
+        const productList = await productService.filterFind(page - 1,
+            12,
+            grade,
+            priceRange,
+            universe,
+            orderBy,
+            orderCondition);
+        res.render("./product/list_product_with_filter", { productList, pagePass: page, filterCondition });
+    } catch (err) {
+        console.error(err);
+        res.render("error", { message: err });
     }
 }

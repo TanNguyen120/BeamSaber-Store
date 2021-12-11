@@ -1209,6 +1209,18 @@ jQuery(document).ready(function ($) {
     }
 
 
+    function sliderRange() {
+        const slider = document.getElementById("myRange");
+        const output = document.getElementById("demo");
+        output.innerHTML = '$' + slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function () {
+            output.innerHTML = '$' + this.value;
+        }
+    }
+
+
 
 
     // ------------------------------------------------------------------------------------------------------------------
@@ -1258,5 +1270,6 @@ jQuery(document).ready(function ($) {
     nextpage_click_filter();
     prevpage_click_filter();
     start_rating();
+    sliderRange();
 
 });

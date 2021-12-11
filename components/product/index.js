@@ -14,15 +14,11 @@ router.get("/", productController.listOfProduct);
 router.get("/grade/:grade", productController.gradeFilter);
 
 
-//----------- rout to product details if req product details -----------------------------------------------
-
-router.get("/:product_name", productController.productDetails);
-
-router.post("/:product_name", productController.addComment);
 
 
-//---------------- Handle find grade with pagination ------------------------------------------------------
-router.get("/filter", productController.searchProductWithCond);
+
+//---------------- Handle find product with multiple condition with pagination ------------------------------------------------------
+router.get("/filter", productController.filterProduct);
 
 //=================Handle filter list of products ----------------------------------------------------------
 router.get("/list", productController.searchProductWithCond);
@@ -32,3 +28,9 @@ router.get("/list", productController.searchProductWithCond);
 //----------------rout to find price -----------------------------------------------------------------------
 //router.get("/find_price" , productController.productFindLessThanPrice);
 module.exports = router;
+
+//----------- rout to product details if req product details -----------------------------------------------
+
+router.get("/:product_name", productController.productDetails);
+
+router.post("/:product_name", productController.addComment);
