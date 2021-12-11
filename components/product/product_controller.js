@@ -212,7 +212,38 @@ exports.filterProduct = async (req, res) => {
             orderCondition);
         res.render("./product/list_product_with_filter", { productList, pagePass: page, filterCondition });
     } catch (err) {
-        console.error(err);
         res.render("error", { message: err });
+        console.error(err);
+        throw err;
+    }
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+exports.findNewProducts = async (req, res) => {
+    const page = !isNaN(parseInt(req.query.page)) ? parseInt(req.query.page) : 1;
+    try {
+        const productList = await productService.findNewProducts(page - 1);
+        res.render('./product/all_product', { productList, pagepass: page });
+    }
+    catch (err) {
+        res.render("error", { message: err });
+        console.error(err);
+        throw err;
+    }
+};
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+exports.viewListProduct = async (req, res) => {
+    const page = !isNaN(parseInt(req.query.page)) ? parseInt(req.query.page) : 1;
+    try {
+        const productList = await productService.list(page - 1);
+        res.render('./product/list_product', { productList, pagepass: page });
+    }
+    catch (err) {
+        res.render("error", { message: err });
+        console.error(err);
+        throw err;
     }
 }

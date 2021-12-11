@@ -8,7 +8,7 @@
               <a href='/'>Home</a>
             </li>
             <li class='trail-item trail-end active'>
-              Grid Products
+              List Products
             </li>
           </ul>
         </div>
@@ -19,9 +19,6 @@
         class='content-area shop-grid-content full-width col-lg-12 col-md-12 col-sm-12 col-xs-12'
       >
         <div class='site-main'>
-          <h3 class='custom_blog_title'>
-            Grid Products
-          </h3>
           <div class='shop-top-control'>
             <form
               class='filter-choice select-form'
@@ -84,11 +81,11 @@
             </form>
             <div class='grid-view-mode'>
               <div class='inner'>
-                <a href='?page=0&items=1' class='modes-mode mode-list'>
+                <a href='listproducts.html' class='modes-mode mode-list active'>
                   <span></span>
                   <span></span>
                 </a>
-                <a href='?page=0' class='modes-mode mode-grid active'>
+                <a href='gridproducts.html' class='modes-mode mode-grid'>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -97,55 +94,51 @@
               </div>
             </div>
           </div>
-          <div id='currpageVar' style='display: inline'> {{pagePass}} </div>
-          <div id='filter_value' style='display:none'>{{filterCondition}} </div>
-
-          <ul class='row list-products auto-clear equal-container product-grid'>
+          <h3 class='custom_blog_title'>
+            List Products
+          </h3>
+          <ul class='row list-products auto-clear equal-container product-list'>
             {{#each productList}}
               <li
-                class='product-item col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1'
+                class='product-item style-list col-lg-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-ts-12'
               >
                 <div class='product-inner equal-element'>
-                  {{! <div class="product-top">
-                    <div class="flash">
-                      <span class="onnew">
-                        <span class="text">
+                  <div class='product-top'>
+                    <div class='flash'>
+                      <span class='onnew'>
+                        <span class='text'>
                           new
                         </span>
                       </span>
                     </div>
-                  </div> }}
-                  <div class='product-thumb'>
-                    <div class='thumb-inner'>
-                      <a href='/product/{{name}}?id={{product_id}}'>
-                        <img
-                          class='product_picture'
-                          src='{{link_picture}}'
-                          alt='img'
-                        />
-                      </a>
-                      <div class='thumb-group'>
-                        <div class='yith-wcwl-add-to-wishlist'>
-                          <div class='yith-wcwl-add-button'>
-                            <a href='#'>Add to Wishlist</a>
-                          </div>
-                        </div>
-                        <a href='#' class='button quick-wiew-button'>Quick View</a>
-                        <div class='loop-form-add-to-cart'>
-                          <button class='single_add_to_cart_button button'>Add
-                            to cart
-                          </button>
-                        </div>
+                  </div>
+                  <div class='products-bottom-content'>
+                    <div class='product-thumb'>
+                      <div class='thumb-inner'>
+                        <a href='/product/{{name}}?id={{product_id}}'>
+                          <img
+                            src='{{link_picture}}'
+                            alt='img'
+                            syle='size: 25px'
+                          />
+                        </a>
+                        <a
+                          href='/product/{{name}}?id={{product_id}}'
+                          class='button quick-wiew-button'
+                        >Quick View</a>
                       </div>
                     </div>
-                  </div>
-                  <div class='product-info'>
-                    <h5 class='product-name product_title'>
-                      <a href='/product/{{name}}/?id={{product_id}}'>
-                        {{name}}
-                      </a>
-                    </h5>
-                    <div class='group-info'>
+                    <div class='product-info-left'>
+                      <div class='yith-wcwl-add-to-wishlist'>
+                        <div class='yith-wcwl-add-button'>
+                          <a href='#'>Add to Wishlist</a>
+                        </div>
+                      </div>
+                      <h5 class='product-name product_title'>
+                        <a
+                          href='/product/{{name}}?id={{product_id}}'
+                        >{{name}}</a>
+                      </h5>
                       <div class='stars-rating'>
                         <div class='star-rating'>
                           <span class='star-3'></span>
@@ -154,44 +147,81 @@
                           (3)
                         </div>
                       </div>
+                      <ul class='product-attributes'>
+                        <li>
+                          Universe:
+                        </li>
+                        <li>
+                          <a href='/product/{{name}}?id={{product_id}}'>
+                            {{universe}}</a>
+                        </li>
+                      </ul>
+                      <ul class='attributes-display'>
+                        <li class='swatch-color'>
+                          Grade
+                        </li>
+                        <li class='swatch-color'>
+                          <a
+                            href='\\\\\\\\product\grade\{{grade}} '
+                          >{{grade}}</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class='product-info-right'>
                       <div class='price'>
-                        <del>
-                          $999999
-                        </del>
-                        <ins>
-                          ${{price}}
-                        </ins>
+                        ${{price}}
                       </div>
-                    </div>
-                    <div>
-                      <p>
-                        Grade =
-                        {{grade}}
-                      </p>
-                    </div>
-                    <div>
-                      <p>
-                        id =
-                        {{product_id}}
-                      </p>
+                      <div class='product-list-message'>
+                        <i class='icon fa fa-truck' aria-hidden='true'></i>
+                        UK Free Delivery
+                      </div>
+                      <form class='cart'>
+                        <div class='single_variation_wrap'>
+                          <div class='quantity'>
+                            <div class='control'>
+                              <a
+                                class='btn-number qtyminus quantity-minus'
+                                href='#'
+                              >-</a>
+                              <input
+                                type='text'
+                                data-step='1'
+                                data-min='0'
+                                value='1'
+                                title='Qty'
+                                class='input-qty qty'
+                                size='4'
+                              />
+                              <a
+                                href='#'
+                                class='btn-number qtyplus quantity-plus'
+                              >+</a>
+                            </div>
+                          </div>
+                          <button class='single_add_to_cart_button button'>Add
+                            to cart</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </li>
             {{/each}}
           </ul>
+          <div id='currpageVar' style='display:none'> {{pagepass}} </div>
           <div class='pagination clearfix style2'>
-            <div class='nav-link-filter'>
+            <div class='nav-link'>
               <div class='page-numbers' id='prev_page'><i
                   class='icon fa fa-angle-left'
                   aria-hidden='true'
                 ></i>
               </div>
-              <a href='{{filterCondition}}&page=1' class='page-numbers'>1</a>
-              <a href='{{filterCondition}}&page=2' class='page-numbers'>2</a>
-              <a href='{{filterCondition}}&page=3' class='page-numbers'>3</a>
-              <a href='{{filterCondition}}&page=4' class='page-numbers'>4</a>
-              <a href='{{filterCondition}}&page=5' class='page-numbers'>5</a>
+              <!-- Page Number Here /-->
+              <a href='?page=1' class='page-numbers'>1</a>
+              <a href='?page=2' class='page-numbers'>2</a>
+              <a href='?page=3' class='page-numbers'>3</a>
+              <a href='?page=4' class='page-numbers'>4</a>
+              <a href='?page=5' class='page-numbers'>5</a>
               <div class='page-numbers' id='next_page'><i
                   class='icon fa fa-angle-right'
                   aria-hidden='true'

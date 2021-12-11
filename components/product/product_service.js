@@ -112,7 +112,17 @@ exports.filterFind = (page, limit = 12, fGrade, priceRange, productUniverse, ord
         [orderBy, orderCondition]
       ],
       offset: page * limit,
-      limit: limit
+      limit: limit,
+      raw: true
     }
   )
+}
+
+exports.findNewProducts = (page, limit = 12) => {
+  return models.product.findAll({
+    order: [["product_id", "DESC"]],
+    offset: page * limit,
+    limit: limit,
+    raw: true
+  })
 }
