@@ -1198,7 +1198,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
-
+    //------------------------------------------------------------------------------------------------------------------------------------
     function start_rating() {
         $(".rating input:radio").attr("checked", false);
 
@@ -1221,7 +1221,19 @@ jQuery(document).ready(function ($) {
     }
 
 
+    //-------------------------------------Shoping Cart Relate Script---------------------------------------------------------------------
 
+    function addToCartBtn() {
+        const addToCartBtn = $('.single_add_to_cart_button');
+
+        $(document).on("click", ".single_add_to_cart_button", function () {
+            const productId = $(this).text();
+            $.post('/cart/', { productId }, function (response) {
+                alert("success: " + response);
+
+            });
+        });
+    }
 
     // ------------------------------------------------------------------------------------------------------------------
 
@@ -1232,7 +1244,7 @@ jQuery(document).ready(function ($) {
         tanajil_custom_scrollbar();
     });
     $(window).resize(function () {
-        quickview_popup();
+        //quickview_popup();
         tanajil_masonry();
         kt_resizeMegamenu();
         tanajil_remove_class_review();
@@ -1241,7 +1253,7 @@ jQuery(document).ready(function ($) {
     });
     $(window).load(function () {
         newletter_popup();
-        quickview_popup();
+        //quickview_popup();
         tanajil_mobile_block();
         tanajil_remove_class_review();
         tanajil_custom_scrollbar();
@@ -1271,5 +1283,6 @@ jQuery(document).ready(function ($) {
     prevpage_click_filter();
     start_rating();
     sliderRange();
+    addToCartBtn();
 
 });
