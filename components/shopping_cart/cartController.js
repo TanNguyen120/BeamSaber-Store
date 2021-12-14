@@ -24,10 +24,12 @@ exports.addToCart = async (req, res) => {
 
         // if there already a cart exist. Then we add product price to total cost and update it
         if (!create) {
+
             const newCost = parseFloat(cart.total_cost) + cost;
             await cartService.cartCostUpdate(cart.cart_id, newCost);
 
             // we need to find the cart items and update total cost, quantity if it exists
+            // else we add new item into cart
             const cartItem = await cartService.findCartItems(productId, unAuthnId);
             if (cartItem) {
                 // update quantity of cart items
@@ -40,8 +42,8 @@ exports.addToCart = async (req, res) => {
                     newQuantity,
                     newCost
                 );
-
-                console.log("updated: " + JSON.stringify(updateCartItem));
+            } else {
+                await cartService.createCartItems(unAuthnId, productId, cost);
             }
             // if it doesn't exist we create a new cart item 
         } else {
@@ -54,5 +56,19 @@ exports.addToCart = async (req, res) => {
         res.send("error: " + err);
         throw (err);
 
+    }
+}
+
+
+exports.countCartItems = async (req, res, next) => {
+    const cartID = req.session.unAuthUser;
+    try {
+        const itemsNumber = await cartService.countCartItems(cartID);
+        console.log("Item in cart: " + JSON.stringify(itemsNumber));
+        res.locals.itemsNumber = itemsNumber.count;
+        next();
+    } catch (err) {
+        res.render("error", { message: err.message });
+        throw (err);
     }
 }

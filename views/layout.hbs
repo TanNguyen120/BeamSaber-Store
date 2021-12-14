@@ -161,7 +161,11 @@
                     data-tanajil="tanajil-dropdown"
                   >
                     Cart
-                    <span class="count"> 0 </span>
+                    {{#if itemsNumber}}
+                      <span class="count"> {{itemsNumber}}</span>
+                    {{else}}
+                      <span class="count"> 0 </span>
+                    {{/if}}
                   </a>
                   <div class="shopcart-description tanajil-submenu">
                     <div class="content-wrap">

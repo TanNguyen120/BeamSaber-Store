@@ -1230,7 +1230,7 @@ jQuery(document).ready(function ($) {
             const productId = $(this).text();
             $.post('/cart/', { productId }, function (response) {
                 alert("success: " + response);
-
+                location.reload();
             });
         });
     }

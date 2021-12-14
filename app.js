@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const passport = require('./components/auth/passport');
 const session = require("express-session");
 const auth = require("./components/auth/ath_checking");
+const countItems = require("./components/shopping_cart/cartController")
 
 
 // all specific project router go here
@@ -35,8 +36,8 @@ const errorRouter = require("./components/404page");
 // define order details router
 const orderDetailsRouter = require("./components/order_details");
 
-// define shoping cart router
-const shopingCartRouter = require("./components/shoping_cart");
+// define shopping cart router
+const shopingCartRouter = require("./components/shopping_cart");
 
 // define about us page router
 const aboutUsRouter = require("./components/shop_owner_details");
@@ -53,6 +54,8 @@ const userRouter = require("./components/user");
 
 //define session handler router
 const sessionHandler = require("./components/session_handler");
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -94,11 +97,16 @@ app.use(function (req, res, next) {
 });
 
 
+// use this middle ware to set an id for unknown user
 app.use(sessionHandler);
 app.use((req, res, next) => {
     console.log(req.method + req.path + " unAuthnID: " + req.session.unAuthUser);
     next();
 })
+
+// use this to add number of items in cart to views
+app.use(countItems.countCartItems);
+
 // ROUTER MUST BE USE AFTER ALL OTHER MIDDLE WARE ARE DEFINED
 // default routes
 app.use("/", indexPageRouter);
