@@ -38,7 +38,7 @@
                   </thead>
                   <tbody>
                     {{#each itemsInCart.rows}}
-                      <div id='cartId' style='display: none;'> {{cart_id}}</div>
+                      <div id='cartId' style='display: none;'>{{cart_id}}</div>
                       <tr class='cart_item'>
                         <td class='product-remove'>
                           <a class='remove-item-from-cart'>
@@ -88,6 +88,10 @@
                           </div>
                         </td>
                         <td class='product-price' data-title='Price'>
+                          <span
+                            class='cart-product-id'
+                            style='display: none;'
+                          >{{product_id}}</span>
                           <span class='woocommerce-Price-amount amount'>
                             <span class='woocommerce-Price-currencySymbol'>
                               $

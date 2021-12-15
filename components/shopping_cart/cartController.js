@@ -87,3 +87,20 @@ exports.viewCart = async (req, res) => {
         throw err;
     }
 }
+
+
+exports.removeFromCart = async (req, res) => {
+    const cartID = req.body.cartId;
+    const productID = parseInt(req.body.itemId);
+    if (!isNaN(productID)) {
+        try {
+            await cartService.deleteCartItem(cartID, productID);
+            res.status(200).send("success remove items");
+        } catch (err) {
+            res.status(500).send("cant remove");
+            throw err;
+        }
+    } else {
+        res.status(400).send("bad request");
+    }
+}

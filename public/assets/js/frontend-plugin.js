@@ -933,7 +933,7 @@ jQuery(document).ready(function ($) {
 
     //------------------------- reder pageitem
 
-    function pagesRender() {
+    function pages_render() {
         const pageArray = $("div.nav-link > a");
         const currrentPage = $("#currpageVar");
         const pageNumberInt = parseInt(currrentPage.text());
@@ -1210,7 +1210,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    function sliderRange() {
+    function slider_range() {
         const slider = document.getElementById("myRange");
         const output = document.getElementById("demo");
         if (slider !== null && output !== null) {
@@ -1227,23 +1227,51 @@ jQuery(document).ready(function ($) {
     //-------------------------------------Shopping Cart Relate Script---------------------------------------------------------------------
 
 
-    function addToCartBtn() {
-        const addToCartBtn = $('.single_add_to_cart_button');
-
+    function add_to_cart_btn() {
+        // use JQUERY AJAX TO POST TO SEVER
         $(document).on("click", ".single_add_to_cart_button", function () {
             const productId = $(this).text();
             $.post('/cart/', { productId }, function (response) {
-                alert("success: " + response);
+                alert(response);
                 location.reload();
             });
         });
     }
 
     function delete_from_cart() {
-        // $(document).on("click", "#continueShop", function () {
-        //     alert("You have successfully removed");
-        //     console.log("clickckkk")
-        // })
+        $(document).on("click", ".product-remove", function () {
+            const itemId = $(this).closest("tr")    // Finds the closest row <tr> 
+                .find(".cart-product-id")           // Gets a descendent with class="cart-product-id"
+                .text();                            // Retrieves the text within <td>
+
+            // get cartID
+            const cartId = document.getElementById("cartId").textContent;
+
+            // save the curent element now so we can use it latter
+            const $this = $(this);
+
+            // Confirm will display a prompt and if client click yes we will call delete
+            if (confirm('Are you sure you want to delete this item from your cart')) {
+
+                // Delete itemsInCart
+                $.ajax({
+                    type: "DELETE",
+                    url: '/cart',
+                    data: { cartId, itemId },
+                    success: function (data) {
+                        alert(data);
+                        $this.closest('tr').remove();
+
+                    },
+                    error: function (data) {
+                        alert('Error:', data);
+                    }
+                });
+            } else {
+                // Do nothing!
+                alert(itemId + "    " + cartId.textContent);
+            }
+        })
     }
 
 
@@ -1287,16 +1315,15 @@ jQuery(document).ready(function ($) {
 
     prevpage_click();
     nextpage_click();
-    pagesRender();
+    pages_render();
     pageination_toggle_current_page();
     pagesRender_filter();
     pagination_toggle_current_page_filter();
     nextpage_click_filter();
     prevpage_click_filter();
     start_rating();
-    sliderRange();
-    addToCartBtn();
+    slider_range();
+    add_to_cart_btn();
     delete_from_cart();
-    cotinueShopping();
 
 });

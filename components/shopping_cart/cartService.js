@@ -94,3 +94,14 @@ exports.findCart = (cartID) => {
         { raw: true }
     );
 }
+
+exports.deleteCartItem = (cartId, productId) => {
+    models.cart_items.destroy(
+        {
+            where: {
+                cart_id: cartId,
+                product_id: productId
+            }
+        }
+    )
+}
