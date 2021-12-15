@@ -1209,19 +1209,23 @@ jQuery(document).ready(function ($) {
     }
 
 
+
     function sliderRange() {
         const slider = document.getElementById("myRange");
         const output = document.getElementById("demo");
-        output.innerHTML = '$' + slider.value; // Display the default slider value
+        if (slider !== null && output !== null) {
+            output.innerHTML = '$' + slider.value; // Display the default slider value
 
-        // Update the current slider value (each time you drag the slider handle)
-        slider.oninput = function () {
-            output.innerHTML = '$' + this.value;
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function () {
+                output.innerHTML = '$' + this.value;
+            }
         }
     }
 
 
-    //-------------------------------------Shoping Cart Relate Script---------------------------------------------------------------------
+    //-------------------------------------Shopping Cart Relate Script---------------------------------------------------------------------
+
 
     function addToCartBtn() {
         const addToCartBtn = $('.single_add_to_cart_button');
@@ -1234,6 +1238,14 @@ jQuery(document).ready(function ($) {
             });
         });
     }
+
+    function delete_from_cart() {
+        // $(document).on("click", "#continueShop", function () {
+        //     alert("You have successfully removed");
+        //     console.log("clickckkk")
+        // })
+    }
+
 
     // ------------------------------------------------------------------------------------------------------------------
 
@@ -1284,5 +1296,7 @@ jQuery(document).ready(function ($) {
     start_rating();
     sliderRange();
     addToCartBtn();
+    delete_from_cart();
+    cotinueShopping();
 
 });

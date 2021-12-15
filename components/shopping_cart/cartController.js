@@ -2,6 +2,7 @@ const product = require('../../models/product');
 const cartService = require('./cartService');
 const { models } = require("../../models");
 
+//------------------------------------------------------------------------------------------------------------------
 
 /**
  * creat a cart or add the product to exist cart
@@ -58,17 +59,31 @@ exports.addToCart = async (req, res) => {
 
     }
 }
-
+//------------------------------------------------------------------------------------------------------------------
 
 exports.countCartItems = async (req, res, next) => {
     const cartID = req.session.unAuthUser;
     try {
-        const itemsNumber = await cartService.countCartItems(cartID);
-        console.log("Item in cart: " + JSON.stringify(itemsNumber));
-        res.locals.itemsNumber = itemsNumber.count;
+        const itemsInCart = await cartService.countCartItems(cartID);
+        res.locals.itemsNumber = itemsInCart.count;
+        res.locals.itemsInCart = itemsInCart.rows;
         next();
     } catch (err) {
         res.render("error", { message: err.message });
         throw (err);
+    }
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+exports.viewCart = async (req, res) => {
+    const cartID = req.session.unAuthUser;
+    try {
+        const itemsInCart = await cartService.countCartItems(cartID);
+        const cart = await cartService.findCart(cartID);
+        res.render("./shopping_cart/index", { itemsInCart, cart });
+    } catch (err) {
+        res.render("error", { message: err.message });
+        throw err;
     }
 }

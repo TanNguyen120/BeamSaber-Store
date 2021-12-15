@@ -4,9 +4,8 @@ const cartController = require('./cartController');
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('shoping_cart/index', { title: 'beamsaber' });
-});
+router.get('/', cartController.viewCart);
+
 
 router.post('/', cartController.addToCart);
 module.exports = router;

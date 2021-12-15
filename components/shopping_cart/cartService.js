@@ -82,6 +82,15 @@ exports.updateQuantity = (productId, cartID, newQuantity, newCost) => {
 
 exports.countCartItems = (cartId) => {
     return models.cart_items.findAndCountAll({
-        where: { cart_id: cartId }
+        where: { cart_id: cartId },
+        include: 'product',
+        raw: true
     })
+}
+
+exports.findCart = (cartID) => {
+    return models.cart.findByPk(
+        cartID,
+        { raw: true }
+    );
 }
