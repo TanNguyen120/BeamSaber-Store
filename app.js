@@ -121,7 +121,7 @@ app.use("/login", loginRouter);
 app.use("/register", registerRouter);
 
 // middleware for userInfor task
-app.use("/user-info", usersInforRouter);
+app.use("/user-info", auth.isAuth, usersInforRouter);
 
 // middleware for productlist task
 app.use("/product", productRouter);

@@ -7,7 +7,7 @@ exports.userProfile = async (req, res) => {
     }
     else {
         try {
-            const userProfile = await userService.findUser(req.user.user_id);
+            const userProfile = await userService.findUser(req.user.id);
             res.render("./user_profile/profile", { userProfile });
         }
         catch (err) {
@@ -21,7 +21,7 @@ exports.updateProfile = async (req, res) => {
     const phoneNumber = req.body.phone;
     const address = req.body.address;
     const bankAccount = req.body.bankAccount;
-    const id = req.user.user_id
+    const id = req.user.id
     console.log('updating: ' + id + ' to ' + phoneNumber + ' ' + address + ' ' + bankAccount);
     try {
         const userprofile = await userService.updateUser(id, phoneNumber, address, bankAccount);

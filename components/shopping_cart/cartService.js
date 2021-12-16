@@ -103,7 +103,7 @@ exports.findCart = (cartID) => {
 }
 
 exports.deleteCartItem = (cartId, productId) => {
-    models.cart_items.destroy(
+    return models.cart_items.destroy(
         {
             where: {
                 cart_id: cartId,

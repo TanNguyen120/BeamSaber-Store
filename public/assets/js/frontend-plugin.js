@@ -1276,8 +1276,10 @@ jQuery(document).ready(function ($) {
                     url: '/cart',
                     data: { cartId, itemId },
                     success: function (data) {
-                        alert(data);
+                        alert(data.message);
+                        $("#cart-total-cost").text(data.newCost);
                         $this.closest('tr').remove();
+                        $("#items-in-cart").text(data.itemsCount);
 
                     },
                     error: function (data) {
@@ -1286,7 +1288,6 @@ jQuery(document).ready(function ($) {
                 });
             } else {
                 // Do nothing!
-                alert(itemId + "    " + cartId.textContent);
             }
         })
     }

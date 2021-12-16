@@ -98,9 +98,30 @@ exports.removeFromCart = async (req, res) => {
 
     if (!isNaN(productID)) {
         try {
+            // get the item total price so we can minus it in cart model
+            const cartItem = await cartService.findCartItems(productID, cartID);
+            const itemTotalCost = parseFloat(cartItem.total_cost);
+
             // deleteCartItem will call model destroy with pk is the composite key
-            await cartService.deleteCartItem(cartID, productID);
-            res.status(200).send("success remove items");
+            const flag = await cartService.deleteCartItem(cartID, productID);
+
+            //get the cart so we can update the total cost
+            const cart = await cartService.findCart(cartID);
+            const cartTotalCost = parseFloat(cart.total_cost);
+
+            // update new cost to cart
+            const newCost = cartTotalCost - itemTotalCost;
+            await cartService.cartCostUpdate(cartID, parseFloat(newCost).toFixed(2));
+
+            // message to send to client
+            const message = "success remove items";
+
+            const itemsInCart = await cartService.countCartItems(cartID);
+            const itemsCount = itemsInCart.count;
+
+            // count items in cart
+
+            res.status(200).send({ message, newCost, itemsCount });
         } catch (err) {
             res.status(500).send("cant remove");
             throw err;
