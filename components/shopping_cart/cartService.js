@@ -14,6 +14,13 @@ exports.findItem = (id) => {
     return models.product.findByPk(id, { raw: true });
 };
 
+exports.listCartItems = (cartId) => {
+    return models.cart_items.findAll({
+        where: { cart_id: cartId },
+        raw: true
+    })
+}
+
 exports.createCart = (unAuthnId, cost) => {
 
     return models.cart.findOrCreate(
@@ -23,7 +30,7 @@ exports.createCart = (unAuthnId, cost) => {
                 cart_id: unAuthnId,
                 total_cost: cost
             },
-
+            raw: true
         });
 }
 
@@ -105,3 +112,23 @@ exports.deleteCartItem = (cartId, productId) => {
         }
     )
 }
+
+
+exports.updateItemQuantity = (cartId, productID, newQuantity, productPrice) => {
+    return models.cart_items.update(
+        {
+            quantity: newQuantity,
+            total_cost: productPrice * newQuantity
+        },
+        {
+            where:
+            {
+                cart_id: cartId,
+                product_id: productID
+            }
+        }
+    )
+}
+
+
+

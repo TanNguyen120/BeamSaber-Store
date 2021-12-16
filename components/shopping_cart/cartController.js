@@ -79,6 +79,7 @@ exports.countCartItems = async (req, res, next) => {
 exports.viewCart = async (req, res) => {
     const cartID = req.session.unAuthUser;
     try {
+        // count cart item is an eager load countAndFindAll function 
         const itemsInCart = await cartService.countCartItems(cartID);
         const cart = await cartService.findCart(cartID);
         res.render("./shopping_cart/index", { itemsInCart, cart });
@@ -88,12 +89,16 @@ exports.viewCart = async (req, res) => {
     }
 }
 
+//------------------------------------------------------------------------------------------------------------------
+
 
 exports.removeFromCart = async (req, res) => {
     const cartID = req.body.cartId;
     const productID = parseInt(req.body.itemId);
+
     if (!isNaN(productID)) {
         try {
+            // deleteCartItem will call model destroy with pk is the composite key
             await cartService.deleteCartItem(cartID, productID);
             res.status(200).send("success remove items");
         } catch (err) {
@@ -104,3 +109,41 @@ exports.removeFromCart = async (req, res) => {
         res.status(400).send("bad request");
     }
 }
+
+//------------------------------------------------------------------------------------------------------------------
+
+exports.updateCartItem = async (req, res) => {
+    // get PUT data
+    const cartID = req.body.cartId;
+    const productID = parseInt(req.body.itemId);
+    const newQuantity = req.body.quantity
+    // find the cart and product
+
+
+    try {
+        const product = await cartService.findItem(productID);
+
+        //update cart items quantity
+        const newCartItems = await cartService.updateItemQuantity(cartID, productID, newQuantity, product.price);
+
+        //find all items in cart
+        const listCartItems = await cartService.listCartItems(cartID);
+
+        // update new cost by sum all total cost of cart Item
+        let newCost = 0;
+        listCartItems.forEach(item => {
+            newCost += parseFloat(item.total_cost);
+        })
+        await cartService.cartCostUpdate(cartID, parseFloat(newCost).toFixed(2));
+
+        // send the new cost back to client so it can update the view
+        res.send("" + parseFloat(newCost).toFixed(2));
+    } catch (err) {
+        res.send('error: cant update product quantity');
+        console.error(err);
+        throw err;
+    }
+
+}
+
+//------------------------------------------------------------------------------------------------------------------

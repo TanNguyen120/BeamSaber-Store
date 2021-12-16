@@ -78,7 +78,6 @@
                                 title='Qty'
                                 class='input-qty qty'
                                 size='4'
-                                id='cart-item-quantity'
                               />
                               <a
                                 href='#'
@@ -104,9 +103,12 @@
                   </tbody>
                 </table>
               </form>
-              <div class='control-cart' style='font-size:large; color:red'>
-                Total Cost:
-                {{cart.total_cost}}
+              <div
+                class='control-cart'
+                style='font-size:large; color:red'
+                id='cart-total-cost'
+              >
+                Total Cost: ${{cart.total_cost}}
               </div>
               <div class='control-cart'>
                 <a href='/product'>

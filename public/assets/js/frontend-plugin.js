@@ -167,9 +167,9 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    $(document).ready(function () {
-        tanajil_google_maps();
-    });
+    // $(document).ready(function () {
+    //     tanajil_google_maps();
+    // });
 
     function tanajil_init_menu_toggle() {
         var contain = ".tanajil-nav-toggle";
@@ -640,6 +640,11 @@ jQuery(document).ready(function ($) {
         ".quantity .quantity-plus, .quantity .quantity-minus",
         function (e) {
             // Get values
+            const cartId = document.getElementById("cartId").textContent;
+            const itemId = $(this).closest("tr")    // Finds the closest row <tr> 
+                .find(".cart-product-id")           // Gets a descendent with class="cart-product-id"
+                .text();                            // Retrieves the text within <td>
+
             var $qty = $(this).closest(".quantity").find(".qty"),
                 currentVal = parseFloat($qty.val()),
                 max = parseFloat($qty.attr("max")),
@@ -661,16 +666,28 @@ jQuery(document).ready(function ($) {
             if ($(this).is(".quantity-plus")) {
                 if (max && (max == currentVal || currentVal > max)) {
                     $qty.val(max);
+
                 } else {
                     $qty.val(currentVal + parseFloat(step));
+
                 }
             } else {
                 if (min && (min == currentVal || currentVal < min)) {
                     $qty.val(min);
+
                 } else if (currentVal > 0) {
                     $qty.val(currentVal - parseFloat(step));
+
                 }
             }
+            $.ajax({
+                type: "PUT",
+                url: "/cart",
+                data: { cartId, itemId, quantity: $qty.val() },
+                success: (response) => {
+                    $('#cart-total-cost').text("total cost: $" + response);
+                }
+            })
             // Trigger change event
             $qty.trigger("change");
             e.preventDefault();
@@ -1275,6 +1292,7 @@ jQuery(document).ready(function ($) {
     }
 
 
+
     // ------------------------------------------------------------------------------------------------------------------
 
 
@@ -1325,5 +1343,6 @@ jQuery(document).ready(function ($) {
     slider_range();
     add_to_cart_btn();
     delete_from_cart();
+
 
 });
