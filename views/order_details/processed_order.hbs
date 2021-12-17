@@ -10,6 +10,23 @@
       depends in the pilot. Any damaged cause by explode reactor will not get
       insurance
     </div>
+    {{#each orderList}}
+      <div class='row order-history'>
+        <div class='col-md-4'>
+          <a href='/check_out/order_items/{{order_id}}'>
+            Order ID:
+            {{order_id}}
+          </a>
+        </div>
+        <div class='col-md-2'> Date: {{date}}</div>
+        <div class='col-md-2'> Total Cost: {{total_cost}}</div>
+        {{#if status}}
+          <div class='col-md-4'> Status: {{status}}</div>
+        {{else}}
+          <div class='col-md-4'> Status: store owner has received order</div>
+        {{/if}}
+      </div>
+    {{/each}}
     <a href='/' class='button btn-return'>Return to Store</a>
   </div>
 </div>

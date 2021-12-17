@@ -1,0 +1,44 @@
+<div class='container'>
+  <div class='row-col-2 row-col'>
+    <div class='your-order'>
+      <h3 class='title-form'>
+        Your Order : 
+        ({{order.order_id}})
+      </h3>
+      <ul class='list-product-order'>
+        {{#each itemsInCart.rows}}
+          <li class='product-item-order'>
+            <div class='product-thumb'>
+              <a href='#'>
+                <img src='{{'product.link_picture'}}' alt='img' />
+              </a>
+            </div>
+            <div class='product-order-inner'>
+              <h5 class='product-name'>
+                <a href='#'>{{'product.name'}}</a>
+              </h5>
+              <span
+                class='attributes-select attributes-color'
+              >{{'product.grade'}},</span>
+              <span
+                class='attributes-select attributes-size'
+              >{{'product.universe'}}</span>
+              <div class='price'>
+                ${{total_cost}}
+                <span class='count'>x{{quantity}}</span>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+      <div class='order-total'>
+        <span class='title'>
+          Total Price:
+        </span>
+        <span class='total-price' style='color:red'>
+          ${{order.total_cost}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

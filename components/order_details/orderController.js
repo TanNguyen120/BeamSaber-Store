@@ -63,3 +63,30 @@ exports.conformOrder = async (req, res) => {
     res.send("we know: " + cartId + " " + userId);
 
 }
+
+exports.orderHistory = async (req, res) => {
+    const userId = req.user.id;
+    try {
+        const orderList = await orderService.findOrder(userId);
+        res.render("./order_details/processed_order", { orderList });
+    } catch (err) {
+        throw err;
+    }
+}
+
+exports.orderItems = async (req, res) => {
+    const orderId = req.params.order_id;
+    try {
+        const itemsInCart = await orderService.findOrderItems(orderId);
+        const order = await orderService.findSingleOrder(orderId);
+
+        res.render('./order_details/order_items', { itemsInCart, order });
+
+
+    } catch (err) {
+        console.error(err);
+        res.render('error', { msg: err.message });
+        throw err;
+    }
+
+}

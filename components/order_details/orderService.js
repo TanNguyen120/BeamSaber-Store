@@ -59,3 +59,27 @@ exports.createOrder = (orderId, userId, orderDate, orderCost) => {
         date: orderDate
     })
 }
+
+exports.findOrder = (userId) => {
+    return models.order.findAll(
+        {
+            where: { user_id: userId },
+            raw: true
+        })
+}
+
+
+exports.findOrderItems = (orderId) => {
+    return models.cart_items.findAndCountAll({
+        where: { order_id: orderId },
+        include: 'product',
+        raw: true
+    })
+}
+
+exports.findSingleOrder = (orderId) => {
+    return models.order.findByPk(
+        orderId,
+        { raw: true }
+    );
+}

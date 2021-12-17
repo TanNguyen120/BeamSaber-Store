@@ -7,5 +7,9 @@ router.get('/', orderController.checkShippingInfo, orderController.orderDetailPa
 
 router.post('/', orderController.checkShippingInfo, orderController.conformOrder);
 
+router.get('/history', orderController.checkShippingInfo, orderController.orderHistory);
+
+router.get('/order_items/:order_id', orderController.checkShippingInfo, orderController.orderItems);
+
 
 module.exports = router;
