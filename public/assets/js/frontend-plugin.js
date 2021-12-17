@@ -1255,6 +1255,17 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    function single_add_to_cart_button() {
+        $(document).on("click", "#add-to-cart-btn", function () {
+            const productId = $("#details-page-product-id").text();
+            alert(productId);
+            $.post('/cart/', { productId }, function (response) {
+                alert(response);
+                location.reload();
+            });
+        });
+    }
+
     function delete_from_cart() {
         $(document).on("click", ".product-remove", function () {
             const itemId = $(this).closest("tr")    // Finds the closest row <tr> 
@@ -1281,6 +1292,27 @@ jQuery(document).ready(function ($) {
                         $this.closest('tr').remove();
                         $("#items-in-cart").text(data.itemsCount);
 
+                    },
+                    error: function (data) {
+                        alert('Error:', data);
+                    }
+                });
+            } else {
+                // Do nothing!
+            }
+        })
+    }
+
+
+    function conformOrder() {
+        $(".shipping-address-form-wrapp").on("click", "#order-conform-btn", () => {
+            if (confirm('This process will create an order from items in your cart. Are you sure about this:')) {
+                // Delete itemsInCart
+                $.ajax({
+                    type: "POST",
+                    url: '/check_out',
+                    success: function (data) {
+                        alert(data);
                     },
                     error: function (data) {
                         alert('Error:', data);
@@ -1344,6 +1376,8 @@ jQuery(document).ready(function ($) {
     slider_range();
     add_to_cart_btn();
     delete_from_cart();
+    single_add_to_cart_button();
+    conformOrder();
 
 
 });

@@ -31,3 +31,31 @@ exports.findUser = (userID) => {
         { raw: true }
     );
 }
+
+exports.findCart = (cartID) => {
+    return models.cart.findByPk(
+        cartID,
+        {
+            raw: true
+        }
+    );
+}
+
+exports.cartItemToOrderItems = (orderId, cartId) => {
+    return models.cart_items.update(
+        {
+            order_id: orderId,
+        },
+        {
+            where: { cart_id: cartId },
+        });
+}
+
+exports.createOrder = (orderId, userId, orderDate, orderCost) => {
+    return models.order.create({
+        order_id: orderId,
+        user_id: userId,
+        total_cost: orderCost,
+        date: orderDate
+    })
+}
