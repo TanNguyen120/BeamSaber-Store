@@ -9,13 +9,13 @@
         {{#each itemsInCart.rows}}
           <li class='product-item-order'>
             <div class='product-thumb'>
-              <a href='#'>
+              <a href=''/product/{{'product.name'}}/?id={{'product.product_id'}}''>
                 <img src='{{'product.link_picture'}}' alt='img' />
               </a>
             </div>
             <div class='product-order-inner'>
               <h5 class='product-name'>
-                <a href='#'>{{'product.name'}}</a>
+                <a href='/product/{{'product.name'}}/?id={{'product.product_id'}}'>{{'product.name'}}</a>
               </h5>
               <span
                 class='attributes-select attributes-color'

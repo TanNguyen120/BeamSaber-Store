@@ -46,7 +46,7 @@
                           {{! <a href='#' class='remove'></a> }}
                         </td>
                         <td class='product-thumbnail'>
-                          <a href='#'>
+                          <a href='/product/{{'product.name'}}/?id={{'product.product_id'}}'>
                             <img
                               src='{{'product.link_picture'}}'
                               alt='img'
@@ -55,7 +55,7 @@
                           </a>
                         </td>
                         <td class='product-name' data-title='Product'>
-                          <a href='#' class='title'>{{'product.name'}}</a>
+                          <a href='/product/{{'product.name'}}/?id={{'product.product_id'}}' class='title'>{{'product.name'}}</a>
                           <span
                             class='attributes-select attributes-color'
                           >{{'product.universe'}},</span>
